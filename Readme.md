@@ -1,7 +1,7 @@
 ﻿# Личный проект «Глейси»
 
 * Студент: [Александра Пашкевич](https://htmlacademy.ru/profile/id36578).
-* Наставник: [Лебедев](https://htmlacademy.ru/profile/id51265).
+* Наставник: [Дмитрий Лебедев](https://htmlacademy.ru/profile/id51265).
 
 ---
 
