@@ -8,8 +8,10 @@
   <body>
     <header class="main-header">
       <div class="container" >  
-        <div class="container-left">
-          <a class="logolink-gllacy" href="#"><img class="gllacy-logo" src="#" alt="Gllacy"></a>
+        
+        <div class="main-header-left">
+          <a class="logolink-gllacy" href="#"><img class="gllacy-logo" src="#" alt="Gllacy"></a><!--Я помню твою позицию, что это должна быть ссылка, а потом ее надо будет сделать некликабельной...но я нашла файл Specification.md, где имеется пункт:"gllacy-index.psd: - Логотип не является ссылкой", так что я занудно уточню, некликабельная ссылка удовлетворяет этому пункту?-->
+          <!--и я отделила логотип от навигации, так можно?-->
           <nav class="main-navigation">
             <ul>
               <li>
@@ -25,21 +27,165 @@
           </nav>  
         </div>
         
-        <div class="container-right">
-          
-        </div>       
+        <div class="main-header-right">      
+          <div class="search">
+            <form>
+              <input type="search" name="search" autofocus><!--автофокус должен быть один в рамках страницы или формы?-->
+              <button type="submit"><img src="#"></button><!--Дима, я прошла курс"формы и html5" и окончательно запуталась! Ибо в курсе показано, что тэг button работает без javascript, в отличие от <input type="button">...В общем, этот кусок так сверстать?-->
+            </form>  
+          </div>
+          <div class="user-block">
+            <form>
+              <label for="login-field">Ваш логин</label>
+              <input type="text" id="login-field" name="login" autocomplete="on" tabindex="1" autofocus>
+              <label for="password-field">Пароль</label>
+              <input type="password" id="password-field" name="password" autocomplete="on" tabindex="2">
+              <button type="submit"><img src="#">Вход</button>
+            </form>
+          </div>   
+          <div class="basket">
+            <a class="basket-logo" href="№" title="Перейти в корзину"><img src="#" alt="Корзина">Пусто</a>
+          </div>        
+        </div>  
+        
       </div>
     </header>
     
     
     <main class="container">
+      <div class="contact-info">
+        <span class="contact-info-workinghours">C 10 до 20, ежедневно</span><!--я все спотыкаюсь об маленькие элементы, я могу здесь использывать этот тэг?-->
+        <span class="contact-info-telnumber">8 812 450-25-25</span>
+      </div>
+      
+      <div class="bigicecream-link">
+        <div class="main-headerline">
+          Крем-брюле и пломбир с малиновым джемом
+        </div>
+        <a class="btn btn-givemetwo" href="#">Давайте оба!</a>
+      </div>
+      
+      <div class="main-content">
+        <div class="free">
+          <article class="free-raspberry">
+            <h1>Малинка даром!</h1>
+            <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+            <a class="btn btn-jam" href="#">Хочу варенья!</a>
+          </article>
+          <article class="free-chocolate">
+            <h1>Шоколадки даром!</h1>
+            <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
+            <a class="btn btn-chocolate" href="#">Хочу варенья!</a>
+          </article>
+        </div>
+        
+        <div class="hit">  
+          <article class="hit-orange">
+            <div class="hit-legend">
+              ХИТ
+            </div>
+            <img class="icecream" src="#">
+            <div class="price">
+              <h1>310₽</h1>
+              <span>/кг</span>
+            </div>
+            <a class="link link-icecream" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+          </article>
+          
+          <article class="hit-coffee">
+            <div class="hit-legend">
+              ХИТ
+            </div>
+            <img class="icecream" src="#">
+            <div class="price">
+              <h1>380₽</h1>
+              <span>/кг</span>
+            </div>
+            <a class="link link-icecream" href="#">Сливочно-кофейное с кусочками шоколада</a>
+          </article>
+          
+          <article class="hit-strawberry">
+            <div class="hit-legend">
+              ХИТ
+            </div>
+            <img class="icecream" src="#">
+            <div class="price">
+              <h1>355₽</h1>
+              <span>/кг</span>
+            </div>
+            <a class="link link-icecream" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
+          </article>
+          
+          <article class="hit-сreme-brulee">
+            <div class="hit-legend">
+              ХИТ
+            </div>
+            <img class="icecream" src="#">
+            <div class="price">
+              <h1>415₽</h1>
+              <span>/кг</span>
+            </div>
+            <a class="link link-icecream" href="#">Сливочное крем-брюле с карамельной подсыпкой</a>
+          </article>
+        </div>
+        
+        <section class="features">
+          <b class="features-name">Магазин Глейси - это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</b>
+          <div class="features-left">
+            <div class="features-left-up">
+              <img class="features-logo logo-ice" src="#"><!--не уверена, что нужны отдельные классы для каждой картинки, удалить, если не понадобятся-->
+              <p> Все наше мороженое  изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
+            </div>
+            <div class="features-left-down">
+              <img class="features-logo logo-leaf" src="#">
+              <p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Всне дополнительные ингридиенты и добавки произведены из натурального, экологически чистого сырья.</p>
+            </div>
+          </div>
+          <div class="features-right">
+            <div class="features-right-up">
+              <img class="features-logo logo-cow" src="#">
+              <p>Закупка ингридиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
+            </div>
+            <div class="features-right-down">
+              <img class="features-logo logo-thermometer" src="#">
+              <p>Доставка нашего моорженого до заказчиков осуществляется в специальном термопакете, который не дает мороженому растаять в пути и позволяет ему сохранить свой превосходный вкус.</p>
+            </div>
+          </div>
+        </section>
+        
+        <div class="glacy-online">
+          <div class="blog">
+            <span>Новое в нашем блоге</span>
+            <a class=link-blog href="№" title="Перейти к записи в блоге">10 способов сервировки фруктовых щербетов к столу</a>
+          </div>
+          <div class="email-delivery">
+            <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+            <form>
+              <input type="email" name="email" placeholder="Электронная почта">
+              <button class="btn btn-email-delivery" type="submit">Отправить</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      
+      <div class="map">
+        <a href="#"><img src="#" alt="Карта"></a>
+        <div class="map-address">
+          Адрес главного офиса и офлайн магазина:
+          ул. Большая Конюшенная 19.8, САнкт-Петербург
+          Для заказа по телефону:
+          8 812 450-25-25
+          (с 10 до 20 ежедневно)
+          <a class="btn btn-feedback">Форма обратной связи</a>
+        </div>
+      </div>
     </main>
     
     
     <footer class="main-footer">
       <div class="container">
         <div class="footer-social">
-          <a class="social-btn social-btn-twit" href="#" title="Наша страничка в Twitter"><img class="social-btn-logo logo-twit" src="#" alt="Twitter"></a><!--Почему в браузере при наведении на картинку не появляется title? И картинка не выглядит ссылкой, как это происходит с логотипом htmlacademy?-->
+          <a class="social-btn social-btn-twit" href="#" title="Наша страничка в Twitter"><img class="social-btn-logo logo-twit" src="#" alt="Twitter"></a>
           <a class="social-btn social-btn-inst" href="#" title="Наша страничка в Instagram"><img class="social-btn-logo logo-inst" src="#" alt="Instagram"></a>
           <a class="social-btn social-btn-fb" href="#" title="Наша страничка в Fb"><img class="social-btn-logo logo-fb" src="#" alt="Facebook"></a>
           <a class="social-btn social-btn-vk" href="#" title="Наша страничка в VK"><img class="social-btn-logo logo-vk" src="#" alt="Вконтакте"></a>
