@@ -7,21 +7,22 @@
   </head>
   <body>
     <header class="main-header">
-      <div class="container" >  
+      <div class="container">  
         
         <div class="main-header-left">
-          <a class="logolink-gllacy" href="#"><img class="gllacy-logo" src="#" alt="Gllacy"></a><!--Я помню твою позицию, что это должна быть ссылка, а потом ее надо будет сделать некликабельной...но я нашла файл Specification.md, где имеется пункт:"gllacy-index.psd: - Логотип не является ссылкой", так что я занудно уточню, некликабельная ссылка удовлетворяет этому пункту?-->
-          <!--и я отделила логотип от навигации, так можно?-->
-          <nav class="main-navigation">
+          <nav>
             <ul>
               <li>
-                <a class="link link-catalog" href="#" title="Выберите свой вкус">Каталог</a><!--откуда мы берем текст для title? и всегда ли его надо прописывать? а самое главное, если не всегда, то вот в рамках 1 навигации, я могу прописать title не ко всем пунктам, или это, мол, нелогично и плохой тон?-->
+                <a class="logolink-gllacy" href="#" title="Вы тут"><img class="gllacy-logo" src="#" alt="Gllacy"></a><!--Я помню твою позицию,  что это должбыть ссылка, а потом ее надо будет сделать некликабельной...но я нашла файл Specification.md, где имеется   пункт:"gllaindex.psd: - Логотип не является ссылкой", так что я занудно уточню,на всякий случай, некликабельная ссылка   удовлетворяэтому пункту?-->
               </li>
               <li>
-                <a class="link link-delivery&payment" href="#" title="Доставка и оплата">Доставка и оплата</a><!--я могу использовать значки в названии классов?-->
+                <a class="link link-catalog" href="#" title="Выберите свой вкус">Каталог</a><!--откуда мы берем текст для title? и всегда ли его надо прописывать? а самое главное, если не всегда, то вот в рамках 1 навигации, я могу прописать title не ко всем пунктам, или это, мол, нелогично и плохой тон? а в рамках страницы?-->
               </li>
               <li>
-                <a class="link link-firm-info" href="#" title="Eще немного информации о нас">О компании</a><!--уточнить title в зависимости от того, куда ведет эта страница-->
+                <a class="link link-delivery&payment" href="#" title="Доставка и оплата">Доставка и оплата</a>
+              </li>
+              <li>
+                <a class="link link-firm-info" href="#" title="Eще немного информации о нас">О компании</a>
               </li>
               </ul>
           </nav>  
@@ -29,22 +30,22 @@
         
         <div class="main-header-right">      
           <div class="search">
-            <form>
-              <input type="search" name="search" autofocus><!--автофокус должен быть один в рамках страницы или формы?-->
-              <button type="submit"><img src="#"></button><!--Дима, я прошла курс"формы и html5" и окончательно запуталась! Ибо в курсе показано, что тэг button работает без javascript, в отличие от <input type="button">...В общем, этот кусок так сверстать?-->
+            <form action="#" method="get"><!--мне нужно тут оборачивать форму блоком? или можно оставить без обертки?-->
+              <input type="search" name="search" autofocus>
+              <a class="user-block-btn search-btn" href="#"><img src="#"></a>
             </form>  
           </div>
           <div class="user-block">
-            <form>
+            <form action="#" method="get">
               <label for="login-field">Ваш логин</label>
-              <input type="text" id="login-field" name="login" autocomplete="on" tabindex="1" autofocus>
+              <input type="text" id="login-field" name="login" autocomplete="on">
               <label for="password-field">Пароль</label>
-              <input type="password" id="password-field" name="password" autocomplete="on" tabindex="2">
-              <button type="submit"><img src="#">Вход</button>
+              <input type="password" id="password-field" name="password" autocomplete="on">
+              <a class="user-block-btn login-btn" href="#"><img src="#">Вход</a>
             </form>
           </div>   
           <div class="basket">
-            <a class="basket-logo" href="№" title="Перейти в корзину"><img src="#" alt="Корзина">Пусто</a>
+            <a class="user-block-btn basket-btn" href="№" title="Перейти в корзину"><img src="#" alt="Корзина">Пусто</a>
           </div>        
         </div>  
         
@@ -53,10 +54,10 @@
     
     
     <main class="container">
-      <div class="contact-info">
-        <span class="contact-info-workinghours">C 10 до 20, ежедневно</span>
-        <span class="contact-info-telnumber">8 812 450-25-25</span>
-      </div>
+      <section class="contact-info">
+        <p>C 10 до 20, ежедневно<br>
+          <b>8 812 450-25-25</b></p>
+      </section>
       
       <div class="bigicecream-link">
         <div class="main-headerline">
@@ -75,18 +76,18 @@
           <article class="free-chocolate">
             <h1>Шоколадки даром!</h1>
             <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-            <a class="btn btn-chocolate" href="#">Хочу варенья!</a>
+            <a class="btn btn-chocolate" href="#">Хочу шоколадки!</a>
           </article>
         </div>
         
         <div class="hit"><!--мне нужен тут список из 4х элементов?Или так можно?-->
           <article class="hit-orange">
-            <div class="hit-legend">
+            <div class="hit-legend"><!--можно же такой тэг? или лучше  span?-->
               ХИТ
             </div>
-            <img class="icecream" src="#">
+            <img class="icecream" src="#"><!--мне тут обязательно прописывать alt, а то все ж подписано?-->
             <div class="price">
-              <h1>310₽</h1>
+              <h1>310₽</h1><!--а тут подойдет этот тэг?-->
               <span>/кг</span>
             </div>
             <a class="link link-icecream" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
@@ -130,90 +131,86 @@
         </div>
         
         <section class="features">
-          <b class="features-name">Магазин Глейси - это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</b>
+          <b>Магазин Глейси - это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</b>
           <div class="features-left">
             <div class="features-left-up">
-              <img class="features-logo logo-ice" src="#"><!--не уверена, что нужны отдельные классы для каждой картинки, удалить, если не понадобятся-->
+              <img src="#"><!--эти картинки вставляются в код html?-->
               <p> Все наше мороженое  изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
             </div>
             <div class="features-left-down">
-              <img class="features-logo logo-leaf" src="#">
+              <img src="#">
               <p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Всне дополнительные ингридиенты и добавки произведены из натурального, экологически чистого сырья.</p>
             </div>
           </div>
           <div class="features-right">
             <div class="features-right-up">
-              <img class="features-logo logo-cow" src="#">
+              <img src="#">
               <p>Закупка ингридиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
             </div>
             <div class="features-right-down">
-              <img class="features-logo logo-thermometer" src="#">
+              <img src="#">
               <p>Доставка нашего моорженого до заказчиков осуществляется в специальном термопакете, который не дает мороженому растаять в пути и позволяет ему сохранить свой превосходный вкус.</p>
             </div>
           </div>
         </section>
         
         <div class="glacy-online">
-          <div class="blog">
+          <section class="blog">
             <span>Новое в нашем блоге</span>
-            <a class=link-blog href="№" title="Перейти к записи в блоге">10 способов сервировки фруктовых щербетов к столу</a>
-          </div>
-          <div class="email-delivery">
+            <a class="link link-blog" href="#" title="Перейти к записи в блоге">10 способов сервировки фруктовых щербетов к столу</a>
+          </section>
+          <section class="email-delivery">
             <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-            <form>
-              <input type="email" name="email" placeholder="Электронная почта">
-              <button class="btn btn-email-delivery" type="submit">Отправить</button>
+            <form action="#" method="get"><!--как узнать, какое значение action? куда отправлять?-->
+            <input type="email" name="email" placeholder="Электронная почта">
+            <button class="btn btn-email-delivery" type="submit">Отправить</button>
             </form>
-          </div>
+          </section>
         </div>
       </div>
       
-      <div class="map">
+      <section class="map">
         <a href="#"><img src="#" alt="Карта"></a>
         <div class="map-address">
-          Адрес главного офиса и офлайн магазина:
-          ул. Большая Конюшенная 19.8, САнкт-Петербург
-          Для заказа по телефону:
-          8 812 450-25-25
-          (с 10 до 20 ежедневно)
-          <a class="btn btn-feedback">Форма обратной связи</a>
+          <p>Адрес главного офиса и офлайн магазина:<br>
+          <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b><br>
+          Для заказа по телефону:<br>
+          <b>8 812 450-25-25</b><br>
+          (с 10 до 20 ежедневно)</p>
+          <a class="btn btn-feedback" href="#">Форма обратной связи</a>
         </div>
-      </div>
+      </section>
     </main>
     
     
     <footer class="main-footer">
       <div class="container">
-        <div class="footer-social">
+        <section class="footer-social">
           <a class="social-btn social-btn-twit" href="#" title="Наша страничка в Twitter"><img class="social-btn-logo logo-twit" src="#" alt="Twitter"></a>
           <a class="social-btn social-btn-inst" href="#" title="Наша страничка в Instagram"><img class="social-btn-logo logo-inst" src="#" alt="Instagram"></a>
           <a class="social-btn social-btn-fb" href="#" title="Наша страничка в Fb"><img class="social-btn-logo logo-fb" src="#" alt="Facebook"></a>
           <a class="social-btn social-btn-vk" href="#" title="Наша страничка в VK"><img class="social-btn-logo logo-vk" src="#" alt="Вконтакте"></a>
-        </div>
+        </section>
         
-        <div class="footer-productinfo">
-          <div class="footer-productinfo-left">
+        <section class="footer-documents">
+          <div class="footer-documents-left">
             <a class="link link-for-providers" href="#">Для поставщиков</a><!--сердечко в СSS добавляется?-->
             <a class="link link-production" href="#">О производстве</a>
           </div> 
           
-          <div class="footer-productinfo-right">
+          <div class="footer-documents-right">
             <a class="link link-our-docs" href="#">Наши документы</a>
             <a class="link link-eco-standarts" href="#">Экологические стандарты</a>
           </div>
-        </div>
+        </section>
         
-        <div class="footer-copyright">
-          <a class="logolink-htmlacademy" href="https://htmlacademy.ru" title="Перейти на HTML Academy"><img class="logo-htmlacademy" src="#" alt="HTML Academy"></a>
-          <span class="footer-copyright-text">Сделано в<a class="link link-copyright-htmlacademy" href="https://htmlacademy.ru" title="Перейти на HTML Academy">HTML Academy</a>© 2016</span><!--мне тут нужен такой тэг или лучше div? или p?-->
+        <section class="footer-copyright">
+          <a href="https://htmlacademy.ru" title="Перейти на HTML Academy"><img class="logo-htmlacademy" src="#" alt="HTML Academy"></a>
+          <span>Сделано в<a class="link" href="https://htmlacademy.ru" title="Перейти на HTML Academy">HTML Academy</a>© 2016</span><!--мне тут нужен такой тэг или лучше div? или p?-->
                                                      <!-- Я правильно понимаю, что пробелы вокруг ссылки в тексте будут настраиваться в CSS через отступы?-->
-        </div>
+        </section>
       </div>
     </footer>
-	  
-
-     
-
   </body>        
 </html>
 

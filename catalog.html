@@ -2,26 +2,26 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>GllacyShop - Главная</title>
+    <title>Сливочное - GllacyShop</title>
     <!--надо полагать, тут будут keywords и все такое?-->
   </head>
   <body>
     <header class="main-header">
-      <div class="container" >  
-        
+     <div class="container">   
         <div class="main-header-left">
-          <a class="logolink-gllacy" href="#"><img class="gllacy-logo" src="#" alt="Gllacy"></a><!--Я помню твою позицию, что это должна быть ссылка, а потом ее надо будет сделать некликабельной...но я нашла файл Specification.md, где имеется пункт:"gllacy-index.psd: - Логотип не является ссылкой", так что я занудно уточню, некликабельная ссылка удовлетворяет этому пункту?-->
-          <!--и я отделила логотип от навигации, так можно?-->
-          <nav class="main-navigation">
+          <nav>
             <ul>
               <li>
-                <a class="link link-catalog" href="#" title="Выберите свой вкус">Каталог</a><!--откуда мы берем текст для title? и всегда ли его надо прописывать? а самое главное, если не всегда, то вот в рамках 1 навигации, я могу прописать title не ко всем пунктам, или это, мол, нелогично и плохой тон?-->
+                <a class="logolink-gllacy" href="#" title="Вы тут"><img class="gllacy-logo" src="#" alt="Gllacy"></a>
               </li>
               <li>
-                <a class="link link-delivery&payment" href="#" title="Доставка и оплата">Доставка и оплата</a><!--я могу использовать значки в названии классов?-->
+                <a class="link link-catalog" href="#" title="Выберите свой вкус">Каталог</a>
               </li>
               <li>
-                <a class="link link-firm-info" href="#" title="Eще немного информации о нас">О компании</a><!--уточнить title в зависимости от того, куда ведет эта страница-->
+                <a class="link link-delivery&payment" href="#" title="Доставка и оплата">Доставка и оплата</a>
+              </li>
+              <li>
+                <a class="link link-firm-info" href="#" title="Eще немного информации о нас">О компании</a>
               </li>
               </ul>
           </nav>  
@@ -29,51 +29,50 @@
         
         <div class="main-header-right">      
           <div class="search">
-            <form>
-              <input type="search" name="search" autofocus><!--автофокус должен быть один в рамках страницы или формы?-->
-              <button type="submit"><img src="#"></button><!--Дима, я прошла курс"формы и html5" и окончательно запуталась! Ибо в курсе показано, что тэг button работает без javascript, в отличие от <input type="button">...В общем, этот кусок так сверстать?-->
+            <form action="#" method="get">
+              <input type="search" name="search" autofocus>
+              <a class="user-block-btn search-btn" href="#"><img src="#"></a>
             </form>  
           </div>
           <div class="user-block">
-            <form>
+            <form action="#" method="get">
               <label for="login-field">Ваш логин</label>
-              <input type="text" id="login-field" name="login" autocomplete="on" tabindex="1" autofocus>
+              <input type="text" id="login-field" name="login" autocomplete="on">
               <label for="password-field">Пароль</label>
-              <input type="password" id="password-field" name="password" autocomplete="on" tabindex="2">
-              <button type="submit"><img src="#">Вход</button>
+              <input type="password" id="password-field" name="password" autocomplete="on">
+              <a class="user-block-btn login-btn" href="#"><img src="#">Вход</a>
             </form>
           </div>   
           <div class="basket">
-            <a class="basket-logo" href="#" title="Перейти в корзину"><img src="#" alt="Корзина">Пусто</a>
+            <a class="user-block-btn basket-btn" href="№" title="Перейти в корзину"><img src="#" alt="Корзина">Пусто</a>
           </div>        
-        </div>  
-        
+        </div>         
       </div>
     </header>
     
     
     <main class="container">
-      <div class="headline">
-        <div class="contact-info">
-          <span class="contact-info-workinghours">C 10 до 20, ежедневно</span>
-          <span class="contact-info-telnumber">8 812 450-25-25</span>
-        </div>
+      <div class="container-up">
+        <section class="contact-info">
+          <p>C 10 до 20, ежедневно<br>
+          <b>8 812 450-25-25</b></p>
+        </section>
         
-        <div class="headline-legend">
+        <div class="headline">
           <ul class="breadcrumbs">
-            <li><a class="" href="#" alt="Главная страница">Главная</a></li><!--подумать над классами-->
-            <li><a class="" href="#" alt="Выберите свой вкус">Каталог</a></li><!--подумать над классами-->
-            <li><a class="" href="#" alt="Вы тут">Сливочное</a></li><!--подумать над классами-->
+            <li><a class="link breadcrumbs-home" href="#" title="Главная страница">Главная</a></li><!--подумать над классами-->
+            <li><a class="link breadcrumbs-catalog" href="#" title="Выберите свой вкус">Каталог</a></li><!--подумать над классами-->
+            <li><a class="link breadcrumbs-ice" href="#" title="Вы тут">Сливочное</a></li><!--подумать над классами-->
           </ul>
           <h1>Сливочное мороженое</h1>
         </div>
       </div>
     
       
-      <form class="filter" action="" method="get" oninput="sum.value=price.value"><!--а форму я могу бросить без блока?-->
+      <form class="filter" action="#" method="get" oninput="sum.value=price.value"><!--а форму я могу бросить без блока?-->
         <div class="filter-up">
-          <div class="filter-sorting"><!--нужен этот блок, или он лишний?-->
-            <span class="filter-sorting-legend">Сортировка:</span>
+          <div class="filter-sorting">
+            <span>Сортировка:</span>
             <select name="sorting">
               <option>по популярности</option>
               <option>по цене</option><!--добавить необходимые-->
@@ -81,13 +80,13 @@
           </div>
           
           <div class="filter-price">
-            <span class="filter-price-legend">Цена:</span>
+            <span>Цена:</span>
           <output name="sum"></output>
-          <input type="range" min="0" max="" step="100" name="price"><!--как узнать шаги и минимальное.максимальное значение?-->
+          <input type="range" min="0" max="1000" step="100" step="100" name="price"><!--как узнать шаги и минимальное.максимальное значение?-->
           </div>
           
           <div class="filter-fattiness">
-            <span class="filter-fattiness-legend">Жирность:</span>
+            <span>Жирность:</span>
             <label><input type="radio" name="fattiness" value="0">0%</label><!--или лучше сделать с id, чтобы отдельно редактировать поле и заголовок?-->
             <label><input type="radio" name="fattiness" value="0-10" checked>до 10%</label>
             <label><input type="radio" name="fattiness" value="0-30">до 30%</label>
@@ -95,21 +94,21 @@
           </div>
           
         <div class="filter-down">
-          <div clas="filter-additive">
-            <span class="filter-additive-legend">Наполнители:</span>
+          <div class="filter-additive">
+            <span>Наполнители:</span>
             <label><input type="checkbox" name="chocolate" checked>шоколадные</label>
-            <label><input type="checkbox" name="sugar-powder"checked>сахарные присыпки</label>
+            <label><input type="checkbox" name="sugar-powder" checked>сахарные присыпки</label>
             <label><input type="checkbox" name="fruit">фрукты</label>
             <label><input type="checkbox" name="syrop">сиропы</label>
             <label><input type="checkbox" name="jam">джемые</label>
           </div>
           
-          <button class="btn btn-filter" type="submit">Применить</button><!--как и на первой странице, могу использовать этот тэг или нет?-->
+          <a class="btn btn-filter" href="#">Применить</a>
         </div>
        </div>
       </form>
       
-      <div class="container-catalog"><!--я могу так оформить? или это список?-->
+      <div class="container-catalog"><!--я могу так оформить? или это список из 12 мороженок?-->
         <article class="ice-orange">
           <img class="icecream" src="#">
           <div class="price">
@@ -230,7 +229,7 @@
       
       <ul class="pages"><!--мне, ведь, пока достаточно списка, можно не вставлять его в блок?-->
         <li>
-          <a class="page-previous" href="#" title="предыдущая страница"><</a><!--мой редактор ругается на эту открытый значок меньше...можно ему как-то сказать, что все хорошо в этом месте?)что мне вообще искать? а то я как-то даже не соображу, в каком разделе это посмотреть-->
+          <a class="page-previous" href="#" title="предыдущая страница"><</a><!--мой редактор ругается на этот символ меньше...а валидатор предлагает заменить на сочетание символов &lt; ...а я где-то читала, что это не считается хорошим тоном...как быть?-->
         </li>
         <li>
           <a class="page1" href="#" title="Вы тут">1</a> 
@@ -248,47 +247,46 @@
           <a class="page5" href="#" title="5">5</a>
         </li>
         <li>
-          <a class="page-next"href="#" title="следующая страница">></a>
+          <a class="page-next" href="#" title="следующая страница">></a>
         </li>       
       </ul>    
     </main>
     
-    
-    
-    
-    
-    
-    
-    
     <footer class="main-footer">
       <div class="container">
-        <div class="footer-social">
+        <section class="footer-social">
           <a class="social-btn social-btn-twit" href="#" title="Наша страничка в Twitter"><img class="social-btn-logo logo-twit" src="#" alt="Twitter"></a>
           <a class="social-btn social-btn-inst" href="#" title="Наша страничка в Instagram"><img class="social-btn-logo logo-inst" src="#" alt="Instagram"></a>
           <a class="social-btn social-btn-fb" href="#" title="Наша страничка в Fb"><img class="social-btn-logo logo-fb" src="#" alt="Facebook"></a>
           <a class="social-btn social-btn-vk" href="#" title="Наша страничка в VK"><img class="social-btn-logo logo-vk" src="#" alt="Вконтакте"></a>
-        </div>
+        </section>
         
-        <div class="footer-productinfo">
-          <div class="footer-productinfo-left">
+        <section class="footer-documents">
+          <div class="footer-documents-left">
             <a class="link link-for-providers" href="#">Для поставщиков</a><!--сердечко в СSS добавляется?-->
             <a class="link link-production" href="#">О производстве</a>
           </div> 
           
-          <div class="footer-productinfo-right">
+          <div class="footer-documents-right">
             <a class="link link-our-docs" href="#">Наши документы</a>
             <a class="link link-eco-standarts" href="#">Экологические стандарты</a>
           </div>
-        </div>
+        </section>
         
-        <div class="footer-copyright">
-          <a class="logolink-htmlacademy" href="https://htmlacademy.ru" title="Перейти на HTML Academy"><img class="logo-htmlacademy" src="#" alt="HTML Academy"></a>
-          <span class="footer-copyright-text">Сделано в<a class="link link-copyright-htmlacademy" href="https://htmlacademy.ru" title="Перейти на HTML Academy">HTML Academy</a>© 2016</span><!--мне тут нужен такой тэг или лучше div? или p?-->
-                                                     <!-- Я правильно понимаю, что пробелы вокруг ссылки в тексте будут настраиваться в CSS через отступы?-->
-        </div>
+        <section class="footer-copyright">
+          <a href="https://htmlacademy.ru" title="Перейти на HTML Academy"><img class="logo-htmlacademy" src="#" alt="HTML Academy"></a>
+          <span>Сделано в<a class="link" href="https://htmlacademy.ru" title="Перейти на HTML Academy">HTML Academy</a>© 2016</span>
+        </section>
       </div>
     </footer>
-	  
+    
+    
+    
+    
+    
+    
+    
+
 
      
 
