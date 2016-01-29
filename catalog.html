@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8">
     <title>Сливочное - GllacyShop</title>
-    <!--надо полагать, тут будут keywords и все такое?-->
   </head>
   <body>
     <header class="main-header">
@@ -12,16 +11,16 @@
           <nav>
             <ul>
               <li>
-                <a class="logolink-gllacy" href="#" title="Вы тут"><img class="gllacy-logo" src="#" alt="Gllacy"></a>
+                <a class="logolink-gllacy" href="index.html"><img class="gllacy-logo" src="#" alt="Gllacy"></a>
               </li>
               <li>
-                <a class="link link-catalog" href="#" title="Выберите свой вкус">Каталог</a>
+                <a class="link link-catalog" href="#">Каталог</a>
               </li>
               <li>
-                <a class="link link-delivery&payment" href="#" title="Доставка и оплата">Доставка и оплата</a>
+                <a class="link link-delivery&payment" href="#">Доставка и оплата</a>
               </li>
               <li>
-                <a class="link link-firm-info" href="#" title="Eще немного информации о нас">О компании</a>
+                <a class="link link-firm-info" href="#">О компании</a>
               </li>
               </ul>
           </nav>  
@@ -36,15 +35,17 @@
           </div>
           <div class="user-block">
             <form action="#" method="get">
-              <label for="login-field">Ваш логин</label>
-              <input type="text" id="login-field" name="login" autocomplete="on">
-              <label for="password-field">Пароль</label>
-              <input type="password" id="password-field" name="password" autocomplete="on">
+              <label for="login-field">Ваш логин
+              <input type="text" name="login" autocomplete="on">
+              </label>
+              <label for="password-field">Пароль
+              <input type="password" name="password" autocomplete="on">
+              </label>
               <a class="user-block-btn login-btn" href="#"><img src="#">Вход</a>
             </form>
           </div>   
           <div class="basket">
-            <a class="user-block-btn basket-btn" href="№" title="Перейти в корзину"><img src="#" alt="Корзина">Пусто</a>
+            <a class="user-block-btn basket-btn" href="#"><img src="#" alt="Корзина">Пусто</a>
           </div>        
         </div>         
       </div>
@@ -60,59 +61,61 @@
         
         <div class="headline">
           <ul class="breadcrumbs">
-            <li><a class="link breadcrumbs-home" href="#" title="Главная страница">Главная</a></li><!--подумать над классами-->
-            <li><a class="link breadcrumbs-catalog" href="#" title="Выберите свой вкус">Каталог</a></li><!--подумать над классами-->
-            <li><a class="link breadcrumbs-ice" href="#" title="Вы тут">Сливочное</a></li><!--подумать над классами-->
+            <li><a class="link breadcrumbs-home" href="index.html">Главная</a></li>
+            <li><a class="link breadcrumbs-catalog" href="#">Каталог</a></li>
+            <li><a class="link breadcrumbs-ice" href="catalog.html">Сливочное</a></li>
           </ul>
           <h1>Сливочное мороженое</h1>
         </div>
       </div>
     
+      <div class="filter">
+        <form action="#" method="get">
+          <div class="filter-up">
+            <div class="filter-sorting">
+              <span>Сортировка:</span>
+              <select name="sorting">
+                <option>по популярности</option>
+                <option>по цене</option><!--добавить необходимые-->
+              </select>
+            </div>
+            
+            <div class="filter-price">
+              <span>Цена:</span>
+            <output name="sum"></output>
+            0<input type="range" min="0" max="1000" name="price">1500
+            <!--а зачем вставлять value="" тут?-->
+            </div>
+            
+            <div class="filter-fattiness">
+              <span class="filter-fattiness-legend">Жирность:</span>
+              <label><input type="radio" name="fattiness" value="0">0%</label>
+              <label><input type="radio" name="fattiness" value="0-10" checked>до 10%</label>
+              <label><input type="radio" name="fattiness" value="0-30">до 30%</label>
+              <label><input type="radio" name="fattiness" value="30+">выше 30%</label>
+            </div>
+            
+          <div class="filter-down">
+            <div class="filter-additive">
+              <span>Наполнители:</span>
+              <label><input type="checkbox" name="chocolate" checked>шоколадные</label>
+              <label><input type="checkbox" name="sugar-powder" checked>сахарные присыпки</label>
+              <label><input type="checkbox" name="fruit">фрукты</label>
+              <label><input type="checkbox" name="syrop">сиропы</label>
+              <label><input type="checkbox" name="jam">джемы</label>
+            </div>
+            
+            <button class="btn btn-filter" type="submit">Применить</button>
+          </div>
+         </div>
+        </form>
+      </div>
       
-      <form class="filter" action="#" method="get" oninput="sum.value=price.value"><!--а форму я могу бросить без блока?-->
-        <div class="filter-up">
-          <div class="filter-sorting">
-            <span>Сортировка:</span>
-            <select name="sorting">
-              <option>по популярности</option>
-              <option>по цене</option><!--добавить необходимые-->
-            </select>
-          </div>
-          
-          <div class="filter-price">
-            <span>Цена:</span>
-          <output name="sum"></output>
-          <input type="range" min="0" max="1000" step="100" step="100" name="price"><!--как узнать шаги и минимальное.максимальное значение?-->
-          </div>
-          
-          <div class="filter-fattiness">
-            <span>Жирность:</span>
-            <label><input type="radio" name="fattiness" value="0">0%</label><!--или лучше сделать с id, чтобы отдельно редактировать поле и заголовок?-->
-            <label><input type="radio" name="fattiness" value="0-10" checked>до 10%</label>
-            <label><input type="radio" name="fattiness" value="0-30">до 30%</label>
-            <label><input type="radio" name="fattiness" value="30+">выше 30%</label>
-          </div>
-          
-        <div class="filter-down">
-          <div class="filter-additive">
-            <span>Наполнители:</span>
-            <label><input type="checkbox" name="chocolate" checked>шоколадные</label>
-            <label><input type="checkbox" name="sugar-powder" checked>сахарные присыпки</label>
-            <label><input type="checkbox" name="fruit">фрукты</label>
-            <label><input type="checkbox" name="syrop">сиропы</label>
-            <label><input type="checkbox" name="jam">джемые</label>
-          </div>
-          
-          <a class="btn btn-filter" href="#">Применить</a>
-        </div>
-       </div>
-      </form>
-      
-      <div class="container-catalog"><!--я могу так оформить? или это список из 12 мороженок?-->
+      <div class="container-catalog">
         <article class="ice-orange">
           <img class="icecream" src="#">
           <div class="price">
-            <h1>310₽</h1><!--тэг такой?-->
+            <span>310₽</span>
             <span>/кг</span>
           </div>
           <a class="link link-icecream" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
@@ -121,7 +124,7 @@
         <article class="ice-coffee">
           <img class="icecream" src="#">
           <div class="price">
-            <h1>380₽</h1><!--тэг такой?-->
+            <span>380₽</span>
             <span>/кг</span>
           </div>
           <a class="link link-icecream" href="#">Сливочно-кофейное с кусочками шоколада</a>
@@ -130,7 +133,7 @@
         <article class="ice-strawberry">
           <img class="icecream" src="#">
           <div class="price">
-            <h1>355₽</h1>
+            <span>355₽</span>
             <span>/кг</span>
           </div>
           <a class="link link-icecream" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
@@ -139,7 +142,7 @@
         <article class="ice-сreme-brulee">
           <img class="icecream" src="#">
           <div class="price">
-            <h1>415₽</h1>
+            <span>415₽</span>
             <span>/кг</span>
           </div>
           <a class="link link-icecream" href="#">Сливочное крем-брюле с карамельной подсыпкой</a>
@@ -148,7 +151,7 @@
         <article class="ice-cowberry-jam">
           <img class="icecream" src="#">
           <div class="price">
-            <h1>325₽</h1>
+            <span>325₽</span>
             <span>/кг</span>
           </div>
           <a class="link link-icecream" href="#">Сливочное с брусничным джемом</a>
@@ -157,7 +160,7 @@
         <article class="ice-blueberry">
           <img class="icecream" src="#">
           <div class="price">
-            <h1>410₽</h1>
+            <span>410₽</span>
             <span>/кг</span>
           </div>
           <a class="link link-icecream" href="#">Сливочно-черничное с цельными ягодами черники</a>
@@ -166,7 +169,7 @@
         <article class="ice-lemon">
           <img class="icecream" src="#">
           <div class="price">
-            <h1>375₽</h1>
+            <span>375₽</span>
             <span>/кг</span>
           </div>
           <a class="link link-icecream" href="#">Сливочно-лимонное с карамельной присыпкой</a>
@@ -175,7 +178,7 @@
         <article class="ice-chococrisp">
           <img class="icecream" src="#">
           <div class="price">
-            <h1>320₽</h1>
+            <span>320₽</span>
             <span>/кг</span>
           </div>
           <a class="link link-icecream" href="#">Сливочное с шоколадной присыпкой</a>
@@ -184,7 +187,7 @@
         <article class="ice-orange">
           <img class="icecream" src="#">
           <div class="price">
-            <h1>310₽</h1>
+            <span>310₽</span>
             <span>/кг</span>
           </div>
           <a class="link link-icecream" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
@@ -193,7 +196,7 @@
         <article class="ice-vanilla">
           <img class="icecream" src="#">
           <div class="price">
-            <h1>440₽</h1>
+            <span>440₽</span>
             <span>/кг</span>
           </div>
           <a class="link link-icecream" href="#">Сливочно-ванильное с кусочками шоколада</a>
@@ -202,7 +205,7 @@
         <article class="ice-menthol">
           <img class="icecream" src="#">
           <div class="price">
-            <h1>435₽</h1>
+            <span>435₽</span>
             <span>/кг</span>
           </div>
           <a class="link link-icecream" href="#">Сливочное с ментоловым сиропом</a>
@@ -211,7 +214,7 @@
         <article class="ice-withchocolate">
           <img class="icecream" src="#">
           <div class="price">
-            <h1>355₽</h1>
+            <span>355₽</span>
             <span>/кг</span>
           </div>
           <a class="link link-icecream" href="#">Сливочное с кусочками черного шоколада</a>
@@ -220,34 +223,34 @@
         <article class="ice-mint">
           <img class="icecream" src="#">
           <div class="price">
-            <h1>420₽</h1>
-            <span>/кг</span>
+            <span>420₽</span>
+            <spa>/кг</span>
           </div>
           <a class="link link-icecream" href="#">Сливочное с мятным сиропом</a>
         </article>
       </div>
       
-      <ul class="pages"><!--мне, ведь, пока достаточно списка, можно не вставлять его в блок?-->
+      <ul class="pages">
         <li>
-          <a class="page-previous" href="#" title="предыдущая страница"><</a><!--мой редактор ругается на этот символ меньше...а валидатор предлагает заменить на сочетание символов &lt; ...а я где-то читала, что это не считается хорошим тоном...как быть?-->
+          <a class="page-previous" href="#">‹</a>
         </li>
         <li>
-          <a class="page1" href="#" title="Вы тут">1</a> 
+          <a class="page1" href="#">1</a> 
         </li>
         <li>
-          <a class="page2" href="#" title="2">2</a> 
+          <a class="page2" href="#">2</a> 
         </li>
         <li>
-          <a class="page3" href="#" title="3">3</a>
+          <a class="page3" href="#">3</a>
         </li>
         <li>
-          <a class="page4" href="#" title="4">4</a>
+          <a class="page4" href="#">4</a>
         </li>
         <li>
-          <a class="page5" href="#" title="5">5</a>
+          <a class="page5" href="#">5</a>
         </li>
         <li>
-          <a class="page-next" href="#" title="следующая страница">></a>
+          <a class="page-next" href="#">›</a>
         </li>       
       </ul>    
     </main>
@@ -255,15 +258,15 @@
     <footer class="main-footer">
       <div class="container">
         <section class="footer-social">
-          <a class="social-btn social-btn-twit" href="#" title="Наша страничка в Twitter"><img class="social-btn-logo logo-twit" src="#" alt="Twitter"></a>
-          <a class="social-btn social-btn-inst" href="#" title="Наша страничка в Instagram"><img class="social-btn-logo logo-inst" src="#" alt="Instagram"></a>
-          <a class="social-btn social-btn-fb" href="#" title="Наша страничка в Fb"><img class="social-btn-logo logo-fb" src="#" alt="Facebook"></a>
-          <a class="social-btn social-btn-vk" href="#" title="Наша страничка в VK"><img class="social-btn-logo logo-vk" src="#" alt="Вконтакте"></a>
+          <a class="social-btn social-btn-twit" href="#"><img class="social-btn-logo logo-twit" src="#" alt="Twitter"></a>
+          <a class="social-btn social-btn-inst" href="#"><img class="social-btn-logo logo-inst" src="#" alt="Instagram"></a>
+          <a class="social-btn social-btn-fb" href="#"><img class="social-btn-logo logo-fb" src="#" alt="Facebook"></a>
+          <a class="social-btn social-btn-vk" href="#"><img class="social-btn-logo logo-vk" src="#" alt="Вконтакте"></a>
         </section>
         
         <section class="footer-documents">
           <div class="footer-documents-left">
-            <a class="link link-for-providers" href="#">Для поставщиков</a><!--сердечко в СSS добавляется?-->
+            <a class="link link-for-providers" href="#">Для поставщиков</a>3
             <a class="link link-production" href="#">О производстве</a>
           </div> 
           
@@ -274,8 +277,8 @@
         </section>
         
         <section class="footer-copyright">
-          <a href="https://htmlacademy.ru" title="Перейти на HTML Academy"><img class="logo-htmlacademy" src="#" alt="HTML Academy"></a>
-          <span>Сделано в<a class="link" href="https://htmlacademy.ru" title="Перейти на HTML Academy">HTML Academy</a>© 2016</span>
+          <a href="https://htmlacademy.ru"><img class="logo-htmlacademy" src="#" alt="HTML Academy"></a>
+          <span>Сделано в<a class="link" href="https://htmlacademy.ru">HTML Academy</a>© 2016</span>
         </section>
       </div>
     </footer>
