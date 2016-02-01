@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>GllacyShop - Главная</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
@@ -12,7 +13,7 @@
           <nav>
             <ul>
               <li>
-                <a class="logolink-gllacy" href="index.html"><img class="gllacy-logo" src="#" alt="Gllacy"></a>
+                <a class="logolink-gllacy" href="index.html"><img class="gllacy-logo" src="img/GllacyLogo.svg" width="153" height="63" alt="Gllacy"></a>
               </li>
               <li>
                 <a class="link link-catalog" href="#">Каталог</a>
@@ -31,7 +32,7 @@
           <div class="search">
             <form action="#" method="get">
               <input type="search" name="search" autofocus>
-              <a class="user-block-btn search-btn" href="#"><img src="#"></a>
+              <a class="user-block-btn search-btn" href="#"><img src="img/icon.loupe.svg" width="16" height="16" alt="Поиск"></a>
             </form>  
           </div>
           <div class="user-block">
@@ -40,11 +41,11 @@
               <input type="text" id="login-field" name="login" autocomplete="on">
               <label for="password-field">Пароль</label>
               <input type="password" id="password-field" name="password" autocomplete="on">
-              <a class="user-block-btn login-btn" href="#"><img src="#">Вход</a>
+              <a class="user-block-btn login-btn" href="#"><img src="img/icon.login.svg" width="20" height="19" alt="Вход">Вход</a>
             </form>
           </div>   
           <div class="basket">
-            <button type="submit"><img src="#" alt="Корзина">Пусто</button>
+            <button type="submit"><img src="img/icon.basket.svg" width="20" height="19" alt="Корзина">Пусто</button>
           </div>        
         </div>  
         
@@ -84,9 +85,9 @@
             <div class="hit-legend">
               ХИТ
             </div>
-            <img class="icecream" src="#"><!--мне тут обязательно прописывать alt, а то все ж подписано?-->
+            <img class="icecream" src="img/ice-orange.png" width="267" hidden="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
             <div class="price">
-              <span>310₽</span>
+              <span>310<img class="rouble" src="img/rouble.svg" width="27" height="32" alt="рубль"></span>
               <span>/кг</span>
             </div>
             <a class="link link-icecream" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
@@ -96,9 +97,9 @@
             <div class="hit-legend">
               ХИТ
             </div>
-            <img class="icecream" src="#">
+            <img class="icecream" src="img/ice-coffee.png" width="267" hidden="267" alt="Сливочно-кофейное с кусочками шоколада">
             <div class="price">
-              <span>380₽</span>
+              <span>380<img class="rouble" src="img/rouble.svg" width="27" height="32" alt="рубль"></span>
               <span>/кг</span>
             </div>
             <a class="link link-icecream" href="#">Сливочно-кофейное с кусочками шоколада</a>
@@ -108,9 +109,9 @@
             <div class="hit-legend">
               ХИТ
             </div>
-            <img class="icecream" src="#">
+            <img class="icecream" src="img/ice-strawberry.png" width="267" hidden="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
             <div class="price">
-              <span>355₽</span>
+              <span>355<img class="rouble" src="img/rouble.svg" width="27" height="32" alt="рубль"></span>
               <span>/кг</span>
             </div>
             <a class="link link-icecream" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
@@ -120,9 +121,9 @@
             <div class="hit-legend">
               ХИТ
             </div>
-            <img class="icecream" src="#">
+            <img class="icecream" src="img/ice-crem-brulee.png" width="267" hidden="267" alt="Сливочное крем-брюле с карамельной подсыпкой">
             <div class="price">
-              <span>415₽</span>
+              <span>415<img class="rouble" src="img/rouble.svg" width="27" height="32" alt="рубль"></span>
               <span>/кг</span>
             </div>
             <a class="link link-icecream" href="#">Сливочное крем-брюле с карамельной подсыпкой</a>
@@ -130,20 +131,24 @@
         </div>
         
         <article class="features">
-          <b>Магазин Глейси - это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</b>
+          <h3>Магазин Глейси - это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</h3>
           <div class="features-left">
             <div class="features-left-up">
+              <img class="features-icon icon-ice" src="img/icon.ice.svg" width="48" height="48" alt="icon ice">
               <p> Все наше мороженое  изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
             </div>
             <div class="features-left-down">
+              <img class="features-icon icon-ice" src="img/icon.leaf.svg" width="48" height="48" alt="icon leaf">
               <p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингридиенты и добавки произведены из натурального, экологически чистого сырья.</p>
             </div>
           </div>
           <div class="features-right">
             <div class="features-right-up">
+              <img class="features-icon icon-ice" src="img/icon.cow.svg" width="48" height="48" alt="icon cow">
               <p>Закупка ингридиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
             </div>
             <div class="features-right-down">
+              <img class="features-icon icon-ice" src="img/icon.thermometer.svg" width="48" height="48" alt="icon thermometer">
               <p>Доставка нашего мороженого до заказчиков осуществляется в специальном термопакете, который не дает мороженому растаять в пути и позволяет ему сохранить свой превосходный вкус.</p>
             </div>
           </div>
@@ -152,7 +157,7 @@
         <div class="glacy-online">
           <section class="blog">
             <span>Новое в нашем блоге</span>
-            <a class="link link-blog" href="#">10 способов сервировки фруктовых щербетов к столу</a>
+            <a class="link link-blog" href="#"><h3>10 способов сервировки фруктовых щербетов к столу</h3></a>
           </section>
           <section class="email-delivery">
             <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
@@ -181,14 +186,15 @@
     <footer class="main-footer">
       <div class="container">
         <section class="footer-social">
-          <a class="social-btn social-btn-twit" href="#"><img class="social-btn-logo logo-twit" src="#" alt="Twitter"></a>
-          <a class="social-btn social-btn-inst" href="#"><img class="social-btn-logo logo-inst" src="#" alt="Instagram"></a>
-          <a class="social-btn social-btn-fb" href="#"><img class="social-btn-logo logo-fb" src="#" alt="Facebook"></a>
-          <a class="social-btn social-btn-vk" href="#"><img class="social-btn-logo logo-vk" src="#" alt="Вконтакте"></a>
+          <a class="social-btn social-btn-twit" href="#"><img class="social-btn-logo logo-twit" src="img/tw.svg" width="31" height="31" alt="Twitter"></a>
+          <a class="social-btn social-btn-inst" href="#"><img class="social-btn-logo logo-inst" src="img/inst.svg" width="31" height="31" alt="Instagram"></a>
+          <a class="social-btn social-btn-fb" href="#"><img class="social-btn-logo logo-fb" src="img/fb.svg" width="31" height="31" alt="Facebook"></a>
+          <a class="social-btn social-btn-vk" href="#"><img class="social-btn-logo logo-vk" src="img/vk.svg" width="31" height="31" alt="Вконтакте"></a>
         </section>
         
         <section class="footer-documents">
           <div class="footer-documents-left">
+            <img class="heart" src="img/footer-heart.svg" width="15" height="33" alt="heart">
             <a class="link link-for-providers" href="#">Для поставщиков</a>
             <a class="link link-production" href="#">О производстве</a>
           </div> 
@@ -200,7 +206,7 @@
         </section>
         
         <section class="footer-copyright">
-          <a href="https://htmlacademy.ru"><img class="logo-htmlacademy" src="#" alt="HTML Academy"></a>
+          <a href="https://htmlacademy.ru"><img class="logo-htmlacademy" src="img/logo.htmlacademy.svg" width="107" height="36" alt="HTML Academy"></a>
           <span>Сделано в<a class="link" href="https://htmlacademy.ru">HTML Academy</a>© 2016</span> 
                                                      
         </section>
