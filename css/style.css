@@ -1,31 +1,275 @@
 body {
-    font-size: 100%;
-    line-height: 1,20;
-    color: #ffffff;
-    font-weight: normal;
-    font-family: "Roboto Bold", "Arial", serif;  
+  font-size: 100%;
+  line-height: 1.5;
+  color: #ffffff;
+  font-weight: normal;
+  font-family: "Roboto Bold", "Arial", serif; 
+  margin: 0 auto;
+  
+  background: grey;
 }
 
 h1 {
-    font-size: 35px;
-    line-height: 30px;
-    font-weight: bold;
+  font-size: 35px;
+  line-height: 30px;
+  font-weight: bold;
 }
 
 h3 {
-    font-size: 24px;
-    line-height: 30px;
-    font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: bold;
 }
    
 p  {
-    font-size: 16px;
-    line-height: 22px;
+  font-size: 16px;
+  line-height: 22px;
+}
   
-/*
-Я догадываюсь, зачем устанавливать относительную высоту строки, но не понимаю, почему она должна быть 1, ведь тогда строки будут сливаться...Почитав статью по типографике из материалов от 3 вебинара, поставила 1,20... Что совпадает с интерлиньяжем в тех местах, где стоит авто в photoshop
-*/
+  /*Сетка*/
+  /*Для Главной*/
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
-/*
-А вот как подключить шрифт я так и не понимаю...И я бы хотела это оставить до следующей лекции, на которой это должно разбираться...ок?
-*/
+.container {
+  width: 1146px;
+  margin: 0 auto;
+  background: orange;
+}
+
+.main-header-left{
+  float: left;
+  width: 560px;
+  min-height: 74px;
+  background: white;
+    
+}
+
+.main-header-right{
+  float: right;
+  width: 540px;
+  min-height: 74px;
+  background: red;
+}
+
+.main-footer{
+  min-height: 98px;
+  padding-bottom: 23px;
+}
+
+.footer-social{
+  float: left;
+  width: 267px;
+  min-height: 37px;
+  padding-top: 35px;
+  margin-right: 26px;
+  background: pink;
+}
+
+.footer-documents{
+  float: left;
+  width: 560px;
+  min-height: 40px;
+  padding-top: 35px;
+  background: blue;  
+}/*мне надо на этапе размечать 2 колонки в документах, или это чрезмерная детализация?*/
+ 
+.footer-copyright{
+  float: right;
+  width: 267px;
+  min-height: 61px;
+  padding-top: 20px;
+  background: green;
+}
+
+/*Главная*/
+.contact-info-index{
+  margin-bottom: 285px;
+  background:white
+}
+
+.bigicecream-link{
+  clear:both;
+  min-height: 210px;
+  width: 1096px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 38px;
+  margin-top: 0;
+  background: red;  
+}
+
+.free article{
+  padding: 20px;
+  width: 520px;
+  min-height: 190px;
+  margin-bottom: 38px;
+}
+
+.free-raspberry{
+  float: left;
+  background: blue;
+}
+
+.free-chocolate{
+  float: right;
+  background: green;
+}
+
+.hit{
+  font-size: 0;
+  margin-bottom: 38px;
+}
+
+.hit article{
+  display: inline-block;
+  vertical-align: top;
+  font-size: 16px;
+  width: 267px;
+  min-height: 325px;
+  margin-right: 26px;
+  background: violet;
+}
+
+.hit article:nth-child(4n){
+  margin-right: 0;
+}
+
+.features{
+  min-height: 308px;
+  margin-bottom: 38px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 30px;
+  padding-bottom: 25px;
+  background: yellow;
+}
+
+.features-left{
+  float: left;
+  width: 540px;
+  min-height: 190px;
+}
+
+.features-right{
+  float: right;
+  width: 540px;
+  min-height: 190px;
+}
+
+.glacy-online{
+  margin-bottom: 38px;
+  background: brown;
+}
+
+.blog{
+  float: left;
+  width: 520px;
+  min-height: 194px;
+  padding-top: 28px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background: blue;
+}
+
+.email-delivery{
+  float: right;
+  width: 520px;
+  min-height: 142px;
+  padding: 40px 26px;
+  background: green;
+}
+
+.map{
+  width: 1200px;
+  min-height: 430px;
+  background: yellow;
+}
+
+.map-address{
+  float: right;
+  width: 250px;
+  min-height: 250px;
+  margin-left: 27px;
+  padding: 30px: 26px;
+  background: violet;
+}
+
+/*Каталог*/
+.container-up{
+  min-height: 86px;
+  margin-bottom: 28px;
+}
+
+.headline{
+  float:left;
+  width: 560px;
+  min-height: 60px;
+  padding-top: 26px;
+}
+
+.contact-info{
+  float: right;
+  width: 267px;
+  min-height: 40px;
+}
+
+.filter{
+  min-height: 136px;
+  margin-bottom: 36;
+  font-size: 0;
+}
+
+.filter-item{
+  display: inline-block;
+  font-size: 16px;
+}
+
+.container-catalog{
+  font-size: 0;
+  background: grey;
+}
+
+.container-catalog article{
+  display: inline-block;
+  min-height: 325px;
+  width: 267px;
+  margin-right: 26px;
+  margin-bottom: 40px;
+  font-size: 16px;
+  vertical-align: top;
+  background: red;
+}
+
+.container-catalog article:nth-child(4n){
+  margin-right: 0;
+}
+
+.pages{
+  float: right;
+  min-height: 32px;
+  margin: 35px 0;
+  font-size: 0;
+  background: white;
+}
+
+.pages li{
+  display: inline-block;
+  font-size: 16px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
