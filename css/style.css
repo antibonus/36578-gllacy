@@ -56,14 +56,13 @@ p  {
 }
 
 .main-footer{
-  min-height: 98px;
+  min-height: 100px;
   padding-bottom: 23px;
 }
 
 .footer-social{
   float: left;
   width: 267px;
-  min-height: 37px;
   padding-top: 35px;
   margin-right: 26px;
   background: pink;
@@ -72,15 +71,24 @@ p  {
 .footer-documents{
   float: left;
   width: 560px;
-  min-height: 40px;
   padding-top: 35px;
   background: blue;  
-}/*мне надо на этапе размечать 2 колонки в документах, или это чрезмерная детализация?*/
+}
+.footer-documents-left{
+  float: left;
+  width: 148px;
+  padding-left: 106px;
+  background: #ff5500;
+}
+.footer-documents-right{
+  float: right;
+  width: 293px;
+  background: #0055ff;
+}
  
 .footer-copyright{
   float: right;
   width: 267px;
-  min-height: 61px;
   padding-top: 20px;
   background: green;
 }
@@ -88,7 +96,7 @@ p  {
 /*Главная*/
 .contact-info-index{
   margin-bottom: 285px;
-  background:white
+  background: black;
 }
 
 .bigicecream-link{
@@ -184,7 +192,6 @@ p  {
 }
 
 .map{
-  width: 1200px;
   min-height: 430px;
   background: yellow;
 }
@@ -193,8 +200,7 @@ p  {
   float: right;
   width: 250px;
   min-height: 250px;
-  margin-left: 27px;
-  padding: 30px: 26px;
+  padding: 30px 26px;
   background: violet;
 }
 
