@@ -1,135 +1,616 @@
 body {
-  font-size: 100%;
-  line-height: 1.5;
-  color: #ffffff;
-  font-weight: normal;
-  font-family: "Roboto Bold", "Arial", serif; 
-  margin: 0 auto;
-  
-  background: grey;
-}
-
-h1 {
-  font-size: 35px;
-  line-height: 30px;
-  font-weight: bold;
-}
-
-h3 {
-  font-size: 24px;
-  line-height: 30px;
-  font-weight: bold;
-}
-   
-p  {
+  min-width: 1200px;
   font-size: 16px;
-  line-height: 22px;
+  line-height: 1.2;
+  color: #ffffff;
+  font-weight: 400;
+  font-family: "Roboto", "Arial", serif; 
+  margin: 0 auto;
+  background: #849d8f;
+  padding: 0;
 }
-  
-  /*Сетка*/
-  /*Для Главной*/
+
+
+ /*Главная*/
+body > input[type="radio"] {
+  display: none;
+}
+ 
 .clearfix::after {
   content: "";
   display: table;
   clear: both;
 }
 
+.site-wrapper{
+  min-width: 940px;
+  background:  #849d8f url("../img/bg-big-ice1.png") no-repeat top center;
+  color:#ffffff;
+  transition: background-image 0.5s ease, background-color 0.5s ease;
+}
+
+.site-wrapper:before,
+.site-wrapper:after {
+  content: "";
+  visibility: hidden;
+}
+
+.site-wrapper:before,
+.site-wrapper:after {
+  background-image: url("../img/bg-big-ice1.png");
+}
+
+.site-wrapper:after {
+  background-image: url("../img/bg-big-ice3.png");
+}
 .container {
   width: 1146px;
   margin: 0 auto;
-  background: orange;
+}
+
+.main-header{
+  padding-top: 10px;
 }
 
 .main-header-left{
   float: left;
-  width: 560px;
-  min-height: 74px;
-  background: white;
-    
+  width: 706px;
+  min-height: 64px;
+  font-size: 0;
 }
+
+.main-header-logo {
+  display:inline-block;
+  vertical-align: top;
+}
+
+.main-navigation{
+  display: inline-block;
+  vertical-align: top;
+}
+
+.main-navigation ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-left: 30px; /*сюда ли отступ слева этот приписывать?*/
+  font-size: 0;
+  margin-left: 10px;
+}
+
+.main-navigation > ul > li{
+  display: inline-block; 
+  vertical-align: top;
+  padding-top: 13px;
+  padding-bottom: 19px;
+}
+
+.main-navigation > ul > li:first-child{
+  position:relative;
+}
+
+.main-navigation a{
+  display:block;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  padding: 6px 13px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.link-border{
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.main-navigation .submenu{
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin: 0; 
+  width:146px;
+  min-height: 173px;
+  background: #f8f7f4;
+  border-radius: 8px;
+  color: #333333;
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+  position:absolute;
+  left: -8px;
+}
+
+.main-navigation .submenu li{
+  padding:0;
+  margin:0;
+}
+.main-navigation .submenu-link{
+  display:block;
+  color:#343434;
+  font-size:14px;
+  font-weight:400;
+  text-decoration: none;
+  padding:12px 20px;
+}
+
+.main-navigation .submenu-link-new{
+  font-weight:700;
+  position:relative;
+}
+
+.main-navigation .submenu-link-new:after{
+  position:absolute;
+  content:"";
+  margin:0 8px;
+  height: 1px;
+  background:rgba(52, 52, 52, 0.2);
+  right: 8px;
+  bottom: 0;
+  left: 8px;
+}
+
+.main-navigation a:hover{
+  background:#f7f6f3;
+  border-radius: 16px;
+  color: #333333;
+}
+
+.main-navigation a:hover .link-border{
+  border-bottom: 0;
+}
+
+.main-navigation a:hover .submenu{
+  display:block;
+}
+
+.submenu a:hover{
+  background:#fbded7;
+  border-radius: 0;
+}
+
+.main-navigation a:active{
+  background: #ededed;
+  color:#333333;
+  box-shadow:inset 0 2px 1px 0 #696969;
+}
+.main-navigation a:active .link-border{
+  border-bottom: 0;
+}
+
+.submenu a:active{
+  background:#f6b5a5;
+  border-radius: 0;
+}
+/*подменю при наведении не отображается...я не понимаю, почему?*/
 
 .main-header-right{
   float: right;
-  width: 540px;
-  min-height: 74px;
-  background: red;
-}
-
-.main-footer{
-  min-height: 100px;
-  padding-bottom: 23px;
-}
-
-.footer-social{
-  float: left;
   width: 267px;
-  padding-top: 35px;
-  margin-right: 26px;
-  background: pink;
+  min-height: 32px;
+  font-size: 0;
+  padding-top: 13px;
+  padding-bottom: 19px;
 }
 
-.footer-documents{
-  float: left;
-  width: 560px;
-  padding-top: 35px;
-  background: blue;  
+.search{
+  display: inline-block;
+  position:relative;
+  vertical-align: top;
 }
-.footer-documents-left{
-  float: left;
-  width: 148px;
-  padding-left: 106px;
-  background: #ff5500;
+
+.btn{
+  display:inline-block;
+  vertical-align: top;
+  padding:14px 24px;
+  color:#ffffff;
+  font-size: 18px;
+  font-weight:700;
+  line-height: 1;
+  text-decoration: none;
+  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+  background: #f26843;
+  background:    -moz-linear-gradient(top, #f26843 0%, #e74a35 100%);
+  background: -webkit-linear-gradient(top, #f26843 0%, #e74a35 100%);
+  background:         linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
+  border-radius: 22px;
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+  text-decoration: none;
 }
-.footer-documents-right{
-  float: right;
-  width: 293px;
-  background: #0055ff;
+
+.search .search-btn {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  border-radius: 16px;
+  width: 32px;
+  height: 32px;
+  margin: 0 5px;
+  background: rgba(176, 192, 183, 0.2);
+  position:relative;
+}
+
+.search .search-btn::before{
+  content:"";
+  position:absolute;
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  width: 17px;
+  height: 17px;
+  background-position: -5px -447px;
+  top: 25%;
+  left: 25%;
+  /*Я могу задать в процентах координаты, да?*/
+}
+
+.search form{
+  display: none;
+  width: 274px;
+  min-height:40px;
+  /*Я же тут жестко задаю ширину и высоту, да?*/
+  background:#f8f7f4;
+  color:#999999;
+  border-radius: 6px;
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+  position:absolute;
+  right:0;
+  top: 40px;
+  padding:15px;
+}
+
+.search input[type="search"]{
+  display:block;
+  width:240px;
+  padding:12px;
+  background: #ffffff;
+  font-size:14px;
+  line-height:24.3px;
+  font-weight:400;
+  white-space:nowrap;
+  border:1px solid #d3d3d2;
+  border-radius: 5px;
+  color:#999999;
+}
+
+.search-btn:hover{
+ background: #ffffff; 
+}
+
+.search-btn:hover::before{
+  content:"";
+  position:absolute;
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  width: 17px;
+  height: 17px;
+  background-position: -5px -803px;
+  top: 25%;
+  left: 25%;
+}
+
+.search-btn:hover .search form{
+  display:block;
+}
+/*что я делаю не так? оно опять не работает(*/
+
+.user-block{
+  display: inline-block;
+  vertical-align: top;
+  min-height: 32px;
+  margin: 0 5px;
+  position:relative;
+}
+.user-block .login-btn{
+  display:block;
+  background: rgba(176, 192, 183, 0.2); 
+  border-radius: 16px;
+  min-width: 34px;
+  font-size:14px;
+  font-weight: 500;
+  line-height:1.2;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 8px;
+  padding-left: 44px;
+  padding-right: 16px;
 }
  
-.footer-copyright{
+.user-block::before{
+  content:"";
+  position:absolute;
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 19px;
+  background-position: -5px -371px;
+  top: 8px;
+  left: 15px;
+} 
+
+.user-block form{
+  display: none;
+  width: 244px;
+  min-height:147px;
+  padding: 15px;
+  background:#f8f7f4;
+  color:#999999;
+  border-radius: 6px;
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+  position:absolute;
+  right: 0;
+  top: 40px;
+}
+.user-block input{
+  display:block;
+  width: 220px;
+  margin-bottom: 10px;
+  min-height:16px;
+  padding:12px;
+  background: #ffffff;
+  font-size:14px;
+  line-height:24.3px;
+  font-weight:400;
+  white-space:nowrap;
+  border:1px solid #d3d3d2;
+  border-radius: 5px;
+}
+.user-block .btn-login{
+  float:left;
+  font-size:15px;
+}
+.user-block-links{
+  float:right;
+  min-height:36px;
+  width: 130px;
+  
+}
+.user-block-link{
+  font-size:13px;
+  line-height:24.3px;
+  font-weight:400;
+  border-bottom:1px solid #9c9c9c; 
+  color:#333333;
+  text-decoration: none;
+}
+
+.login-btn:hover{
+ background: #ffffff;
+ color:#323232;
+}
+
+.login-btn:hover::before{
+  content:"";
+  position:absolute;
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 19px;
+  background-position: -5px -774px;
+  top: 8px;
+  left: 15px;
+}
+
+.login-btn:hover .user-block form{
+  display:block;
+}
+
+.basket{
+  display: inline-block;
+  vertical-align: top;
+}
+
+.basket .basket-btn{
+  display: block;
+  background: rgba(176, 192, 183, 0.2); 
+  border-radius: 16px;
+  width: 60px;
+  height:16px;
+  padding:8px 0;
+  padding-left: 37px;
+  padding-right: 17px;
+  margin: 0 5px;
+  margin-right: 0;
+  font-size:14px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #ffffff;
+  text-decoration: none;
+  position:relative;
+  text-align:right;
+}
+
+.basket .basket-empty{
+  display: inline-block;
+}
+
+.basket .link-basket-empty:before{
+  content:"";
+  position:absolute;
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  width: 21px;
+  height: 20px;
+  background-position: -5px -5px;
+  top: 6px;
+  left: 10px;
+}
+
+.basket-btn:hover{
+  background: #ffffff;
+  color:#323232;
+}
+
+.basket .link-basket-empty:hover::before{
+  content:"";
+  position:absolute;
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  width: 21px;
+    height: 20px;
+    background-position: -5px -830px;
+  top: 6px;
+  left: 10px;
+}
+
+.basket-full{
+  display:none;
+}
+
+
+.contact-info{
   float: right;
   width: 267px;
-  padding-top: 20px;
-  background: green;
+  min-height: 40px;
+  text-align: right;
 }
-
-/*Главная*/
 .contact-info-index{
   margin-bottom: 285px;
-  background: black;
 }
 
-.bigicecream-link{
+.slider{
   clear:both;
   min-height: 210px;
-  width: 1096px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 38px;
+  /*как лучше: сделать маленькую широту или добавить паддинги?*/
+  margin-bottom: 40px;
   margin-top: 0;
-  background: red;  
+  position: relative;
+  text-align: center;
+}
+
+.slide{
+  display:none;
+}
+
+.slider .slide-headerline{
+  width: 680px;
+  margin:0 auto;
+  color:#ffffff;
+  font-size: 60px;
+  line-height: 60.35px;
+  /*очень странная высота строки из макета ...так оставить?*/
+  font-weight:900;
+  margin-bottom: 30px;
+}
+
+
+.btn:hover {
+  background:    -moz-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
+  background: -webkit-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
+  background:         linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+.btn:active {
+  background:    -moz-linear-gradient(top, #d84732 0%, #e1613e 100%);
+  background: -webkit-linear-gradient(top, #d84732 0%, #e1613e 100%);
+  background:         linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
+  box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
+}
+.slider .btn-givemetwo{
+  padding:17px 40px;
+  font-size: 30.26px;
+  line-height: 1;
+  /*В макете такой шрифт и высота строки: 60.5px. Что писать? Можно ли округлить?)*/
+  font-weight:700;
+  border-radius: 32px;
+  
+}  
+
+.slider-controls{
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  z-index: 20;
+/*зачем тут z-index?*/
+  font-size: 0;
+}
+
+.slider-controls label{
+  display:inline-block;
+  width: 17px;
+  height: 17px;
+  margin-right: 8px;
+  vertical-align: top;
+  font-size: 16px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+#btn-1:checked ~ .site-wrapper #slide1,
+#btn-2:checked ~ .site-wrapper #slide2,
+#btn-3:checked ~ .site-wrapper #slide3 {
+  display: block;
+} 
+
+#btn-1:checked ~ .site-wrapper {
+  background-color: #849d8f;
+  background-image: url("../img/bg-big-ice1.png");
+}
+
+#btn-2:checked ~ .site-wrapper {
+  background-color: #8996a6;
+  background-image: url("../img/bg-big-ice2.png");
+}
+
+#btn-3:checked ~ .site-wrapper {
+  background-color: #9d8b84;
+  background-image: url("../img/bg-big-ice3.png");
+}
+
+#btn-1:checked ~ .site-wrapper label[for="btn-1"],
+#btn-2:checked ~ .site-wrapper label[for="btn-2"],
+#btn-3:checked ~ .site-wrapper label[for="btn-3"] {
+  background-color: #ffffff;
+}
+
+.slaider-btn:hover{
+  background: rgba(255, 255, 255, 0.4);
 }
 
 .free article{
   padding: 20px;
   width: 520px;
-  min-height: 190px;
+  min-height: 189px;
   margin-bottom: 38px;
 }
 
 .free-raspberry{
   float: left;
-  background: blue;
+  background: #cd3559 url("../img/bg-raspberry.png") no-repeat;
+  border-radius: 20px;
+  color:#ffffff;
 }
 
 .free-chocolate{
   float: right;
-  background: green;
+  background: #44281c url("../img/bg-choco.png") no-repeat;
+  border-radius: 20px;
+  color:#ffffff;
+}
+.free h2{
+  font-size:35px;
+  font-weight: 700;
+  line-height: 1.5;
+  color:#ffffff;
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.free p{
+  font-size:18px;
+  font-weight: 700;
+  line-height: 1.5;
+  color:#ffffff;
+  margin:16px 0;
+}
+
+.free .btn{
+  float:right; 
 }
 
 .hit{
   font-size: 0;
-  margin-bottom: 38px;
+  margin-bottom: 10px;
 }
 
 .hit article{
@@ -139,21 +620,69 @@ p  {
   width: 267px;
   min-height: 325px;
   margin-right: 26px;
-  background: violet;
+  margin-bottom: 30px;
+  font-size: 16px;
+  vertical-align: top;
+  position: relative;
 }
 
 .hit article:nth-child(4n){
   margin-right: 0;
 }
 
+.hit article::before{
+  content: "";
+  position:absolute;
+  background: url(../img/sprite.png) no-repeat;
+  width: 61px;
+  height: 61px;
+  background-position: -5px -703px;
+}
+.hit img{
+   border-radius: 133px; 
+  margin-bottom: 10px;
+}
+
+.hit .price{
+  position: absolute;
+  top: 213px;
+}
+.hit .amount{
+  margin:0;
+  padding: 0;
+  font-size:45px;
+  line-height: 1;
+  /* в макете стоит 30.5px на высоту строки, мне так и писать?*/
+  font-weight:700;
+}
+
+.hit .amount + span{
+  font-size:30px;
+  line-height: 1;
+  /* в макете стоит 13.13px на высоту строки, мне так и писать?*/
+  font-weight:700;
+}
+
+.hit .link-icecream{
+  display:block;
+  color:#ffffff;
+  font-weight: 500;
+  line-height: 22px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+}
+
 .features{
-  min-height: 308px;
+  min-height: 253px;
   margin-bottom: 38px;
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 30px;
   padding-bottom: 25px;
-  background: yellow;
+  background: #ebddbe url("../img/bg-waffle.jpg");
+  color:#323232;
+  border-radius: 20px;
 }
 
 .features-left{
@@ -168,46 +697,323 @@ p  {
   min-height: 190px;
 }
 
+.features .features-item{
+  padding-left: 57px;
+  position:relative;
+}
+
+.features .features-left-up::before{
+  content:"";
+  position:absolute;
+  background-image: url(../img/sprite.png);
+  background-repeat: no-repeat;
+  width: 47px;
+  height: 47px;
+  background-position: -5px -216px;
+  left:0;
+}
+.features .features-left-down::before{
+   content:"";
+  position:absolute;
+  background-image: url(../img/sprite.png);
+  background-repeat: no-repeat;
+  width: 47px;
+    height: 47px;
+    background-position: -5px -314px;
+  left:0;
+}
+.features .features-right-up::before{
+   content:"";
+  position:absolute;
+  background-image: url(../img/sprite.png);
+  background-repeat: no-repeat;
+  width: 47px;
+    height: 47px;
+    background-position: -5px -95px;
+  left:0;
+}
+.features .features-right-down::before{
+   content:"";
+  position:absolute;
+  background-image: url(../img/sprite.png);
+  background-repeat: no-repeat;
+  width: 47px;
+    height: 47px;
+    background-position: -5px -534px;
+  left:0;
+}
+
+.features h3{
+  font-size:24px;
+  line-height: 30px;
+  font-weight:500;
+  padding:0;
+  margin:0;
+}
+
+.features p{
+  font-size:16px;
+  line-height: 22px;
+  font-weight:400;
+  padding:0;
+  padding-top: 26px;
+  margin:0;
+}
+
 .glacy-online{
   margin-bottom: 38px;
-  background: brown;
+  min-height: 220px;
 }
 
 .blog{
   float: left;
-  width: 520px;
-  min-height: 194px;
-  padding-top: 28px;
+  width: 300px;
+  min-height: 166px;
+  padding: 27px;
   padding-left: 20px;
-  padding-right: 20px;
-  background: blue;
+  padding-right: 240px;
+  background: #ffffff url("../img/bg-strawberry.png") no-repeat;
+  border-radius: 20px;
+  color:#5a5a5a;
 }
 
+.blog p{
+  color:#5a5a5a;
+  font-size:16px;
+  font-weight:500;
+  line-height:1.2;
+  padding:0;
+  margin:0;
+  margin-bottom: 10px;
+}
+
+.blog a{
+  color:#353535;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+  padding:0;
+  margin: 10px 0;
+}
+/*не могу придумать, как переннести предлог "к" на третью строчку (помимо br)*/
 .email-delivery{
   float: right;
-  width: 520px;
-  min-height: 142px;
-  padding: 40px 26px;
-  background: green;
+  width: 508px;
+  min-height: 166px;
+  padding: 27px;
+  padding-left: 26px;
+  padding-right: 26px;
+  border-radius: 20px;
+  color:#5a5a5a;
+  background:#f8f7f4 url("../img/bg-letter.png") no-repeat;
 }
+.email-delivery p{
+  color:#5a5a5a;
+  font-size:16px;
+  font-weight:400;
+  line-height:22px;
+  padding:0;
+  margin:0;
+  margin-bottom: 10px;
+}
+
+.email-delivery input{
+  color:#999999;
+  font-size:16px;
+  font-weight:500;
+  line-height:24px;
+  padding:12px 10px;
+  margin-top:30px;
+  width: 340px;
+  border: 1px solid rgba(178, 178, 178, 0.52)
+}
+
+.email-delivery .btn-email-delivery{
+  margin-top:30px;
+  float:right;
+  padding: 14px 22px;
+}
+
 
 .map{
   min-height: 430px;
-  background: yellow;
+  background: url("../img/map%20with%20marker.png") no-repeat center;
 }
 
 .map-address{
   float: right;
   width: 250px;
-  min-height: 250px;
+  min-height: 246px; 
   padding: 30px 26px;
-  background: violet;
+  background: #fefefe;
+  color:#343434;
+  border-radius: 20px;
+  margin-top: 65px;
+  
 }
 
+.map-address p{
+  font-size: 14px;
+  font-weight:400;
+  line-height:20px;
+  margin:0;
+  margin-bottom:25px;
+  padding:0;
+}
+
+.map-address b{
+  font-size: 18px;
+  font-weight:700;
+  line-height:24px;
+  margin-bottom:8px 0;
+}
+
+.main-footer{
+  min-height: 100px;
+  padding-bottom: 23px;
+}
+
+.footer-social{
+  float: left;
+  width: 267px;
+  padding-top: 35px;
+  margin-right: 26px;
+}
+
+.footer-social a{
+  width: 31px;
+  height: 31px;
+  border: 2px solid rgba(194, 206, 199, 0.8);
+  border-radius: 18px;
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.social-btn-twit{
+  background-position: -5px -591px;
+}
+/*У меня тут картинка смещена на полпикселя от рамки, я неочень понимаю, как я могу это исправить?*/
+.social-btn-inst{
+  background-position: -5px -273px;
+}
+.social-btn-fb{
+  background-position: -5px -152px;
+}
+
+.social-btn-vk{
+  background-position: -5px -632px;
+}
+
+.footer-documents{
+  float: left;
+  width: 560px;
+  padding-top: 35px;
+}
+
+.footer-documents-left{
+  float: left;
+  min-width: 107px;
+  padding-left: 128px;
+  padding-right: 32px;
+  position:relative;
+}
+.footer-documents-left::after{
+  content:"";
+  position:absolute;
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  width: 15px;
+  height: 13px;
+  background-position: -5px -193px;
+  top:2px;
+  left: 107px;
+}
+
+.footer-documents-right{
+  float: left;
+  min-width: 200px;
+  padding-left:
+}
+ 
+.footer-documents a{
+  display: block;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #ffffff;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.footer-documents .link-for-providers{
+  font-weight: 700;
+}
+
+.footer-copyright{
+  float: right;
+  width: 267px;
+  padding-top: 20px;
+}
+
+.footer-copyright .logo-htmlacademy{
+  display: block;
+  margin-left: 78px;
+  margin-bottom: 8px; 
+  width: 108px;
+  height: 37px;
+  /*Я не очень понимаю, надо ли мне прописывать широту и высоту...и если надо, то зачем?*/
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  background-position: -5px -400px;  
+}
+
+.footer-copyright .made-in{
+  display:block;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #ffffff;
+  font-weight: 400; 
+  margin:0;
+  padding:0;
+  text-align:right;
+}
+
+.footer-copyright .link-htmlacademy{
+  display:inline-block;
+  padding: 0 4px;
+  /*Это нормально, что я отступы-пробелы так задала?*/
+  font-size: 12px;
+  line-height: 1.5;
+  color: #ffffff;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
 /*Каталог*/
+.main-navigation-current{
+  background:rgba(202, 117, 94, 1);
+  border-radius: 16px;
+}
+.main-navigation-current .link-border{
+  border: none;
+}
+.submenu-link-current{
+  color:#ffffff;
+  background: #d07058;
+  border-radius:0;
+}
 .container-up{
   min-height: 86px;
-  margin-bottom: 28px;
+  margin-bottom: 26px;
 }
 
 .headline{
@@ -217,15 +1023,72 @@ p  {
   padding-top: 26px;
 }
 
-.contact-info{
-  float: right;
-  width: 267px;
-  min-height: 40px;
+.breadcrumbs{
+  margin: 0;
+  margin-top: 16px;
+  padding: 0;
+  list-style: none;
+  font-size:0;
 }
+
+.breadcrumbs li {
+  position: relative;
+  display: inline;
+  padding:0;
+  margin:0;
+}
+
+.breadcrumbs a {
+  color: #ffffff;
+  font-size: 14px;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.breadcrumbs a:first-child{
+  padding-left:0;
+}
+/*Согласно макету ссылки при выделении должны давать отступы широкие белые...
+Я, во-первых, не понимаю, какие именно мне отступы задавать, потому что отступы в style-guide слиты...
+а, во-торых, в хлебных крошках у главной я не понимаю, как сделать отступ слева? и надо ли его делать...
+а еще если делить между ссылками отступ, то куда запихивать этот значок>>? он получается строго на стыке отступов...*/
+
+.breadcrumbs-current .link-border{
+  border:none;
+}
+
+.headline h1{
+  margin:0;
+  padding: 0;
+  font-size: 35px;
+  line-height: 1;
+  /*В макете стоит 30px - высота строки. Мне какую ставить?)*/
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.contact-info p{
+  margin:0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.contact-info b{
+  margin:0;
+  padding: 0; 
+  font-size: 22px;
+  line-height: 1.5;
+  color: #ffffff;
+  font-weight: 900;
+}
+
 
 .filter{
   min-height: 136px;
-  margin-bottom: 36;
+  margin-bottom: 26px;
   font-size: 0;
 }
 
@@ -236,7 +1099,6 @@ p  {
 
 .container-catalog{
   font-size: 0;
-  background: grey;
 }
 
 .container-catalog article{
@@ -244,27 +1106,108 @@ p  {
   min-height: 325px;
   width: 267px;
   margin-right: 26px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   font-size: 16px;
   vertical-align: top;
-  background: red;
+  position: relative;
+  padding-top: 10px;
 }
-
 .container-catalog article:nth-child(4n){
   margin-right: 0;
 }
 
+.container-catalog img{
+  border-radius: 133px; 
+  margin-bottom: 10px;
+}
+
+.container-catalog .price{
+  position: absolute;
+  top: 213px;
+}
+.container-catalog .amount{
+  margin:0;
+  padding: 0;
+  font-size:45px;
+  line-height: 1;
+  /* в макете стоит 30.5px на высоту строки, мне так и писать?*/
+  font-weight:700;
+}
+
+.container-catalog .amount + span{
+  font-size:30px;
+  line-height: 1;
+  /* в макете стоит 13.13px на высоту строки, мне так и писать?*/
+  font-weight:700;
+}
+
+.container-catalog .link-icecream{
+  display:block;
+  color:#ffffff;
+  font-weight: 500;
+  line-height: 22px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+}
+
+
 .pages{
   float: right;
   min-height: 32px;
-  margin: 35px 0;
+  margin: 40px 0;
+  padding:0;
   font-size: 0;
   background: white;
+  background: red;
+  list-style: none;
+  background:#849d8f;
+  color: #ffffff;
 }
 
 .pages li{
   display: inline-block;
   font-size: 16px;
+  line-height: 1.5;
+  margin:0;
+  padding: 0;
+}
+
+.pages .page-link{
+  display:inline-block;
+  min-width:26px;
+  min-height:26px;
+  margin: 0 2px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 13px;
+  text-decoration: none;
+}
+.pages .page-previous{
+  margin-right: 6px;
+  color: #c3cec8;
+}
+.pages .page-next{
+  margin-left: 6px;
+  color: #c3cec8;
+}
+
+.pages .disabled{
+  color:rgba(195, 206, 200, 0.2);
+  /*gjxtve не отражается прозрачность?*/
+}
+
+.pages .current{
+  background:#c3cec8;
+  color:#353535;
+  
+}
+
+.footer-border{
+  border-top: 2px solid rgba(255, 255, 255, 0.3);  
 }
 
 
