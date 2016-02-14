@@ -99,8 +99,26 @@ body > input[type="radio"] {
   text-decoration: none;
 }
 
+.main-navigation a:hover{
+  background:#f7f6f3;
+  border-radius: 16px;
+  color: #333333;
+}
+.main-navigation a:active{
+  background: #ededed;
+  color:#333333;
+  box-shadow:inset 0 2px 1px 0 #696969;
+}
+
 .link-border{
   border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.main-navigation a:hover .link-border{
+  border-bottom: 0;
+}
+.main-navigation a:active .link-border{
+  border-bottom: 0;
 }
 
 .main-navigation .submenu{
@@ -117,6 +135,9 @@ body > input[type="radio"] {
   box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
   position:absolute;
   left: -8px;
+  top:50px;
+  z-index: 30;
+  /*я не понимаю, почему на странице каталога выпадающее меню перекрывается хлебными крошками и заголовком...К слову, я в целом путаюсь в свойстве z-index) Я должна прописать этот индекс хлебным крошкам тоже? чтобы они оказались под выпадающем меню?*/
 }
 
 .main-navigation .submenu li{
@@ -148,17 +169,8 @@ body > input[type="radio"] {
   left: 8px;
 }
 
-.main-navigation a:hover{
-  background:#f7f6f3;
-  border-radius: 16px;
-  color: #333333;
-}
 
-.main-navigation a:hover .link-border{
-  border-bottom: 0;
-}
-
-.main-navigation a:hover .submenu{
+.main-navigation .catalog:hover .submenu{
   display:block;
 }
 
@@ -167,36 +179,27 @@ body > input[type="radio"] {
   border-radius: 0;
 }
 
-.main-navigation a:active{
-  background: #ededed;
-  color:#333333;
-  box-shadow:inset 0 2px 1px 0 #696969;
-}
-.main-navigation a:active .link-border{
-  border-bottom: 0;
-}
-
 .submenu a:active{
   background:#f6b5a5;
   border-radius: 0;
 }
-/*подменю при наведении не отображается...я не понимаю, почему?*/
+
+
 
 .main-header-right{
   float: right;
-  width: 267px;
-  min-height: 32px;
+  width: 367px;
+  min-height: 51px;
   font-size: 0;
   padding-top: 13px;
-  padding-bottom: 19px;
+  text-align:right;
 }
-
 .search{
   display: inline-block;
   position:relative;
   vertical-align: top;
+  width:140px;
 }
-
 .btn{
   display:inline-block;
   vertical-align: top;
@@ -214,8 +217,8 @@ body > input[type="radio"] {
   border-radius: 22px;
   box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
   text-decoration: none;
+  border:none;
 }
-
 .search .search-btn {
   display: inline-block;
   vertical-align: top;
@@ -224,10 +227,13 @@ body > input[type="radio"] {
   width: 32px;
   height: 32px;
   margin: 0 5px;
+  margin-bottom: 20px;
   background: rgba(176, 192, 183, 0.2);
   position:relative;
 }
-
+.search-btn:hover{
+ background: #ffffff; 
+}
 .search .search-btn::before{
   content:"";
   position:absolute;
@@ -240,40 +246,6 @@ body > input[type="radio"] {
   left: 25%;
   /*Я могу задать в процентах координаты, да?*/
 }
-
-.search form{
-  display: none;
-  width: 274px;
-  min-height:40px;
-  /*Я же тут жестко задаю ширину и высоту, да?*/
-  background:#f8f7f4;
-  color:#999999;
-  border-radius: 6px;
-  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
-  position:absolute;
-  right:0;
-  top: 40px;
-  padding:15px;
-}
-
-.search input[type="search"]{
-  display:block;
-  width:240px;
-  padding:12px;
-  background: #ffffff;
-  font-size:14px;
-  line-height:24.3px;
-  font-weight:400;
-  white-space:nowrap;
-  border:1px solid #d3d3d2;
-  border-radius: 5px;
-  color:#999999;
-}
-
-.search-btn:hover{
- background: #ffffff; 
-}
-
 .search-btn:hover::before{
   content:"";
   position:absolute;
@@ -285,20 +257,48 @@ body > input[type="radio"] {
   top: 25%;
   left: 25%;
 }
-
-.search-btn:hover .search form{
+.search form{
+  display: none;
+  width: 272px;
+  min-height:40px;
+  /*Я же тут жестко задаю ширину и высоту, да?*/
+  background:#f8f7f4;
+  color:#999999;
+  border-radius: 6px;
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+  position:absolute;
+  right:0;
+  top: 40px;
+  padding:15px;
+}
+.search input[type="search"]{
+  display:block;
+  width:270px;
+  padding:12px;
+  background: #ffffff;
+  font-size:14px;
+  line-height:24.3px;
+  font-weight:400;
+  white-space:nowrap;
+  border:1px solid #d3d3d2;
+  border-radius: 5px;
+  color:#999999;
+}
+.search:hover form{
   display:block;
 }
-/*что я делаю не так? оно опять не работает(*/
+
 
 .user-block{
   display: inline-block;
   vertical-align: top;
-  min-height: 32px;
+  height: 32px;
   margin: 0 5px;
+  padding-bottom: 20px;
   position:relative;
 }
-.user-block .login-btn{
+.user-block .user-btn{
+  
   display:block;
   background: rgba(176, 192, 183, 0.2); 
   border-radius: 16px;
@@ -312,7 +312,10 @@ body > input[type="radio"] {
   padding-left: 44px;
   padding-right: 16px;
 }
- 
+.user-block .user-btn:hover{
+ background: #ffffff;
+ color:#323232;
+}
 .user-block::before{
   content:"";
   position:absolute;
@@ -324,6 +327,17 @@ body > input[type="radio"] {
   top: 8px;
   left: 15px;
 } 
+.user-block .user-btn:hover::before{
+  content:"";
+  position:absolute;
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 19px;
+  background-position: -5px -774px;
+  top: 8px;
+  left: 15px;
+}
 
 .user-block form{
   display: none;
@@ -371,26 +385,10 @@ body > input[type="radio"] {
   text-decoration: none;
 }
 
-.login-btn:hover{
- background: #ffffff;
- color:#323232;
-}
-
-.login-btn:hover::before{
-  content:"";
-  position:absolute;
-  background-image: url("../img/sprite.png");
-  background-repeat: no-repeat;
-  width: 20px;
-  height: 19px;
-  background-position: -5px -774px;
-  top: 8px;
-  left: 15px;
-}
-
-.login-btn:hover .user-block form{
+.user-block:hover form{
   display:block;
 }
+
 
 .basket{
   display: inline-block;
@@ -1092,10 +1090,255 @@ body > input[type="radio"] {
   font-size: 0;
 }
 
+.filter-up{
+  margin-bottom: 17px;
+}
+
 .filter-item{
   display: inline-block;
-  font-size: 16px;
+  vertical-align: top;
+  margin-right: 16px;
 }
+
+.filter-title{
+  font-size: 14px;
+  font-weight:500;
+  line-height: 20px;
+  /*у меня тут не указана высота строки, что писать?)*/
+  color:#ffffff;
+  padding:0 15px;
+  padding-right: 3px;
+  margin-bottom: 3px;
+}
+
+.filter-input{
+  font-size: 16px;
+  font-weight:500;
+  line-height: 22px;
+  /*у меня тут не указана высота строки, что писать?)*/
+  color:#ffffff;
+  background:rgba(255, 255, 255, 0.2);
+  border-radius:20px;
+  min-height: 20px; 
+  padding:8px 15px;
+}
+.filter-sorting .sorting{
+  padding-right: 50px;
+  cursor: pointer;
+}
+/*а я могу вставить тут этот значок(стрелочка вниз левее текста"по популярности") иначе, чем через спрайт?*/
+
+.filter-sorting .sorting:hover{
+  background: #ffffff;
+  color:#343434;
+}
+
+.filter-title-price{
+  display:inline-block;
+  vertical-align: top;
+}
+.price-control{
+  display:inline-block;
+  vertical-align: top;
+}
+.price-control-input {
+  background: #849d8f;
+  border:none;
+  font-size: 14px;
+  font-weight:500;
+  line-height: 20px;
+  /*у меня тут не указана высота строки, что писать?)*/
+  color:#ffffff;
+  width:55px;
+  cursor: pointer;
+}
+
+.price-control-maxinput{
+  width: 80px;
+}
+
+.range-control {
+  position: relative;
+  padding:8px 0;
+  /*еще по 8px сверху и снизу самого блока filter-input price...итого по 16*/
+  width:220;
+}
+.range-control .scale {
+  height: 4px;
+  background: rgba(201, 210, 203, 0.5);
+  width:190px;
+}
+
+.range-control .bar {
+  margin-left:39px;
+  margin-right:61px;
+  height: 4px;
+  background: rgba(201, 210, 203, 1);
+}
+
+.range-control .toggle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  background: #f8f7f4;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.range-control .toggle-min {
+  left: 29px;
+}
+
+.range-control .toggle-max {
+  left: 129px;
+}
+
+.filter-fattiness label{
+  margin-left: 50px;
+  position:relative;
+  cursor:pointer;
+}
+
+.filter-fattiness label:first-child{
+  margin-left: 45px;
+}
+.filter-fattiness input[type="radio"]{
+  display:none;
+}
+
+.filter-fattiness input[type="radio"] + .radio-indicator{
+  position:absolute;
+  border:1px solid #e1e7e4;
+  border-radius: 100%;
+  width:20px;
+  height:20px;
+  left: -30px;
+   /*Я помню, ты говорил про робота) но мне физически больно помещать кружочки радиобаттанов, практически, по середине между вариантами...непонятно, что выбирать: левый или правый пункт...можно, я  так оставлю?*/
+}
+
+.filter-fattiness input[type="radio"]:hover + .radio-indicator{
+  border:2px solid #ffffff;
+}
+
+.filter-fattiness input[type="radio"]:disabled + .radio-indicator{
+  border:1px solid #98ada0;
+}
+/*Дим, hover сhабатывает, но как-то странно...подтормаживает, что ли...или я что-то не то прописала? в общем, кажется, он начинает подсвечиваться только после нажатия, а не до */
+
+.filter-fattiness input[type="radio"]:checked + .radio-indicator:before{
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 12px;
+  height: 12px;
+  background-color: #e1e7e4;
+  border-radius: 100%;
+}
+/*а с псевдоэлементами я вообще не уверена, что правильно прописала...и два псевдокласса...я же могу прописать псевдоклассы так?*/
+
+.filter-fattiness input[type="radio"]:checked:hover + .radio-indicator:before{
+  background-color: #ffffff;
+ 
+}
+
+.filter-fattiness input[type="radio"]:checked:disabled + .radio-indicator:before{
+  background-color: #98ada0;
+}
+
+.filter-additive label{
+  margin-left: 50px;
+  position:relative;
+  cursor:pointer;
+}
+
+.filter-additive label:first-child{
+  margin-left: 45px;
+}
+
+.filter-additive input[type="checkbox"]{
+  display:none;
+}
+
+.filter-additive input[type="checkbox"] + .checkbox-indicator{
+  position:absolute;
+  border:1px solid #e1e7e4;
+  border-radius: 4px;
+  width:20px;
+  height:20px;
+  left: -25px;
+  /*Я помню, ты говорил про робота) но мне физически больно помещать квадратики чекбоксов, практически, по середине между вариантами...непонятно, что выбирать: левый или правый пункт...можно, я  так оставлю?*/
+}
+.filter-additive input[type="checkbox"]:hover + .checkbox-indicator{
+  border:2px solid #ffffff;
+}
+
+.filter-additive input[type="checkbox"]:disabled + .checkbox-indicator{
+  border:1px solid #98ada0;
+}
+.filter-additive input[type="checkbox"]:checked + .checkbox-indicator::before{
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 3px;
+  width: 7px;
+  height: 3px;
+  background-color: #e1e7e4;
+  transform: rotate(45deg);
+}
+
+.filter-additive input[type="checkbox"]:checked:hover + .checkbox-indicator::before{
+  background-color: #ffffff;
+}
+  
+.filter-additive input[type="checkbox"]:checked:disabled + .checkbox-indicator::before{
+   background-color: #98ada0;
+}
+    
+.filter-additive input[type="checkbox"]:checked + .checkbox-indicator::after{content: "";
+  position: absolute;
+  top: 9px;
+  left: 6px;
+  width: 12px;
+  height: 3px;
+  background-color: #e1e7e4;
+  transform: rotate(-45deg);
+}
+/*Эмм...у меня они(галки в чекбоксах) вышли самую малость неровные...совсем-совсем чуть-чуть при сильном приближении...это ничего7*/
+
+.filter-additive input[type="checkbox"]:checked:hover + .checkbox-indicator::after{
+  background-color: #ffffff;
+}
+  
+.filter-additive input[type="checkbox"]:checked:disabled + .checkbox-indicator::after{
+   background-color: #98ada0;
+}
+
+.btn-filter{
+  border:none;
+  vertical-align: bottom;
+  padding:6px 30px;
+  border: 2px solid #ffffff;
+  min-height:16px;
+}
+
+.btn-filter:hover{
+  background: #fafbfb;
+  color: #363636;
+}
+
+.btn-filter:active{
+  background: #ededed;
+  color: #363636;
+  box-shadow:inset 0 2px 1px 0 #696969;
+  border: 2px solid #ededed;
+}
+
+
+/* Дим, мне надо выравнивать верхнюю и нижнюю строчку фильтра, чтобы они одинаковой длины были? к слову, на макете кнопка выступает на 2px вправо...Просто это выравниваие будет не самым логичным, добавь 3 пикселя в случайный отступ где-то в тексте...еще, наверное, кнопочку можно зафлоатить вправо...что посоветуешь?*/
 
 .container-catalog{
   font-size: 0;
@@ -1171,6 +1414,7 @@ body > input[type="radio"] {
   line-height: 1.5;
   margin:0;
   padding: 0;
+  cursor: pointer;
 }
 
 .pages .page-link{
@@ -1186,6 +1430,14 @@ body > input[type="radio"] {
   border-radius: 13px;
   text-decoration: none;
 }
+.pages .page-link:hover{
+  background:#9db1a5;
+}
+
+.pages .page-link:active{
+  background:#c3cec8;
+  color:#353535;
+}
 .pages .page-previous{
   margin-right: 6px;
   color: #c3cec8;
@@ -1197,7 +1449,6 @@ body > input[type="radio"] {
 
 .pages .disabled{
   color:rgba(195, 206, 200, 0.2);
-  /*gjxtve не отражается прозрачность?*/
 }
 
 .pages .current{
@@ -1205,6 +1456,8 @@ body > input[type="radio"] {
   color:#353535;
   
 }
+
+
 
 .footer-border{
   border-top: 2px solid rgba(255, 255, 255, 0.3);  

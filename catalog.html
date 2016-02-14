@@ -105,40 +105,62 @@
         <form action="#" method="get">
           <div class="filter-up">
             <div class="filter-item filter-sorting">
-              <span>Сортировка:</span>
-              <select name="sorting">
-                <option>по популярности</option>
-                <option>по цене</option><!--добавить необходимые-->
-              </select>
+              <div class="filter-title filter-title-sorting">
+                Сортировка:
+              </div>
+              <div class="filter-input sorting">
+                по популярности
+              </div>                
             </div>
             
             <div class="filter-item filter-price">
-              <span>Цена:</span>
-            <output name="sum"></output>
-            0<input type="range" min="0" max="1000" name="price">1500
-            <!--а зачем вставлять value="" тут?-->
+              <div class="filter-title filter-title-price">
+                Цена:
+              </div>
+              <div class="price-control">
+                <input class="price-control-input" name="min-price" type="text" value="100 руб.">
+                <span>-</span>
+                <input class="price-control-input price-control-maxinput" name="min-price" type="text" value="500 руб.">
+              </div>
+              <div class="filter-input price">
+                <div class="range-control">
+                  <div class="scale">
+                    <div class="bar"></div>
+                  </div>
+                    <div class="toggle toggle-min"></div>
+                    <div class="toggle toggle-max"></div>
+                </div>
+              </div>
             </div>
             
             <div class="filter-item filter-fattiness">
-              <span class="filter-fattiness-legend">Жирность:</span>
-              <label><input type="radio" name="fattiness" value="0">0%</label>
-              <label><input type="radio" name="fattiness" value="0-10" checked>до 10%</label>
-              <label><input type="radio" name="fattiness" value="0-30">до 30%</label>
-              <label><input type="radio" name="fattiness" value="30+">выше 30%</label>
+              <div class="filter-title filter-title-fattiness">
+               Жирность:
+              </div>
+              <div class="filter-input fattiness">
+                <label><input type="radio" name="fattiness" value="0"><span class="radio-indicator"></span>0%</label>
+                <label><input type="radio" name="fattiness" value="0-10" checked><span class="radio-indicator"></span>до 10%</label>
+                <label><input type="radio" name="fattiness" value="0-30"><span class="radio-indicator"></span>до 30%</label>
+                <label><input type="radio" name="fattiness" value="30+"><span class="radio-indicator"></span>выше 30%</label>
+              </div>
             </div>
           </div>
             
           <div class="filter-down">
             <div class="filter-item filter-additive">
-              <span>Наполнители:</span>
-              <label><input type="checkbox" name="chocolate" checked>шоколадные</label>
-              <label><input type="checkbox" name="sugar-powder" checked>сахарные присыпки</label>
-              <label><input type="checkbox" name="fruit">фрукты</label>
-              <label><input type="checkbox" name="syrop">сиропы</label>
-              <label><input type="checkbox" name="jam">джемы</label>
+              <div class="filter-title filter-title-additive">
+                Наполнители:
+              </div>
+              <div class="filter-input additive">
+                <label><input type="checkbox" name="chocolate" checked><span class="checkbox-indicator"></span>шоколадные</label>
+                <label><input type="checkbox" name="sugar-powder" checked><span class="checkbox-indicator"></span>сахарные присыпки</label>
+                <label><input type="checkbox" name="fruit"><span class="checkbox-indicator"></span>фрукты</label>
+                <label><input type="checkbox" name="syrop"><span class="checkbox-indicator"></span>сиропы</label>
+                <label><input type="checkbox" name="jam"><span class="checkbox-indicator"></span>джемы</label>
+              </div>
             </div>
             
-            <button class="filter-item btn btn-filter" type="submit">Применить</button>
+            <button class="filter-item filter-input btn-filter" type="submit">Применить</button>
           </div>
         </form>
       </div>
@@ -272,7 +294,7 @@
           <a class="page-link" href="#">5</a>
         </li>
         <li>
-          <a class="page-link" href="#">›</a>
+          <a class="page-link page-next" href="#">›</a>
         </li>       
       </ul>    
     </main>
@@ -304,3 +326,11 @@
     </footer>
   </body>        
 </html>
+
+
+
+
+
+
+
+
