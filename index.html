@@ -17,7 +17,7 @@
         <div class="container clearfix">   
           <div class="main-header-left">
             <div class="main-header-logo">
-              <a class="logolink-gllacy" href="index.html"><img class="gllacy-logo" src="img/GllacyLogo.svg" width="153" height="63" alt="Gllacy"></a>
+              <a class="logolink-gllacy logolink-gllacy-index" href="index.html"><img class="gllacy-logo" src="img/GllacyLogo.svg" width="153" height="63" alt="Gllacy"></a>
             </div>  
             <nav class="main-navigation">
               <ul>
@@ -55,7 +55,8 @@
             <div class="search">
               <a class="search-btn" href="#"></a>
               <form action="#" method="get">
-              <input type="search" name="search" placeholder="Что ищем?" autofocus>
+                <span class="search-placeholder">Что ищем?</span>
+                <input type="search" name="search" placeholder="Что ищем?">
               </form>
             </div>
             
@@ -64,7 +65,7 @@
               <form action="#" method="post">
               <input type="email" name="email-login" placeholder="Электронная почта">
               <input type="password" name="password" placeholder="Пароль" autocomplete="on">
-              <button class="btn btn-login">Войти</button>
+              <button class="btn btn-login" type="submit">Войти</button>
               <div class="user-block-links">
                 <a class="user-block-link link-forgot">Забыли пароль?</a>
                 <a class="user-block-link link-forgot">Новая регистрация</a>
@@ -75,14 +76,38 @@
             <div class="basket basket-empty">
               <a class="basket-btn link-basket-empty" href="#">Пусто</a>
             </div>
+            
             <div class="basket basket-full">
               <a class="basket-btn link-basket-full" href="#">2 товара</a>
-              <div class="basket-goods">
-                /*Это надо оформлять таблицей?*/
-                <span>Итого:750 руб.</span>
-                <a class="order btn" href="#">Оформить заказ</a>
-              </div>
+              <form action="#" method="post">
+                <!--Это надо оформлять таблицей и формой?-->
+                <table>
+                  <tr>
+                    <th class="basket-item-delete"><input type="checkbox" name="orange-ice" checked><span class="basket-checkbox-indicator"></span></th>
+                    <th class="basket-item-img"><img src="img/icon-orange.jpg" alt="пломбир с апельсиновым джемом" width="33px" height="33px"></th>
+                    <!-- вставляю  картинки в html?мол, товар)-->
+                    <th class="basket-item-name">Пломбир с апельсиновым джемом</th>
+                    <th class="basket-item-weight">1,5кг</th>
+                    <th class="basket-item-per-kg">x 200 руб.</th>
+                    <th class="basket-item-price">300 руб.</th>
+                  </tr>
+                   <tr>
+                    <th class="basket-item-delete"><input type="checkbox" name="strawberry-ice" checked><span class="basket-checkbox-indicator"></span></th>
+                    <th class="basket-item-img"><img src="img/icon-strawberry.jpg" alt="клубничный пломбир с присыпкой из белого шоколада" width="33px" height="33px"></th>
+                    <th class="basket-item-name">Клубничный пломбир присыпкой из белого шоколада</th>
+                    <th class="basket-item-weight">1,5кг</th>
+                    <th class="basket-item-per-kg">x 300 руб.</th>
+                    <th class="basket-item-price">450 руб.</th>
+                  </tr>
+                  <tr>
+                    <th class="basket-total-cost" colspan="6">Итого: 750 руб.</th>
+                  </tr>
+                </table>
+                <button class="btn btn-basket-order" type="submit">Оформить заказ</button>
+                <!--Кнопку верстать через button или a?-->
+              </form>
             </div>
+            
           </div>  
           
         </div>
@@ -135,6 +160,7 @@
               <a class="btn btn-chocolate" href="#">Хочу шоколадки!</a>
             </article>
           </div>
+        </div>
           
           <div class="hit">
             <article class="hit-orange">
@@ -143,7 +169,8 @@
                 <span class="amount">310₽</span>
                 <span>/кг</span>
               </div>
-              <a class="link link-icecream" href="#"><span class="link-border">Сливочное с апельсиновым джемом и цитрусовой стружкой</span></a>
+              <a class="link-transparent-bg link-icecream" href="#"><span class="link-border">Сливочное с апельсиновым джемом и цитрусовой стружкой</span></a>
+              <a class="btn bth-quick-view" href="#">Быстрый просмотр</a>
             </article>
             
             <article class="hit-coffee">
@@ -152,7 +179,8 @@
                 <span class="amount">380₽</span>
                 <span>/кг</span>
               </div>
-              <a class="link link-icecream" href="#"><span class="link-border">Сливочно-кофейное с кусочками шоколада</span></a>
+              <a class="link-transparent-bg link-icecream" href="#"><span class="link-border">Сливочно-кофейное с кусочками шоколада</span></a>
+              <a class="btn bth-quick-view" href="#">Быстрый просмотр</a>
             </article>
             
             <article class="hit-strawberry">
@@ -161,7 +189,8 @@
                 <span class="amount">355₽</span>
                 <span>/кг</span>
               </div>
-              <a class="link link-icecream" href="#"><span class="link-border">Сливочно-клубничное с присыпкой из белого шоколада</span></a>
+              <a class="link-transparent-bg link-icecream" href="#"><span class="link-border">Сливочно-клубничное с присыпкой из белого шоколада</span></a>
+              <a class="btn bth-quick-view" href="#">Быстрый просмотр</a>
             </article>
             
             <article class="hit-сreme-brulee">
@@ -170,10 +199,12 @@
                 <span class="amount">415₽</span>
                 <span>/кг</span>
               </div>
-              <a class="link link-icecream" href="#"><span class="link-border">Сливочное крем-брюле с карамельной подсыпкой</span></a>
+              <a class="link-transparent-bg link-icecream" href="#"><span class="link-border">Сливочное крем-брюле с карамельной подсыпкой</span></a>
+              <a class="btn bth-quick-view" href="#">Быстрый просмотр</a>
             </article>
           </div>
-          
+        
+        <div class="container">  
           <article class="features clearfix">
             <h3>Магазин Глейси - это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</h3>
             <div class="features-left">
@@ -197,7 +228,7 @@
           <div class="glacy-online clearfix">
             <section class="blog">
               <p>Новое в нашем блоге</p>
-              <a class="link link-blog" href="#">10 способов сервировки фруктовых щербетов к столу</a>
+              <a class="link-blog link-white-bg" href="#">10 способов сервировки фруктовых щербетов к столу</a>
             </section>
             <section class="email-delivery">
               <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
@@ -235,13 +266,13 @@
           </section>
           <section class="footer-documents">
             <div class="footer-documents-left">
-              <a class="link link-for-providers" href="#"><span class="link-border">Для поставщиков</span></a>
-              <a class="link link-production" href="#"><span class="link-border">О производстве</span></a>
+              <a class="link-transparent-bg link-for-providers" href="#"><span class="link-border">Для поставщиков</span></a>
+              <a class="link-transparent-bg link-production" href="#"><span class="link-border">О производстве</span></a>
             </div> 
             
             <div class="footer-documents-right">
-              <a class="link link-our-docs" href="#"><span class="link-border">Наши документы</span></a>
-              <a class="link link-eco-standarts" href="#"><span class="link-border">Экологические стандарты</span></a>
+              <a class="link-transparent-bg link-our-docs" href="#"><span class="link-border">Наши документы</span></a>
+              <a class="link-transparent-bg link-eco-standarts" href="#"><span class="link-border">Экологические стандарты</span></a>
             </div>
           </section>     
           <section class="footer-copyright">
@@ -250,7 +281,18 @@
           </section>
         </div>
       </footer>
+        <div class="modal-content">
+          <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+          <p>Мы обязательно вам ответим!</p>
+          <form class="form-feedback clearfix" action="https://echo.htmlacademy.ru" method="post">
+            <input class="name" type="text" name="login" placeholder="Как вас зовут?">
+            <input class="e-mail" type="e-mail"  name="e-mail" placeholder="Ваша почта для ответа?">
+            <textarea class="text-feddback" name="text-feddback" placeholder="Напишите что-нибудь..."></textarea>
+            <button class="btn btn-form-feedback" type="submit">Отправить</button>
+          </form>
+        </div>
     </div>
+    <div class="modal-overlay"></div>
   </body>        
 </html>
 

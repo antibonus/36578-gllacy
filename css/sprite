@@ -4,134 +4,122 @@
     display: block;
 }
 
-.sprite-basket {
+.sprite-basket-black {
     width: 21px;
     height: 20px;
-    background-position: -5px -5px;
+    background-position: -10px -10px;
 }
 
-.sprite-checkbox-_2_ {
-    width: 20px;
+.sprite-basket-full {
+    width: 21px;
     height: 20px;
-    background-position: -5px -35px;
+    background-position: -10px -50px;
 }
 
-.sprite-checkbox_ {
-    width: 20px;
+.sprite-basket-wh {
+    width: 21px;
     height: 20px;
-    background-position: -5px -65px;
+    background-position: -10px -90px;
 }
 
 .sprite-cow {
     width: 47px;
     height: 47px;
-    background-position: -5px -95px;
+    background-position: -10px -130px;
 }
 
 .sprite-fb {
     width: 31px;
     height: 31px;
-    background-position: -5px -152px;
+    background-position: -10px -197px;
 }
 
 .sprite-heart {
     width: 15px;
     height: 13px;
-    background-position: -5px -193px;
+    background-position: -10px -248px;
+}
+
+.sprite-hit {
+    width: 61px;
+    height: 61px;
+    background-position: -10px -281px;
 }
 
 .sprite-ice {
     width: 47px;
     height: 47px;
-    background-position: -5px -216px;
+    background-position: -10px -362px;
 }
 
 .sprite-inst {
     width: 31px;
     height: 31px;
-    background-position: -5px -273px;
+    background-position: -10px -429px;
 }
 
 .sprite-leaf {
     width: 47px;
     height: 47px;
-    background-position: -5px -314px;
+    background-position: -10px -480px;
 }
 
 .sprite-login {
     width: 20px;
     height: 19px;
-    background-position: -5px -371px;
+    background-position: -10px -547px;
+}
+
+.sprite-login-black {
+    width: 20px;
+    height: 19px;
+    background-position: -10px -586px;
 }
 
 .sprite-logohtml {
     width: 108px;
     height: 37px;
-    background-position: -5px -400px;
+    background-position: -10px -625px;
 }
 
 .sprite-loupe {
     width: 17px;
     height: 17px;
-    background-position: -5px -447px;
+    background-position: -10px -682px;
 }
 
-.sprite-radio-btn-in {
-    width: 20px;
-    height: 20px;
-    background-position: -5px -474px;
+.sprite-loupe-black {
+    width: 17px;
+    height: 17px;
+    background-position: -10px -719px;
 }
 
-.sprite-radio-btn-out {
-    width: 20px;
-    height: 20px;
-    background-position: -5px -504px;
+.sprite-select-black {
+    width: 8px;
+    height: 5px;
+    background-position: -10px -756px;
+}
+
+.sprite-select-wh {
+    width: 8px;
+    height: 5px;
+    background-position: -10px -781px;
 }
 
 .sprite-thermo {
     width: 47px;
     height: 47px;
-    background-position: -5px -534px;
+    background-position: -10px -806px;
 }
 
-.sprite-tw-_2_ {
+.sprite-tw {
     width: 31px;
     height: 31px;
-    background-position: -5px -591px;
+    background-position: -10px -873px;
 }
 
 .sprite-vk {
     width: 31px;
     height: 31px;
-    background-position: -5px -632px;
-}
-
-.sprite-vkhibasket {
-    width: 21px;
-    height: 20px;
-    background-position: -5px -673px;
-}
-
-.sprite-vkhit {
-    width: 61px;
-    height: 61px;
-    background-position: -5px -703px;
-}
-
-.sprite-vkhlogin {
-    width: 20px;
-    height: 19px;
-    background-position: -5px -774px;
-}
-
-.sprite-vkhloupe {
-    width: 17px;
-    height: 17px;
-    background-position: -5px -803px;
-}
-
-.sprite-vkhloupebasket {
-    width: 21px;
-    height: 20px;
-    background-position: -5px -830px;
+    background-position: -10px -924px;
 }

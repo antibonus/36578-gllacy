@@ -16,8 +16,8 @@
           </div>  
           <nav class="main-navigation">
             <ul>
-              <li>
-                <a class="main-navigation-current" href="#"><span class="link-border">Каталог</span></a>
+              <li class="catalog">
+                <a class="main-navigation main-navigation-current" href="#"><span class="link-border">Каталог</span></a>
                 <ul class="submenu">
                   <li>
                     <a class="submenu-link submenu-link-new" href="#">Новинки</a>
@@ -55,114 +55,144 @@
           </div>
           
           <div class="user-block">
-            <a class="login-btn" href="#">Вход</a>
+            <a class="user-btn" href="#">Вход</a>
             <form action="#" method="post">
             <input type="email" name="email-login" placeholder="Электронная почта">
             <input type="password" name="password" placeholder="Пароль" autocomplete="on">
             <button class="btn btn-login">Войти</button>
             <div class="user-block-links">
-              <a class="user-block-link link-forgot">Забыли пароль?</a>
-              <a class="user-block-link link-forgot">Новая регистрация</a>
+              <a class="user-block-link link-forgot link-white-bg">Забыли пароль?</a>
+              <a class="user-block-link link-forgot link-white-bg">Новая регистрация</a>
             </div>
             </form>
           </div> 
           
-          <div class="basket basket-empty">
-            <a class="basket-btn link-basket-empty" href="#">Пусто</a>
-          </div>
-          <div class="basket basket-full">
-            <a class="basket-btn link-basket-full" href="#">2 товара</a>
-            <div class="basket-goods">
-              /*Это надо оформлять таблицей?*/
-              <span>Итого:750 руб.</span>
-              <a class="order btn" href="#">Оформить заказ</a>
+            <div class="basket basket-empty basket-empty-catalog">
+              <a class="basket-btn link-basket-empty" href="#">Пусто</a>
             </div>
-          </div>
-        </div>  
+            
+            <div class="basket basket-full basket-full-catalog">
+              <a class="basket-btn link-basket-full" href="#">2 товара</a>
+              <form action="#" method="post">
+                <!--Это надо оформлять таблицей и формой?-->
+                <table>
+                  <tr>
+                    <th class="basket-item-delete"><input type="checkbox" name="orange-ice" checked><span class="basket-checkbox-indicator"></span></th>
+                    <th class="basket-item-img"><img src="img/icon-orange.jpg" alt="пломбир с апельсиновым джемом" width="33px" height="33px"></th>
+                    <!-- вставляю  картинки в html?мол, товар)-->
+                    <th class="basket-item-name">Пломбир с апельсиновым джемом</th>
+                    <th class="basket-item-weight">1,5кг</th>
+                    <th class="basket-item-per-kg">x 200 руб.</th>
+                    <th class="basket-item-price">300 руб.</th>
+                  </tr>
+                   <tr>
+                    <th class="basket-item-delete"><input type="checkbox" name="strawberry-ice" checked><span class="basket-checkbox-indicator"></span></th>
+                    <th class="basket-item-img"><img src="img/icon-strawberry.jpg" alt="клубничный пломбир с присыпкой из белого шоколада" width="33px" height="33px"></th>
+                    <th class="basket-item-name">Клубничный пломбир присыпкой из белого шоколада</th>
+                    <th class="basket-item-weight">1,5кг</th>
+                    <th class="basket-item-per-kg">x 300 руб.</th>
+                    <th class="basket-item-price">450 руб.</th>
+                  </tr>
+                  <tr>
+                    <th class="basket-total-cost" colspan="6">Итого: 750 руб.</th>
+                  </tr>
+                </table>
+                <button class="btn btn-basket-order" type="submit">Оформить заказ</button>
+                <!--Кнопку верстать через button или a?-->
+              </form>
+            </div>
         
+      </div>
       </div>
     </header>
     
     
-    <main class="container clearfix">
-      <div class="container-up clearfix"> 
-        <div class="headline">
-          <ul class="breadcrumbs">
-            <li><a  href="index.html"><span class="link-border">Главная</span></a></li>
-            <li><a  href="#"><span class="link-border">Каталог</span></a></li>
-            <li><a class="breadcrumbs-current" href="catalog.html"><span class="link-border">Сливочное</span></a></li>
-          </ul>
-          <h1>Сливочное мороженое</h1>
+    <main class="clearfix">
+      <div class="container">
+        <div class="container-up clearfix"> 
+          <div class="headline">
+            <ul class="breadcrumbs">
+              <li><a  href="index.html"><span class="link-border">Главная</span></a></li>
+              <li><a  href="#"><span class="link-border">Каталог</span></a></li>
+              <li class="current-li"><a class="breadcrumbs-current" href="catalog.html"><span class="link-border">Сливочное</span></a></li>
+            </ul>
+            <h1>Сливочное мороженое</h1>
+          </div>
+          
+          <section class="contact-info">
+            <p>C 10 до 20, ежедневно<br>
+            <b>8 812 450-25-25</b></p>
+          </section>
         </div>
         
-        <section class="contact-info">
-          <p>C 10 до 20, ежедневно<br>
-          <b>8 812 450-25-25</b></p>
-        </section>
-      </div>
-      
-      <div class="filter">
-        <form action="#" method="get">
-          <div class="filter-up">
-            <div class="filter-item filter-sorting">
-              <div class="filter-title filter-title-sorting">
-                Сортировка:
+        <div class="filter">
+          <form action="#" method="get">
+            <div class="filter-up">
+              <div class="filter-item filter-sorting">
+                <div class="filter-title filter-title-sorting">
+                  Сортировка:
+                </div>
+                <div class="filter-input sorting">
+                  по популярности
+                </div> 
+                <ul class="sorting-submenu">
+                  <li>сначала недорогие</li>
+                  <li class="expensive">сначала дорогие</li>
+                  <li>по жирности</li>
+                </ul>               
               </div>
-              <div class="filter-input sorting">
-                по популярности
-              </div>                
-            </div>
-            
-            <div class="filter-item filter-price">
-              <div class="filter-title filter-title-price">
-                Цена:
-              </div>
-              <div class="price-control">
-                <input class="price-control-input" name="min-price" type="text" value="100 руб.">
-                <span>-</span>
-                <input class="price-control-input price-control-maxinput" name="min-price" type="text" value="500 руб.">
-              </div>
-              <div class="filter-input price">
-                <div class="range-control">
-                  <div class="scale">
-                    <div class="bar"></div>
+              
+              <div class="filter-item filter-price">
+                <div class="filter-title filter-title-price">
+                  Цена:
+                </div>
+                <div class="price-control">
+                  <input class="price-control-input" name="min-price" type="text" value="100 руб.">
+                  <span>-</span>
+                  <input class="price-control-input price-control-maxinput" name="min-price" type="text" value="500 руб.">
+                </div>
+                <div class="filter-input price">
+                  <div class="range-control">
+                    <div class="scale">
+                      <div class="bar"></div>
+                    </div>
+                      <div class="toggle toggle-min"></div>
+                      <div class="toggle toggle-max"></div>
                   </div>
-                    <div class="toggle toggle-min"></div>
-                    <div class="toggle toggle-max"></div>
+                </div>
+              </div>
+              
+              <div class="filter-item filter-fattiness">
+                <div class="filter-title filter-title-fattiness">
+                 Жирность:
+                </div>
+                <div class="filter-input fattiness">
+                  <label><input type="radio" name="fattiness" value="0"><span class="radio-indicator"></span>0%</label>
+                  <label><input type="radio" name="fattiness" value="0-10" checked><span class="radio-indicator"></span>до 10%</label>
+                  <label><input type="radio" name="fattiness" value="0-30"><span class="radio-indicator"></span>до 30%</label>
+                  <label><input type="radio" name="fattiness" value="30+"><span class="radio-indicator"></span>выше 30%</label>
                 </div>
               </div>
             </div>
-            
-            <div class="filter-item filter-fattiness">
-              <div class="filter-title filter-title-fattiness">
-               Жирность:
+              
+            <div class="filter-down">
+              <div class="filter-item filter-additive">
+                <div class="filter-title filter-title-additive">
+                  Наполнители:
+                </div>
+                <div class="filter-input additive">
+                  <label><input type="checkbox" name="chocolate" checked><span class="checkbox-indicator"></span>шоколадные</label>
+                  <label><input type="checkbox" name="sugar-powder" checked><span class="checkbox-indicator"></span>сахарные присыпки</label>
+                  <label><input type="checkbox" name="fruit"><span class="checkbox-indicator"></span>фрукты</label>
+                  <label><input type="checkbox" name="syrop"><span class="checkbox-indicator"></span>сиропы</label>
+                  <label><input type="checkbox" name="jam"><span class="checkbox-indicator"></span>джемы</label>
+                </div>
               </div>
-              <div class="filter-input fattiness">
-                <label><input type="radio" name="fattiness" value="0"><span class="radio-indicator"></span>0%</label>
-                <label><input type="radio" name="fattiness" value="0-10" checked><span class="radio-indicator"></span>до 10%</label>
-                <label><input type="radio" name="fattiness" value="0-30"><span class="radio-indicator"></span>до 30%</label>
-                <label><input type="radio" name="fattiness" value="30+"><span class="radio-indicator"></span>выше 30%</label>
-              </div>
+              
+              <button class="filter-item filter-input btn-filter" type="submit">Применить</button>
             </div>
-          </div>
-            
-          <div class="filter-down">
-            <div class="filter-item filter-additive">
-              <div class="filter-title filter-title-additive">
-                Наполнители:
-              </div>
-              <div class="filter-input additive">
-                <label><input type="checkbox" name="chocolate" checked><span class="checkbox-indicator"></span>шоколадные</label>
-                <label><input type="checkbox" name="sugar-powder" checked><span class="checkbox-indicator"></span>сахарные присыпки</label>
-                <label><input type="checkbox" name="fruit"><span class="checkbox-indicator"></span>фрукты</label>
-                <label><input type="checkbox" name="syrop"><span class="checkbox-indicator"></span>сиропы</label>
-                <label><input type="checkbox" name="jam"><span class="checkbox-indicator"></span>джемы</label>
-              </div>
-            </div>
-            
-            <button class="filter-item filter-input btn-filter" type="submit">Применить</button>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
       
       <div class="container-catalog">
@@ -172,7 +202,8 @@
             <span class="amount">310₽</span>
             <span>/кг</span>
           </div>
-          <a class="link link-icecream" href="#"><span class="link-border">Сливочное с апельсиновым джемом и цитрусовой стружкой</span></a>
+          <a class="link-icecream link-transparent-bg" href="#"><span class="link-border">Сливочное с апельсиновым джемом и цитрусовой стружкой</span></a>
+          <a class="btn bth-quick-view" href="#">Быстрый просмотр</a>
         </article>
           
         <article class="ice-coffee">
@@ -181,7 +212,8 @@
             <span class="amount">380₽</span>
             <span>/кг</span>
           </div>
-          <a class="link link-icecream" href="#"><span class="link-border">Сливочно-кофейное с кусочками шоколада</span></a>
+          <a class="link-transparent-bg link-icecream" href="#"><span class="link-border">Сливочно-кофейное с кусочками шоколада</span></a>
+          <a class="btn bth-quick-view" href="#">Быстрый просмотр</a>
         </article>
         
         <article class="ice-strawberry">
@@ -190,7 +222,8 @@
             <span class="amount">355₽</span>
             <span>/кг</span>
           </div>
-          <a class="link link-icecream" href="#"><span class="link-border">Сливочно-клубничное с присыпкой из белого шоколада</span></a>
+          <a class="link-transparent-bg link-icecream" href="#"><span class="link-border">Сливочно-клубничное с присыпкой из белого шоколада</span></a>
+          <a class="btn bth-quick-view" href="#">Быстрый просмотр</a>
         </article>
         
         <article class="ice-сreme-brulee">
@@ -199,7 +232,8 @@
             <span class="amount">415₽</span>
             <span>/кг</span>
           </div>
-          <a class="link link-icecream" href="#"><span class="link-border">Сливочное крем-брюле с карамельной подсыпкой</span></a>
+          <a class="link-transparent-bg link-icecream" href="#"><span class="link-border">Сливочное крем-брюле с карамельной подсыпкой</span></a>
+          <a class="btn bth-quick-view" href="#">Быстрый просмотр</a>
         </article>
         
         <article class="ice-cowberry-jam">
@@ -208,7 +242,8 @@
             <span class="amount">325₽</span>
             <span>/кг</span>
           </div>
-          <a class="link link-icecream" href="#"><span class="link-border">Сливочное с брусничным джемом</span></a>
+          <a class="link-transparent-bg link-icecream" href="#"><span class="link-border">Сливочное с брусничным джемом</span></a>
+          <a class="btn bth-quick-view" href="#">Быстрый просмотр</a>
         </article>
         
         <article class="ice-blueberry">
@@ -217,7 +252,8 @@
             <span class="amount">410₽</span>
             <span>/кг</span>
           </div>
-          <a class="link link-icecream" href="#"><span class="link-border">Сливочно-черничное с цельными ягодами черники</span></a>
+          <a class="link-transparent-bg link-icecream" href="#"><span class="link-border">Сливочно-черничное с цельными ягодами черники</span></a>
+          <a class="btn bth-quick-view" href="#">Быстрый просмотр</a>
         </article>
         
         <article class="ice-lemon">
@@ -226,7 +262,8 @@
             <span class="amount">375₽</span>
             <span>/кг</span>
           </div>
-          <a class="link link-icecream" href="#"><span class="link-border">Сливочно-лимонное с карамельной присыпкой</span></a>
+          <a class="link-transparent-bg link-icecream" href="#"><span class="link-border">Сливочно-лимонное с карамельной присыпкой</span></a>
+          <a class="btn bth-quick-view" href="#">Быстрый просмотр</a>
         </article>
         
         <article class="ice-chococrisp">
@@ -235,7 +272,8 @@
             <span class="amount">320₽</span>
             <span>/кг</span>
           </div>
-          <a class="link link-icecream" href="#"><span class="link-border">Сливочное с шоколадной присыпкой</span></a>
+          <a class="link-transparent-bg link-icecream" href="#"><span class="link-border">Сливочное с шоколадной присыпкой</span></a>
+          <a class="btn bth-quick-view" href="#">Быстрый просмотр</a>
         </article>
         
         <article class="ice-vanilla">
@@ -244,7 +282,8 @@
             <span class="amount">440₽</span>
             <span>/кг</span>
           </div>
-          <a class="link link-icecream" href="#"><span class="link-border">Сливочно-ванильное с кусочками шоколада</span></a>
+          <a class="link-transparent-bg link-icecream" href="#"><span class="link-border">Сливочно-ванильное с кусочками шоколада</span></a>
+          <a class="btn bth-quick-view" href="#">Быстрый просмотр</a>
         </article>
         
         <article class="ice-menthol">
@@ -253,7 +292,8 @@
             <span class="amount">435₽</span>
             <span>/кг</span>
           </div>
-          <a class="link link-icecream" href="#"><span class="link-border">Сливочное с ментоловым сиропом</span></a>
+          <a class="link-transparent-bg link-icecream" href="#"><span class="link-border">Сливочное с ментоловым сиропом</span></a>
+          <a class="btn bth-quick-view" href="#">Быстрый просмотр</a>
         </article>
         
         <article class="ice-withchocolate">
@@ -262,7 +302,8 @@
             <span class="amount">355₽</span>
             <span>/кг</span>
           </div>
-          <a class="link link-icecream" href="#"><span class="link-border">Сливочное с кусочками черного шоколада</span></a>
+          <a class="link-transparent-bg link-icecream" href="#"><span class="link-border">Сливочное с кусочками черного шоколада</span></a>
+          <a class="btn bth-quick-view" href="#">Быстрый просмотр</a>
         </article>
         
         <article class="ice-mint">
@@ -271,32 +312,35 @@
             <span class="amount">420₽</span>
             <span>/кг</span>
           </div>
-          <a class="link link-icecream" href="#"><span class="link-border">Сливочное с мятным сиропом</span></a>
+          <a class="link-transparent-bg link-icecream" href="#"><span class="link-border">Сливочное с мятным сиропом</span></a>
+          <a class="btn bth-quick-view" href="#">Быстрый просмотр</a>
         </article>
       </div> 
-      <ul class="pages">
-        <li>
-          <a class="page-link page-previous disabled" href="#">‹</a>
-        </li>
-        <li>
-          <a class="page-link current" href="#">1</a> 
-        </li>
-        <li>
-          <a class="page-link" href="#">2</a> 
-        </li>
-        <li>
-          <a class="page-link" href="#">3</a>
-        </li>
-        <li>
-          <a class="page-link" href="#">4</a>
-        </li>
-        <li>
-          <a class="page-link" href="#">5</a>
-        </li>
-        <li>
-          <a class="page-link page-next" href="#">›</a>
-        </li>       
-      </ul>    
+      <div class="container">
+        <ul class="pages">
+          <li>
+            <a class="page-link page-previous disabled" href="#">‹</a>
+          </li>
+          <li>
+            <a class="page-link current" href="#">1</a> 
+          </li>
+          <li>
+            <a class="page-link" href="#">2</a> 
+          </li>
+          <li>
+            <a class="page-link" href="#">3</a>
+          </li>
+          <li>
+            <a class="page-link" href="#">4</a>
+          </li>
+          <li>
+            <a class="page-link" href="#">5</a>
+          </li>
+          <li>
+            <a class="page-link page-next" href="#">›</a>
+          </li>       
+        </ul> 
+      </div>
     </main>
     
     <footer class="main-footer  clearfix">
@@ -309,18 +353,18 @@
         </section>
         <section class="footer-documents">
           <div class="footer-documents-left">
-            <a class="link link-for-providers" href="#"><span class="link-border">Для поставщиков</span></a>
-            <a class="link link-production" href="#"><span class="link-border">О производстве</span></a>
+            <a class="link-transparent-bg link-for-providers" href="#"><span class="link-border">Для поставщиков</span></a>
+            <a class="link-transparent-bg link-production" href="#"><span class="link-border">О производстве</span></a>
           </div> 
           
           <div class="footer-documents-right">
-            <a class="link link-our-docs" href="#"><span class="link-border">Наши документы</span></a>
-            <a class="link link-eco-standarts" href="#"><span class="link-border">Экологические стандарты</span></a>
+            <a class="link-transparent-bg link-our-docs" href="#"><span class="link-border">Наши документы</span></a>
+            <a class="link-transparent-bg link-eco-standarts" href="#"><span class="link-border">Экологические стандарты</span></a>
           </div>
         </section>     
         <section class="footer-copyright">
           <a class="logo-htmlacademy" href="https://htmlacademy.ru"></a>
-          <span class="made-in">Сделано в<a class="link-htmlacademy" href="https://htmlacademy.ru"><span class="link-border">HTML Academy</span></a>© 2016</span>
+          <span class="made-in">Сделано в<a class="link-htmlacademy link-transparent-bg " href="https://htmlacademy.ru"><span class="link-border">HTML Academy</span></a>© 2016</span>
         </section>
       </div>
     </footer>
