@@ -192,7 +192,15 @@ body > input[type="radio"] {
   border-radius: 0;
 }
 
+.submenu a:first-child:hover,
+.submenu a:first-child:active{
+  border-radius: 8px 8px 0 0;
+}
 
+.submenu a:last-child:hover,
+.submenu a:last-child:active{
+  border-radius: 0 0 8px 8px;
+}
 
 .main-header-right{
   float: right;
@@ -265,11 +273,11 @@ body > input[type="radio"] {
   top: 25%;
   left: 25%;
 }
+
 .search form{
   display: none;
   width: 272px;
   min-height:40px;
-  /*Я же тут жестко задаю ширину и высоту, да?*/
   background:#f8f7f4;
   color:#999999;
   border-radius: 6px;
@@ -281,24 +289,25 @@ body > input[type="radio"] {
   z-index: 31;
   text-align:left;
 }
-.search-placeholder{
-  color:#5b9ddf;
-  font-size: 11px;
-  font-weight:400;
-  display:none;
+
+.search:hover form{
+  display:block;
 }
+
+
+
 .search input[type="search"]{
   display:block;
   width:270px;
   padding:12px;
   background: #ffffff;
-  font-size:14px;
-  line-height:24.3px;
-  font-weight:400;
+  font-size:16px;
+  line-height:24px;
+  font-weight:700;
   white-space:nowrap;
   border:1px solid #d3d3d2;
   border-radius: 5px;
-  color:#999999;
+  color:#353535;
 }
 
 .search input[type="search"]:hover{
@@ -309,9 +318,30 @@ body > input[type="radio"] {
   border:2px solid #5b9ddf;
 }
 
-
-.search:hover form{
-  display:block;
+.search input[type="search"]:invalid + label{
+  color:#999999;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight:400;
+  position:absolute;
+  top:30px;
+  left:28px;
+}
+.search input[type="search"]:focus + label{
+  color:#5b9ddf;
+  font-size: 11px;
+  font-weight:400;
+  position:absolute;
+  top:-3px;
+  left:28px;
+}
+.search input[type="search"]:valid + label{
+  color:#999999;
+  font-size: 11px;
+  font-weight:400;
+  position:absolute;
+  top:-3px;
+  left:28px;
 }
 
 
@@ -379,6 +409,8 @@ body > input[type="radio"] {
   top: 40px;
   z-index: 32;
 }
+
+
 .user-block input{
   display:block;
   width: 220px;
@@ -401,6 +433,44 @@ body > input[type="radio"] {
 .user-block input:focus{
   border:2px solid #5b9ddf;
 }
+
+
+.user-block input:invalid + label{
+  color:#999999;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight:400;
+  position:absolute;
+  top:30px;
+  left:28px;
+}
+.user-block input:invalid + .label-password{
+  top:90px;
+}
+
+.user-block input:focus + label{
+  color:#5b9ddf;
+  font-size: 11px;
+  font-weight:400;
+  position:absolute;
+  top:-3px;
+  left:28px;
+}
+.user-block input:focus + .label-password{
+  top:59px;
+}
+.user-block input:valid + label{
+  color:#9a9a9a;
+  font-size: 11px;
+  font-weight:400;
+  position:absolute;
+  top:-3px;
+  left:28px;
+}
+.user-block input:valid + .label-password{
+  top:59px;
+}
+
 .user-block .btn-login{
   float:left;
   font-size:15px;
@@ -530,13 +600,18 @@ body > input[type="radio"] {
   right:0;
   z-index: 33;
 }
-.basket-full table{
-  border-collapse:collapse;
+.basket-full .table{
+  display:table;
 }
-.basket-full th{
+.basket-full .tr{
+  display: table-row;
+}
+.basket-full .th{
+  display: table-cell;
   padding:20px 15px;
   text-align: left;
   min-height: 20px;
+  vertical-align:top;
 }
 .basket-full .basket-item-delete{
   position:relative;
@@ -559,7 +634,7 @@ body > input[type="radio"] {
   height:14px;
   transform: rotate(-45deg);
   position:absolute;
-  top:30px;
+  top:25px;
   left:5px;
   border-radius: 1px;
 }
@@ -570,13 +645,14 @@ body > input[type="radio"] {
   height:14px;
   transform: rotate(45deg);
   position:absolute;
-  top:30px;
+  top:25px;
   left:5px;
   border-radius: 1px;
 }
 .basket-full .basket-item-img{
   padding-left:0;
   padding-right: 0;
+  padding-top: 15px;
 }
 .basket-item-img img{
   border-radius: 17px;
@@ -592,13 +668,14 @@ body > input[type="radio"] {
   color:#7f7f7f;
 }
 .basket-full .basket-item-price{
-  
   width:55px;
 }
 .basket-full .basket-total-cost{
   text-align: right;
   font-size:15px;
+  font-weight: 700;
   border-top: 2px solid #cacac7;
+  padding:20px 15px;
 }
 .basket-full:hover form{
   display: block;
@@ -757,6 +834,7 @@ body > input[type="radio"] {
   width: 1166px;
   margin: 0 auto;
   margin-bottom: 10px;
+  position: relative;
 }
 
 .hit article{
@@ -786,6 +864,7 @@ body > input[type="radio"] {
   width: 61px;
   height: 61px;
   background-position: -10px -281px;
+  position:relative;
 }
 .hit img{
    border-radius: 133px; 
@@ -794,7 +873,7 @@ body > input[type="radio"] {
 .hit .price{
   position: absolute;
   top: 213px;
-  text-shadow: 0 1px 3px rgba(49, 50, 52, 0.5);
+  text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
 }
 .hit .amount{
   margin:0;
@@ -826,19 +905,23 @@ body > input[type="radio"] {
   border-bottom:1px solid rgba(255, 188, 158, 0.3);
 }
 
+
 .hit .bth-quick-view{
   display: none;
   margin-top: 20px;
   margin-bottom: 20px;
   padding-left: 27px;
   padding-right: 27px;
+  
 }
 
 .hit article:hover{
   background:rgba(255, 255, 255, 0.3);
   box-shadow:0 20px 20px 0 rgba(0, 0, 0, 0.4);
   border-radius: 5px;
+  position:absolute;
 } 
+
 .hit article:hover .bth-quick-view{
   display:inline-block;
 }
@@ -987,6 +1070,7 @@ body > input[type="radio"] {
   border-radius: 20px;
   color:#5a5a5a;
   background:#f8f7f4 url("../img/bg-letter.png") no-repeat;
+  position:relative;
 }
 .email-delivery p{
   color:#5a5a5a;
@@ -1002,11 +1086,12 @@ body > input[type="radio"] {
   color:#999999;
   font-size:16px;
   font-weight:500;
-  line-height:24px;
+  line-height:20px;
   padding:12px 10px;
   margin-top:30px;
   width: 340px;
-  border: 1px solid rgba(178, 178, 178, 0.52)
+  border: 1px solid rgba(178, 178, 178, 0.52);
+  height:20px;
 }
 
 .email-delivery input:hover{
@@ -1016,6 +1101,39 @@ body > input[type="radio"] {
 .email-delivery input:focus{
   border:2px solid #5b9ddf;
 }
+
+.email-delivery input:invalid + label{
+  color:#999999;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight:400;
+  position:absolute;
+  top:145px;
+  left:38px;
+}
+
+.email-delivery input:focus + label{
+  color:#5b9ddf;
+  font-size: 11px;
+  font-weight:400;
+  position:absolute;
+  top:110px;
+  left:38px;
+}
+
+.email-delivery input:valid + label{
+  color:#9a9a9a;
+  font-size: 11px;
+  font-weight:400;
+  position:absolute;
+  top:110px;
+  left:38px;
+}
+
+
+
+
+
 .email-delivery .btn-email-delivery{
   margin-top:30px;
   float:right;
@@ -1096,7 +1214,9 @@ body > input[type="radio"] {
 .social-btn-vk{
   background-position: -10px -924px;
 }
-
+.footer-social a:active{
+  box-shadow:inset 0 2px 1px 0 #888888;
+}
 .footer-documents{
   float: left;
   width: 560px;
@@ -1172,7 +1292,6 @@ body > input[type="radio"] {
 .footer-copyright .link-htmlacademy{
   display:inline-block;
   padding: 0 4px;
-  /*Это нормально, что я отступы-пробелы так задала?*/
   font-size: 12px;
   line-height: 1.5;
   color: #ffffff;
@@ -1218,10 +1337,10 @@ body > input[type="radio"] {
 }
 
 .modal-content {
-  position: absolute;
+  position: fixed;
   top: 338px;
   left:50%;
-  /*Как мне отцентровать это окно?*/
+  margin-left:-240px; 
   width: 478px;
   min-height: 397px;
   padding: 25px;
@@ -1229,7 +1348,7 @@ body > input[type="radio"] {
   color:#343434 ;
   background:  #f8f7f4;
   border-radius: 10px;
-  z-index: 50;
+  z-index: 3010;
   display: none;
 }
 
@@ -1313,6 +1432,65 @@ body > input[type="radio"] {
   resize: none;
 }
 
+.modal-content input:invalid + label,
+.modal-content textarea:invalid + label{
+  color:#656565;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight:400;
+  position:absolute;
+  top:87px;
+  left:40px;
+}
+
+.modal-content input:invalid + .label-email-feedback{
+  top:153px;
+}
+
+.modal-content textarea:invalid + .label-text-feedback{
+  top: 211px;
+}
+
+.modal-content input:focus + label,
+.modal-content textarea:focus + label{
+  color:#5b9ddf;
+  font-size: 11px;
+  font-weight:400;
+  position:absolute;
+  top:56px;
+  left:40px;
+}
+.modal-content input:focus + .label-email-feedback{
+  top:121px;
+}
+
+.modal-content textarea:focus + .label-text-feedback{
+  top: 186px;
+}
+
+.modal-content input:valid + label,
+.modal-content textarea:valid + label{
+  color:#9a9a9a;
+  font-size: 11px;
+  font-weight:400;
+  position:absolute;
+  top:56px;
+  left:40px;
+}
+.modal-content input:valid + .label-email-feedback{
+  top:121px;
+}
+
+.modal-content textarea:valid + .label-text-feedback{
+  top: 186px;
+}
+
+
+
+
+
+
+
 .modal-content .btn-form-feedback{
   float:right;
   margin:0;
@@ -1321,14 +1499,16 @@ body > input[type="radio"] {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 40;
+  z-index: 3000;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.3);
   display: none;
 }
 
-
+.modal-overlay-show{
+  display: block;
+}
 /*Каталог*/
 .main-navigation-current{
   background:rgba(202, 117, 94, 1);
@@ -1360,7 +1540,6 @@ body > input[type="radio"] {
   float:left;
   width: 560px;
   min-height: 60px;
-  padding-top: 26px;
 }
 
 .breadcrumbs{
@@ -1534,21 +1713,27 @@ body > input[type="radio"] {
   top:63px;
 }
 .filter-sorting li{
+  list-style:none;
+  
+}
+.sorting-submenu a{
+  text-decoration: none;
   padding:2px 20px;
   margin:0;
-  list-style:none;
   color:#343434;
   font-size:14px;
   line-height: 20px;
   font-weight: 400;
   cursor: pointer;
+  display:block;
+  font-family: "Roboto", "Arial", sans-serif;
+  
 }
-
 .filter-sorting:hover ul{
   display:block;
 }
 
-.sorting-submenu .expensive{
+.sorting-submenu a:hover{
   color:#ffffff;
   background:#1e90ff;
 } 
@@ -1788,7 +1973,7 @@ body > input[type="radio"] {
 .container-catalog .price{
   position: absolute;
   top: 213px;
-  text-shadow: 0 1px 3px rgba(49, 50, 52, 0.5);
+  text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
 }
 .container-catalog .amount{
   margin:0;
@@ -1857,20 +2042,25 @@ body > input[type="radio"] {
   margin:0;
   padding: 0;
   cursor: pointer;
+  
+  
 }
 
 .pages .page-link{
   display:inline-block;
+  vertical-align: top;
   min-width:26px;
-  min-height:26px;
+  min-height:24px;
+  padding-top: 2px;
   margin: 0 2px;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
   text-align: center;
   color: #ffffff;
-  border-radius: 13px;
+  vertical-align:top;
   text-decoration: none;
+  border-radius: 100%;
 }
 .pages .page-link:hover{
   background:#9db1a5;

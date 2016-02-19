@@ -5,12 +5,12 @@ var formFeedback = popupFeedback.querySelector("form");
 var nameFeedback = popupFeedback.querySelector("[name=login]");
 var emailFeedback = popupFeedback.querySelector("[name=e-mail]");
 var textFeedback = popupFeedback.querySelector("textarea");
-ymaps.ready(init);
-var myMap,
-    myPlacemark;
+var overlayFeedback = document.querySelector(".modal-overlay");
+
 
 btnFeedback.addEventListener("click", function(event){
   event.preventDefault();
+  overlayFeedback.classList.add("modal-overlay-show");
   popupFeedback.classList.add("modal-content-show");
   nameFeedback.focus();
       });
@@ -19,6 +19,7 @@ closePopupFeedback.addEventListener("click", function(event){
   event.preventDefault();
   popupFeedback.classList.remove("modal-content-show");
   popupFeedback.classList.remove("modal-error");
+  overlayFeedback.classList.remove("modal-overlay-show");
 });
 
 formFeedback.addEventListener("submit", function(event) {
@@ -34,10 +35,22 @@ window.addEventListener("keydown", function(event) {
           if (popupFeedback.classList.contains("modal-content-show")) {
             popupFeedback.classList.remove("modal-content-show");
             popupFeedback.classList.remove("modal-error");
+            overlayFeedback.classList.remove("modal-overlay-show");
           }
         }
       });
 
+overlayFeedback.addEventListener("click", function(event){
+  event.preventDefault();
+  popupFeedback.classList.remove("modal-content-show");
+  popupFeedback.classList.remove("modal-error");
+  overlayFeedback.classList.remove("modal-overlay-show");
+});
+
+
+ymaps.ready(init);
+var myMap,
+    myPlacemark;
 
 function init(){     
         myMap = new ymaps.Map ("map-interactive", {

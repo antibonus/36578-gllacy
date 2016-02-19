@@ -55,16 +55,20 @@
             <div class="search">
               <a class="search-btn" href="#"></a>
               <form action="#" method="get">
-                <span class="search-placeholder">Что ищем?</span>
-                <input type="search" name="search" placeholder="Что ищем?">
+                <input type="search" name="search" id="search" required>
+                <label for="search">Что ищем?</label>
               </form>
             </div>
             
             <div class="user-block">
               <a class="user-btn" href="#">Вход</a>
               <form action="#" method="post">
-              <input type="email" name="email-login" placeholder="Электронная почта">
-              <input type="password" name="password" placeholder="Пароль" autocomplete="on">
+                
+                <input type="email" name="email-login" id="email" required>
+                <label class="label-email" for="email">Электронная почта</label>
+                
+                <input type="password" name="password" id="password" required autocomplete="on">
+                <label class="label-password" for="password">Пароль</label>
               <button class="btn btn-login" type="submit">Войти</button>
               <div class="user-block-links">
                 <a class="user-block-link link-forgot">Забыли пароль?</a>
@@ -80,31 +84,28 @@
             <div class="basket basket-full">
               <a class="basket-btn link-basket-full" href="#">2 товара</a>
               <form action="#" method="post">
-                <!--Это надо оформлять таблицей и формой?-->
-                <table>
-                  <tr>
-                    <th class="basket-item-delete"><input type="checkbox" name="orange-ice" checked><span class="basket-checkbox-indicator"></span></th>
-                    <th class="basket-item-img"><img src="img/icon-orange.jpg" alt="пломбир с апельсиновым джемом" width="33px" height="33px"></th>
+                <div class="table">
+                  <div class="tr">
+                    <div class="th basket-item-delete"><input type="checkbox" name="orange-ice" checked><span class="basket-checkbox-indicator"></span></div>
+                    <div class="th basket-item-img"><img src="img/icon-orange.jpg" alt="пломбир с апельсиновым джемом" width="33px" height="33px"></div>
                     <!-- вставляю  картинки в html?мол, товар)-->
-                    <th class="basket-item-name">Пломбир с апельсиновым джемом</th>
-                    <th class="basket-item-weight">1,5кг</th>
-                    <th class="basket-item-per-kg">x 200 руб.</th>
-                    <th class="basket-item-price">300 руб.</th>
-                  </tr>
-                   <tr>
-                    <th class="basket-item-delete"><input type="checkbox" name="strawberry-ice" checked><span class="basket-checkbox-indicator"></span></th>
-                    <th class="basket-item-img"><img src="img/icon-strawberry.jpg" alt="клубничный пломбир с присыпкой из белого шоколада" width="33px" height="33px"></th>
-                    <th class="basket-item-name">Клубничный пломбир присыпкой из белого шоколада</th>
-                    <th class="basket-item-weight">1,5кг</th>
-                    <th class="basket-item-per-kg">x 300 руб.</th>
-                    <th class="basket-item-price">450 руб.</th>
-                  </tr>
-                  <tr>
-                    <th class="basket-total-cost" colspan="6">Итого: 750 руб.</th>
-                  </tr>
-                </table>
+                    <div class="th basket-item-name">Пломбир с апельсиновым джемом</div>
+                    <div class="th basket-item-weight">1,5кг</div>
+                    <div class="th basket-item-per-kg">x 200 руб.</div>
+                    <div class="th basket-item-price">300 руб.</div>
+                  </div>
+                  <div class="tr">
+                    <div class="th basket-item-delete"><input type="checkbox" name="strawberry-ice" checked><span class="basket-checkbox-indicator"></span></div>
+                    <div class="th basket-item-img"><img src="img/icon-strawberry.jpg" alt="клубничный пломбир с присыпкой из белого шоколада" width="33px" height="33px"></div>
+                    <div class="th basket-item-name">Клубничный пломбир присыпкой из белого шоколада</div>
+                    <div class="th basket-item-weight">1,5кг</div>
+                    <div class="th basket-item-per-kg">x 300 руб.</div>
+                    <div class="th basket-item-price">450 руб.</div>
+                 </div>
+                </div>
+                    <div class="basket-total-cost">Итого: 750 руб.</div>
+               
                 <button class="btn btn-basket-order" type="submit">Оформить заказ</button>
-                <!--Кнопку верстать через button или a?-->
               </form>
             </div>
             
@@ -162,7 +163,7 @@
           </div>
         </div>
           
-          <div class="hit">
+          <div class="hit">    
             <article class="hit-orange">
               <img class="icecream" src="img/ice-orange.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
               <div class="price">
@@ -170,8 +171,9 @@
                 <span>/кг</span>
               </div>
               <a class="link-transparent-bg link-icecream" href="#"><span class="link-border">Сливочное с апельсиновым джемом и цитрусовой стружкой</span></a>
-              <a class="btn bth-quick-view" href="#">Быстрый просмотр</a>
+              <div class="hit-btn-bg"><a class="btn bth-quick-view" href="#">Быстрый просмотр</a></div>
             </article>
+              
             
             <article class="hit-coffee">
               <img class="icecream" src="img/ice-coffee.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
@@ -180,7 +182,7 @@
                 <span>/кг</span>
               </div>
               <a class="link-transparent-bg link-icecream" href="#"><span class="link-border">Сливочно-кофейное с кусочками шоколада</span></a>
-              <a class="btn bth-quick-view" href="#">Быстрый просмотр</a>
+              <div class="hit-btn-bg"><a class="btn bth-quick-view" href="#">Быстрый просмотр</a></div>
             </article>
             
             <article class="hit-strawberry">
@@ -190,7 +192,7 @@
                 <span>/кг</span>
               </div>
               <a class="link-transparent-bg link-icecream" href="#"><span class="link-border">Сливочно-клубничное с присыпкой из белого шоколада</span></a>
-              <a class="btn bth-quick-view" href="#">Быстрый просмотр</a>
+             <div class="hit-btn-bg"><a class="btn bth-quick-view" href="#">Быстрый просмотр</a></div>
             </article>
             
             <article class="hit-сreme-brulee">
@@ -200,7 +202,7 @@
                 <span>/кг</span>
               </div>
               <a class="link-transparent-bg link-icecream" href="#"><span class="link-border">Сливочное крем-брюле с карамельной подсыпкой</span></a>
-              <a class="btn bth-quick-view" href="#">Быстрый просмотр</a>
+              <div class="hit-btn-bg"><a class="btn bth-quick-view" href="#">Быстрый просмотр</a></div>
             </article>
           </div>
         
@@ -233,7 +235,8 @@
             <section class="email-delivery">
               <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
               <form class="clearfix" action="#" method="post">
-              <input type="email" name="email" placeholder="Электронная почта">
+              <input type="email" name="email" id="email-delivery" required>
+              <label for="email-delivery">Электронная почта</label>
               <button class="btn btn-email-delivery" type="submit">Отправить</button>
               </form>
             </section>
@@ -249,7 +252,7 @@
               <p>Для заказа по телефону:<br>
               <b>8 812 450-25-25</b><br>
               (с 10 до 20 ежедневно)</p>
-              <a class="btn btn-feedback" href="#">Форма обратной связи</a>
+              <a class="btn btn-feedback" href="123">Форма обратной связи</a>
             </div>
           </div>
         </section>
@@ -285,9 +288,12 @@
           <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
           <p>Мы обязательно вам ответим!</p>
           <form class="form-feedback clearfix" action="https://echo.htmlacademy.ru" method="post">
-            <input class="name" type="text" name="login" placeholder="Как вас зовут?">
-            <input class="e-mail" type="e-mail"  name="e-mail" placeholder="Ваша почта для ответа?">
-            <textarea class="text-feddback" name="text-feddback" placeholder="Напишите что-нибудь..."></textarea>
+            <input class="name" type="text" name="login" id="name" required>
+            <label class="label-name-feedback" for="name">Как вас зовут?</label>
+            <input class="e-mail" type="e-mail"  name="e-mail" id="email-feedback" required>
+            <label class="label-email-feedback" for="email-feedback">Ваша почта для ответа?</label>
+            <textarea class="text-feedback" name="text-feddback" id="text-feedback" required></textarea>
+            <label class="label-text-feedback" for="text-feedback">Напишите что-нибудь...</label>
             <button class="btn btn-form-feedback" type="submit">Отправить</button>
           </form>
         </div>

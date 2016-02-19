@@ -74,33 +74,31 @@
             <div class="basket basket-full basket-full-catalog">
               <a class="basket-btn link-basket-full" href="#">2 товара</a>
               <form action="#" method="post">
-                <!--Это надо оформлять таблицей и формой?-->
-                <table>
-                  <tr>
-                    <th class="basket-item-delete"><input type="checkbox" name="orange-ice" checked><span class="basket-checkbox-indicator"></span></th>
-                    <th class="basket-item-img"><img src="img/icon-orange.jpg" alt="пломбир с апельсиновым джемом" width="33px" height="33px"></th>
+                <div class="table">
+                  <div class="tr">
+                    <div class="th basket-item-delete"><input type="checkbox" name="orange-ice" checked><span class="basket-checkbox-indicator"></span></div>
+                    <div class="th basket-item-img"><img src="img/icon-orange.jpg" alt="пломбир с апельсиновым джемом" width="33px" height="33px"></div>
                     <!-- вставляю  картинки в html?мол, товар)-->
-                    <th class="basket-item-name">Пломбир с апельсиновым джемом</th>
-                    <th class="basket-item-weight">1,5кг</th>
-                    <th class="basket-item-per-kg">x 200 руб.</th>
-                    <th class="basket-item-price">300 руб.</th>
-                  </tr>
-                   <tr>
-                    <th class="basket-item-delete"><input type="checkbox" name="strawberry-ice" checked><span class="basket-checkbox-indicator"></span></th>
-                    <th class="basket-item-img"><img src="img/icon-strawberry.jpg" alt="клубничный пломбир с присыпкой из белого шоколада" width="33px" height="33px"></th>
-                    <th class="basket-item-name">Клубничный пломбир присыпкой из белого шоколада</th>
-                    <th class="basket-item-weight">1,5кг</th>
-                    <th class="basket-item-per-kg">x 300 руб.</th>
-                    <th class="basket-item-price">450 руб.</th>
-                  </tr>
-                  <tr>
-                    <th class="basket-total-cost" colspan="6">Итого: 750 руб.</th>
-                  </tr>
-                </table>
+                    <div class="th basket-item-name">Пломбир с апельсиновым джемом</div>
+                    <div class="th basket-item-weight">1,5кг</div>
+                    <div class="th basket-item-per-kg">x 200 руб.</div>
+                    <div class="th basket-item-price">300 руб.</div>
+                  </div>
+                  <div class="tr">
+                    <div class="th basket-item-delete"><input type="checkbox" name="strawberry-ice" checked><span class="basket-checkbox-indicator"></span></div>
+                    <div class="th basket-item-img"><img src="img/icon-strawberry.jpg" alt="клубничный пломбир с присыпкой из белого шоколада" width="33px" height="33px"></div>
+                    <div class="th basket-item-name">Клубничный пломбир присыпкой из белого шоколада</div>
+                    <div class="th basket-item-weight">1,5кг</div>
+                    <div class="th basket-item-per-kg">x 300 руб.</div>
+                    <div class="th basket-item-price">450 руб.</div>
+                 </div>
+                </div>
+                    <div class="basket-total-cost">Итого: 750 руб.</div>
+               
                 <button class="btn btn-basket-order" type="submit">Оформить заказ</button>
-                <!--Кнопку верстать через button или a?-->
               </form>
             </div>
+            
         
       </div>
       </div>
@@ -136,9 +134,9 @@
                   по популярности
                 </div> 
                 <ul class="sorting-submenu">
-                  <li>сначала недорогие</li>
-                  <li class="expensive">сначала дорогие</li>
-                  <li>по жирности</li>
+                  <li><a href="#">сначала недорогие</a></li>
+                  <li><a href="#">сначала дорогие</a></li>
+                  <li><a href="#">по жирности</a></li>
                 </ul>               
               </div>
               
