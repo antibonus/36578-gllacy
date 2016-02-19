@@ -1026,10 +1026,12 @@ body > input[type="radio"] {
 .map{
   min-height: 430px;
   background: url("../img/map%20with%20marker.png") no-repeat center;
+  
 }
-
+.map .div-for-map{
+  position:relative;
+}
 .map-address{
-  float: right;
   width: 250px;
   min-height: 246px; 
   padding: 30px 26px;
@@ -1037,6 +1039,9 @@ body > input[type="radio"] {
   color:#343434;
   border-radius: 20px;
   margin-top: 65px;
+  position:absolute;
+  z-index: 2550;
+  right:0;
   
 }
 

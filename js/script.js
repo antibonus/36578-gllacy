@@ -5,6 +5,9 @@ var formFeedback = popupFeedback.querySelector("form");
 var nameFeedback = popupFeedback.querySelector("[name=login]");
 var emailFeedback = popupFeedback.querySelector("[name=e-mail]");
 var textFeedback = popupFeedback.querySelector("textarea");
+ymaps.ready(init);
+var myMap,
+    myPlacemark;
 
 btnFeedback.addEventListener("click", function(event){
   event.preventDefault();
@@ -34,4 +37,24 @@ window.addEventListener("keydown", function(event) {
           }
         }
       });
+
+
+function init(){     
+        myMap = new ymaps.Map ("map-interactive", {
+            center: [59.93869678, 30.32588304], 
+            zoom: 16});
+  
+        myPlacemark = new ymaps.Placemark([59.93867179, 30.32296542], { 
+            hintContent: "Gllacy"},
+           {iconLayout: "default#image",
+            iconImageHref: "../img/pin-map.svg", 
+            iconImageSize: [79, 138], 
+            iconImageOffset: [-42, -138]
+           
+        });
+  
+        myMap.geoObjects.add(myPlacemark);}
+
+
+
 
