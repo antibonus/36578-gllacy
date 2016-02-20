@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>GllacyShop - Главная</title>
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,900,700,500&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-    <link href="css/normalize.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,900,700,500&subset=latin,cyrillic" rel="stylesheet" type="text/css">
+    <link href="css/normalize.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
@@ -62,18 +62,18 @@
             
             <div class="user-block">
               <a class="user-btn" href="#">Вход</a>
-              <form action="#" method="post">
+              <form action="#" method="post" class="clearfix">
                 
                 <input type="email" name="email-login" id="email" required>
                 <label class="label-email" for="email">Электронная почта</label>
                 
                 <input type="password" name="password" id="password" required autocomplete="on">
                 <label class="label-password" for="password">Пароль</label>
-              <button class="btn btn-login" type="submit">Войти</button>
-              <div class="user-block-links">
-                <a class="user-block-link link-forgot">Забыли пароль?</a>
-                <a class="user-block-link link-forgot">Новая регистрация</a>
-              </div>
+                <button class="btn btn-login" type="submit">Войти</button>
+                <div class="user-block-links">
+                  <a class="user-block-link link-forgot">Забыли пароль?</a>
+                  <a class="user-block-link link-forgot">Новая регистрация</a>
+                </div>
               </form>
             </div> 
             
@@ -88,7 +88,6 @@
                   <div class="tr">
                     <div class="th basket-item-delete"><input type="checkbox" name="orange-ice" checked><span class="basket-checkbox-indicator"></span></div>
                     <div class="th basket-item-img"><img src="img/icon-orange.jpg" alt="пломбир с апельсиновым джемом" width="33px" height="33px"></div>
-                    <!-- вставляю  картинки в html?мол, товар)-->
                     <div class="th basket-item-name">Пломбир с апельсиновым джемом</div>
                     <div class="th basket-item-weight">1,5кг</div>
                     <div class="th basket-item-per-kg">x 200 руб.</div>
@@ -164,7 +163,7 @@
         </div>
           
           <div class="hit">    
-            <article class="hit-orange">
+            <article class="hit-orange ice">
               <img class="icecream" src="img/ice-orange.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
               <div class="price">
                 <span class="amount">310₽</span>
@@ -175,7 +174,7 @@
             </article>
               
             
-            <article class="hit-coffee">
+            <article class="hit-coffee ice">
               <img class="icecream" src="img/ice-coffee.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
               <div class="price">
                 <span class="amount">380₽</span>
@@ -185,7 +184,7 @@
               <div class="hit-btn-bg"><a class="btn bth-quick-view" href="#">Быстрый просмотр</a></div>
             </article>
             
-            <article class="hit-strawberry">
+            <article class="hit-strawberry ice">
               <img class="icecream" src="img/ice-strawberry.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
               <div class="price">
                 <span class="amount">355₽</span>
@@ -195,7 +194,7 @@
              <div class="hit-btn-bg"><a class="btn bth-quick-view" href="#">Быстрый просмотр</a></div>
             </article>
             
-            <article class="hit-сreme-brulee">
+            <article class="hit-сreme-brulee ice">
               <img class="icecream" src="img/ice-creme-brulee.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подсыпкой">
               <div class="price">
                 <span class="amount">415₽</span>
@@ -208,7 +207,7 @@
         
         <div class="container">  
           <article class="features clearfix">
-            <h3>Магазин Глейси - это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</h3>
+            <h3>Магазин Глейси  — это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</h3>
             <div class="features-left">
               <div class="features-item features-left-up">
                 <p> Все наше мороженое  изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
@@ -248,7 +247,7 @@
           <div class="container div-for-map">
             <div class="map-address">
               <p>Адрес главного офиса и офлайн магазина:<br>
-              <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b><p>
+                <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b></p>
               <p>Для заказа по телефону:<br>
               <b>8 812 450-25-25</b><br>
               (с 10 до 20 ежедневно)</p>
@@ -290,7 +289,7 @@
           <form class="form-feedback clearfix" action="https://echo.htmlacademy.ru" method="post">
             <input class="name" type="text" name="login" id="name" required>
             <label class="label-name-feedback" for="name">Как вас зовут?</label>
-            <input class="e-mail" type="e-mail"  name="e-mail" id="email-feedback" required>
+            <input class="e-mail" type="email"  name="e-mail" id="email-feedback" required>
             <label class="label-email-feedback" for="email-feedback">Ваша почта для ответа?</label>
             <textarea class="text-feedback" name="text-feddback" id="text-feedback" required></textarea>
             <label class="label-text-feedback" for="text-feedback">Напишите что-нибудь...</label>
@@ -301,7 +300,7 @@
     <div class="modal-overlay"></div>
     
     <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-    <script src="js/script.js"></script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>
 

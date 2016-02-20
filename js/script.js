@@ -60,7 +60,7 @@ function init(){
         myPlacemark = new ymaps.Placemark([59.93867179, 30.32296542], { 
             hintContent: "Gllacy"},
            {iconLayout: "default#image",
-            iconImageHref: "../img/pin-map.svg", 
+            iconImageHref: "img/pin-map.svg", 
             iconImageSize: [79, 138], 
             iconImageOffset: [-42, -138]
            
