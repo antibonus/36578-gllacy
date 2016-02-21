@@ -5,7 +5,7 @@
     <title>GllacyShop - Главная</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,900,700,500&subset=latin,cyrillic" rel="stylesheet" type="text/css">
     <link href="css/normalize.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
     <input type="radio" id="btn-1" name="toggle" checked>
@@ -55,20 +55,24 @@
             <div class="search">
               <a class="search-btn" href="#"></a>
               <form action="#" method="get">
-                <input type="search" name="search" id="search" required>
-                <label for="search">Что ищем?</label>
+                <div class="input-wrapper">
+                  <input type="search" name="search" id="search" required>
+                  <label class="search-label" for="search" data-first="Что ищем?"></label>
+                </div>
               </form>
             </div>
             
             <div class="user-block">
               <a class="user-btn" href="#">Вход</a>
               <form action="#" method="post" class="clearfix">
-                
-                <input type="email" name="email-login" id="email" required>
-                <label class="label-email" for="email">Электронная почта</label>
-                
-                <input type="password" name="password" id="password" required autocomplete="on">
-                <label class="label-password" for="password">Пароль</label>
+                <div class="input-wrapper">
+                  <input type="email" name="email-login" id="email" required>
+                  <label class="label-email" for="email" data-first="Электронная почта"></label>
+                </div>
+                <div class="input-wrapper">
+                  <input type="password" name="password" id="password" required autocomplete="on">
+                  <label class="label-password" for="password" data-first="Пароль"></label>
+                </div>
                 <button class="btn btn-login" type="submit">Войти</button>
                 <div class="user-block-links">
                   <a class="user-block-link link-forgot">Забыли пароль?</a>
@@ -86,7 +90,7 @@
               <form action="#" method="post">
                 <div class="table">
                   <div class="tr">
-                    <div class="th basket-item-delete"><input type="checkbox" name="orange-ice" checked><span class="basket-checkbox-indicator"></span></div>
+                    <div class="th basket-item-delete"><span class="basket-checkbox-indicator"></span></div>
                     <div class="th basket-item-img"><img src="img/icon-orange.jpg" alt="пломбир с апельсиновым джемом" width="33" height="33"></div>
                     <div class="th basket-item-name">Пломбир с апельсиновым джемом</div>
                     <div class="th basket-item-weight">1,5кг</div>
@@ -94,7 +98,7 @@
                     <div class="th basket-item-price">300 руб.</div>
                   </div>
                   <div class="tr">
-                    <div class="th basket-item-delete"><input type="checkbox" name="strawberry-ice" checked><span class="basket-checkbox-indicator"></span></div>
+                    <div class="th basket-item-delete"><span class="basket-checkbox-indicator"></span></div>
                     <div class="th basket-item-img"><img src="img/icon-strawberry.jpg" alt="клубничный пломбир с присыпкой из белого шоколада" width="33" height="33"></div>
                     <div class="th basket-item-name">Клубничный пломбир присыпкой из белого шоколада</div>
                     <div class="th basket-item-weight">1,5кг</div>
@@ -102,14 +106,11 @@
                     <div class="th basket-item-price">450 руб.</div>
                  </div>
                 </div>
-                    <div class="basket-total-cost">Итого: 750 руб.</div>
-               
+                <div class="basket-total-cost">Итого: 750 руб.</div>
                 <button class="btn btn-basket-order" type="submit">Оформить заказ</button>
               </form>
             </div>
-            
           </div>  
-          
         </div>
       </header>
       
@@ -162,22 +163,21 @@
           </div>
         </div>
           
-          <div class="hit">    
+          <div class="hit"> 
             <article class="hit-orange ice">
               <img class="icecream" src="img/ice-orange.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
               <div class="price">
-                <span class="amount">310₽</span>
+                <span class="amount">310&#8381;</span>
                 <span>/кг</span>
               </div>
               <a class="link-transparent-bg link-icecream" href="#"><span class="link-border">Сливочное с апельсиновым джемом и цитрусовой стружкой</span></a>
               <div class="hit-btn-bg"><a class="btn bth-quick-view" href="#">Быстрый просмотр</a></div>
             </article>
-              
             
             <article class="hit-coffee ice">
               <img class="icecream" src="img/ice-coffee.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
               <div class="price">
-                <span class="amount">380₽</span>
+                <span class="amount">380&#8381;</span>
                 <span>/кг</span>
               </div>
               <a class="link-transparent-bg link-icecream" href="#"><span class="link-border">Сливочно-кофейное с кусочками шоколада</span></a>
@@ -187,7 +187,7 @@
             <article class="hit-strawberry ice">
               <img class="icecream" src="img/ice-strawberry.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
               <div class="price">
-                <span class="amount">355₽</span>
+                <span class="amount">355&#8381;</span>
                 <span>/кг</span>
               </div>
               <a class="link-transparent-bg link-icecream" href="#"><span class="link-border">Сливочно-клубничное с присыпкой из белого шоколада</span></a>
@@ -197,7 +197,7 @@
             <article class="hit-сreme-brulee ice">
               <img class="icecream" src="img/ice-creme-brulee.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подсыпкой">
               <div class="price">
-                <span class="amount">415₽</span>
+                <span class="amount">415&#8381;</span>
                 <span>/кг</span>
               </div>
               <a class="link-transparent-bg link-icecream" href="#"><span class="link-border">Сливочное крем-брюле с карамельной подсыпкой</span></a>
@@ -234,17 +234,23 @@
             <section class="email-delivery">
               <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
               <form class="clearfix" action="#" method="post">
-              <input type="email" name="email" id="email-delivery" required>
-              <label for="email-delivery">Электронная почта</label>
-              <button class="btn btn-email-delivery" type="submit">Отправить</button>
+                <div class="input-wrapper">
+                  <input type="email" name="email" id="email-delivery" required>
+                  <label class="label-email-delivery" for="email-delivery" data-first="Электронная почта"></label>
+                </div>
+              <button class="btn btn-email-delivery" type="submit" >Отправить</button>
               </form>
             </section>
           </div>
         </div>
         
-        <section class="map" id="map-interactive">
-          <a href="#"></a>
-          <div class="container div-for-map">
+        <section class="map">
+          <div class="map-interactive" id="map-interactive"></div>
+          
+          <div class="map-bg">
+          </div> 
+            
+          <div class="div-for-address">
             <div class="map-address">
               <p>Адрес главного офиса и офлайн магазина:<br>
                 <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b></p>
@@ -261,10 +267,10 @@
           <footer class="main-footer  clearfix">
         <div class="footer-border container">
           <section class="footer-social">
-            <a class="social-btn social-btn-twit" href="#"></a>
-            <a class="social-btn social-btn-inst" href="#"></a>
-            <a class="social-btn social-btn-fb" href="#"></a>
-            <a class="social-btn social-btn-vk" href="#"></a>
+            <a class="social-btn social-btn-twit" href="#"><img src="img/tw.svg" width="31" height="31" alt="twitter"></a>
+            <a class="social-btn social-btn-inst" href="#"><img src="img/inst.svg" width="31" height="31" alt="instagram"></a>
+            <a class="social-btn social-btn-fb" href="#"><img src="img/fb.svg" width="31" height="31" alt="facebook"></a>
+            <a class="social-btn social-btn-vk" href="#"><img src="img/vk.svg" width="31" height="31" alt="vk"></a>
           </section>
           <section class="footer-documents">
             <div class="footer-documents-left">
@@ -287,12 +293,18 @@
           <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
           <p>Мы обязательно вам ответим!</p>
           <form class="form-feedback clearfix" action="https://echo.htmlacademy.ru" method="post">
-            <input class="name" type="text" name="login" id="name" required>
-            <label class="label-name-feedback" for="name">Как вас зовут?</label>
-            <input class="e-mail" type="email"  name="e-mail" id="email-feedback" required>
-            <label class="label-email-feedback" for="email-feedback">Ваша почта для ответа?</label>
-            <textarea class="text-feedback" name="text-feddback" id="text-feedback" required></textarea>
-            <label class="label-text-feedback" for="text-feedback">Напишите что-нибудь...</label>
+            <div class="input-wrapper">
+              <input class="name" type="text" name="login" id="name" required>
+              <label class="label-name-feedback" for="name" data-first="Как вас зовут?"></label>
+            </div>
+            <div class="input-wrapper">
+              <input class="e-mail" type="email"  name="e-mail" id="email-feedback" required>
+              <label class="label-email-feedback" for="email-feedback" data-first="Ваша почта для ответа?"></label>
+            </div>
+            <div class="input-wrapper">
+              <textarea class="text-feedback" name="text-feddback" id="text-feedback" required></textarea>
+              <label class="label-text-feedback" for="text-feedback" data-first="Напишите что-нибудь..."></label>
+            </div>
             <button class="btn btn-form-feedback" type="submit">Отправить</button>
           </form>
         </div>
