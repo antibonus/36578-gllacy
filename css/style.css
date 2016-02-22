@@ -33,12 +33,9 @@ body>input[type=radio] {
     transition: background-image .5s ease,background-color .5s ease
 }
 
-.site-wrapper::before,.site-wrapper::after {
+.site-wrapper::after,.site-wrapper::before {
     content: "";
-    visibility: hidden
-}
-
-.site-wrapper::before,.site-wrapper::after {
+    visibility: hidden;
     background-image: url("../img/bg-big-ice1.png")
 }
 
@@ -66,28 +63,19 @@ body>input[type=radio] {
     pointer-events: none
 }
 
-.main-header-logo {
-    display: inline-block;
-    vertical-align: top
-}
-
-.main-navigation {
+.main-header-logo,.main-navigation,.main-navigation-item {
     display: inline-block;
     vertical-align: top
 }
 
 .main-navigation ul {
     list-style: none;
-    margin: 0;
     padding: 0;
-    margin-left: 30px;
     font-size: 0;
-    margin-left: 10px
+    margin: 0 0 0 10px
 }
 
 .main-navigation-item {
-    display: inline-block;
-    vertical-align: top;
     padding-top: 13px;
     padding-bottom: 19px
 }
@@ -122,18 +110,13 @@ body>input[type=radio] {
     border-bottom: 1px solid rgba(255,255,255,.4)
 }
 
-.main-navigation a:hover .link-border {
-    border-bottom: 0
-}
-
-.main-navigation a:active .link-border {
+.main-navigation a:active .link-border,.main-navigation a:hover .link-border {
     border-bottom: 0
 }
 
 .main-navigation .submenu {
     display: none;
     list-style: none;
-    margin: 0;
     padding: 0;
     margin: 0;
     width: 146px;
@@ -196,11 +179,11 @@ body>input[type=radio] {
     border-radius: 0
 }
 
-.submenu .submenu-link-new:hover,.submenu .submenu-link-new:active {
+.submenu .submenu-link-new:active,.submenu .submenu-link-new:hover {
     border-radius: 8px 8px 0 0
 }
 
-.submenu .submenu-last-item:hover,.submenu .submenu-last-item:active {
+.submenu .submenu-last-item:active,.submenu .submenu-last-item:hover {
     border-radius: 0 0 8px 8px
 }
 
@@ -213,7 +196,7 @@ body>input[type=radio] {
     text-align: right
 }
 
-.search {
+.search,.search .search-btn {
     display: inline-block;
     vertical-align: top;
     position: relative;
@@ -221,26 +204,21 @@ body>input[type=radio] {
 }
 
 .search .search-btn {
-    display: inline-block;
-    vertical-align: top;
-    position: relative;
     border-radius: 16px;
     width: 32px;
     height: 32px;
-    margin: 0 5px;
-    margin-bottom: 20px;
+    margin: 0 5px 20px;
     background: rgba(255,255,255,.2);
-    position: relative;
     text-align: center
 }
 
 .search-btn img {
-    padding: 7px 7px;
+    padding: 7px;
     width: 16px;
     height: 16px
 }
 
-.search-btn .icon-loupe-hover {
+.search-btn .icon-loupe-hover,.search-btn:hover .icon-loupe {
     display: none
 }
 
@@ -248,11 +226,7 @@ body>input[type=radio] {
     background: #fff
 }
 
-.search-btn:hover .icon-loupe {
-    display: none
-}
-
-.search-btn:hover .icon-loupe-hover {
+.search-btn:hover .icon-loupe-hover,.search:hover form {
     display: block
 }
 
@@ -272,10 +246,6 @@ body>input[type=radio] {
     text-align: left
 }
 
-.search:hover form {
-    display: block
-}
-
 .input-wrapper {
     position: relative;
     display: inline-block;
@@ -293,9 +263,7 @@ body>input[type=radio] {
     z-index: 2;
     pointer-events: none;
     -webkit-transition: -webkit-transform 200ms ease;
-    transition: -webkit-transform 200ms ease;
     transition: transform 200ms ease;
-    transition: transform 200ms ease,-webkit-transform 200ms ease;
     transition: transform 200ms ease,-webkit-transform 200ms ease;
     -webkit-transform: translateY(-28px);
     transform: translateY(-28px)
@@ -334,7 +302,6 @@ body>input[type=radio] {
 
 .search input[type=search]:invalid+label {
     color: #999;
-    font-weight: 400;
     position: absolute;
     -webkit-transform: translateY(0);
     transform: translateY(0);
@@ -369,9 +336,7 @@ body>input[type=radio] {
     line-height: 22px;
     color: #fff;
     text-decoration: none;
-    padding: 5px;
-    padding-left: 44px;
-    padding-right: 16px
+    padding: 5px 16px 5px 44px
 }
 
 .user-block .user-btn:hover {
@@ -407,9 +372,7 @@ body>input[type=radio] {
     display: none;
     width: 244px;
     min-height: 147px;
-    padding: 14px;
-    padding-top: 20px;
-    padding-bottom: 10px;
+    padding: 20px 14px 10px;
     background: #f8f7f4;
     color: #999;
     border-radius: 6px;
@@ -430,9 +393,7 @@ body>input[type=radio] {
     z-index: 3;
     pointer-events: none;
     -webkit-transition: -webkit-transform 200ms ease;
-    transition: -webkit-transform 200ms ease;
     transition: transform 200ms ease;
-    transition: transform 200ms ease,-webkit-transform 200ms ease;
     transition: transform 200ms ease,-webkit-transform 200ms ease;
     -webkit-transform: translateY(-26px);
     transform: translateY(-26px)
@@ -474,7 +435,6 @@ body>input[type=radio] {
     -webkit-transform: translateY(0);
     transform: translateY(0);
     font-size: 14px;
-    font-weight: 400;
     color: #999;
     font-weight: 400
 }
@@ -495,7 +455,6 @@ body>input[type=radio] {
     font-size: 18px;
     font-weight: 700;
     line-height: 1;
-    text-decoration: none;
     text-shadow: 0 2px 5px rgba(160,32,11,.76);
     background: #f26843;
     background: -webkit-linear-gradient(top,#f26843 0%,#e74a35 100%);
@@ -531,7 +490,7 @@ body>input[type=radio] {
     text-decoration: none
 }
 
-.user-block-link:hover,.user-block-link:active {
+.user-block-link:active,.user-block-link:hover {
     color: #ec593c;
     border-bottom: 1px solid rgba(255,188,158,.3)
 }
@@ -551,11 +510,8 @@ body>input[type=radio] {
     background: rgba(255,255,255,.2);
     border-radius: 16px;
     width: 63px;
-    padding: 5px 0;
-    padding-left: 45px;
-    padding-right: 10px;
-    margin: 0;
-    margin-left: 5px;
+    padding: 5px 10px 5px 45px;
+    margin: 0 0 0 5px;
     font-size: 14px;
     font-weight: 500;
     line-height: 22px;
@@ -594,14 +550,13 @@ body>input[type=radio] {
     left: 17px
 }
 
-.basket-empty {
+.basket-empty,.basket-full {
     display: inline-block;
     vertical-align: top
 }
 
 .basket-full {
     display: none;
-    vertical-align: top;
     position: relative
 }
 
@@ -670,7 +625,7 @@ body>input[type=radio] {
     cursor: pointer
 }
 
-.basket-checkbox-indicator::after {
+.basket-checkbox-indicator::after,.basket-checkbox-indicator::before {
     content: "";
     background: #666665;
     width: 2px;
@@ -684,21 +639,12 @@ body>input[type=radio] {
 }
 
 .basket-checkbox-indicator::before {
-    content: "";
-    background: #666665;
-    width: 2px;
-    height: 14px;
     -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-    position: absolute;
-    top: 20px;
-    left: 5px;
-    border-radius: 1px
+    transform: rotate(45deg)
 }
 
 .basket-full .basket-item-img {
-    padding: 0;
-    padding-top: 10px
+    padding: 10px 0 0
 }
 
 .basket-item-img img {
@@ -753,7 +699,7 @@ body>input[type=radio] {
     margin-bottom: 270px
 }
 
-.contact-info p {
+.contact-info b,.contact-info p {
     margin: 0;
     padding: 0;
     font-size: 14px;
@@ -763,11 +709,8 @@ body>input[type=radio] {
 }
 
 .contact-info b {
-    margin: 0;
-    padding: 0;
     font-size: 22px;
     line-height: 1.5;
-    color: #fff;
     font-weight: 900
 }
 
@@ -786,12 +729,11 @@ body>input[type=radio] {
 
 .slider .slide-headerline {
     width: 680px;
-    margin: 0 auto;
     color: #fff;
     font-size: 60px;
     line-height: 60px;
     font-weight: 900;
-    margin-bottom: 30px
+    margin: 0 auto 30px
 }
 
 .btn:hover {
@@ -824,7 +766,6 @@ body>input[type=radio] {
 
 .slider-controls label {
     display: inline-block;
-    vertical-align: top;
     width: 17px;
     height: 17px;
     margin-right: 8px;
@@ -870,34 +811,33 @@ body>input[type=radio] {
     margin-bottom: 28px
 }
 
-.free-raspberry {
-    float: left;
-    background: #cd3559 url("../img/bg-raspberry.png") repeat-y;
+.free-chocolate,.free-raspberry {
+    background-size: 100% 100%;
     border-radius: 20px;
     color: #fff
+}
+
+.free-raspberry {
+    background: #cd3559 url("../img/bg-raspberry.png") no-repeat;
+    float: left
 }
 
 .free-chocolate {
     float: right;
-    background: #44281c url("../img/bg-choco.png") repeat-y;
-    border-radius: 20px;
-    color: #fff
+    background: #44281c url("../img/bg-choco.png") no-repeat
 }
 
-.free h2 {
+.free h2,.free p {
     font-size: 35px;
     font-weight: 700;
     line-height: 35px;
     color: #fff;
-    margin: 0;
-    margin-bottom: 16px
+    margin: 0 0 16px
 }
 
 .free p {
     font-size: 18px;
-    font-weight: 700;
     line-height: 24px;
-    color: #fff;
     margin: 16px 0
 }
 
@@ -909,8 +849,7 @@ body>input[type=radio] {
 .hit {
     font-size: 0;
     width: 1166px;
-    margin: 0 auto;
-    margin-bottom: 10px;
+    margin: 0 auto 10px;
     position: relative
 }
 
@@ -977,11 +916,11 @@ body>input[type=radio] {
     text-decoration: none
 }
 
-.link-transparent-bg:hover,.link-transparent-bg:active {
+.link-transparent-bg:active,.link-transparent-bg:hover {
     color: #ffbc9e
 }
 
-.link-transparent-bg:hover .link-border,.link-transparent-bg:active .link-border {
+.link-transparent-bg:active .link-border,.link-transparent-bg:hover .link-border {
     border-bottom: 1px solid rgba(255,188,158,.3)
 }
 
@@ -997,8 +936,6 @@ body>input[type=radio] {
 }
 
 .hit .bth-quick-view {
-    display: inline-block;
-    vertical-align: top;
     margin-top: 20px;
     margin-bottom: 20px;
     padding-left: 27px;
@@ -1014,7 +951,7 @@ body>input[type=radio] {
     display: block
 }
 
-.hit article:hover .bth-quick-view {
+.hit .bth-quick-view,.hit article:hover .bth-quick-view {
     display: inline-block;
     vertical-align: top
 }
@@ -1022,25 +959,20 @@ body>input[type=radio] {
 .features {
     min-height: 253px;
     margin-bottom: 38px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 23px;
-    padding-bottom: 25px;
+    padding: 23px 20px 25px;
     background: #ebddbe url("../img/bg-waffle.jpg");
     color: #323232;
     border-radius: 20px
 }
 
-.features-left {
+.features-left,.features-right {
     float: left;
     width: 540px;
     min-height: 190px
 }
 
 .features-right {
-    float: right;
-    width: 540px;
-    min-height: 190px
+    float: right
 }
 
 .features .features-item {
@@ -1048,52 +980,42 @@ body>input[type=radio] {
     position: relative
 }
 
-.features .features-left-up::before {
+.features .features-left-down::before,.features .features-left-up::before {
     content: "";
     position: absolute;
     background-image: url(../img/sprite.png);
     background-repeat: no-repeat;
     width: 47px;
     height: 47px;
-    background-position: -10px -362px;
     left: 0;
     top: 10px
 }
 
+.features .features-left-up::before {
+    background-position: -10px -362px
+}
+
 .features .features-left-down::before {
+    background-position: -10px -480px
+}
+
+.features .features-right-down::before,.features .features-right-up::before {
     content: "";
     position: absolute;
     background-image: url(../img/sprite.png);
     background-repeat: no-repeat;
     width: 47px;
     height: 47px;
-    background-position: -10px -480px;
     left: 0;
     top: 10px
 }
 
 .features .features-right-up::before {
-    content: "";
-    position: absolute;
-    background-image: url(../img/sprite.png);
-    background-repeat: no-repeat;
-    width: 47px;
-    height: 47px;
-    background-position: -10px -130px;
-    left: 0;
-    top: 10px
+    background-position: -10px -130px
 }
 
 .features .features-right-down::before {
-    content: "";
-    position: absolute;
-    background-image: url(../img/sprite.png);
-    background-repeat: no-repeat;
-    width: 47px;
-    height: 47px;
-    background-position: -10px -806px;
-    left: 0;
-    top: 10px
+    background-position: -10px -806px
 }
 
 .features h3 {
@@ -1108,8 +1030,7 @@ body>input[type=radio] {
     font-size: 16px;
     line-height: 22px;
     font-weight: 400;
-    padding: 0;
-    padding-top: 22px;
+    padding: 22px 0 0;
     margin: 0
 }
 
@@ -1122,22 +1043,20 @@ body>input[type=radio] {
     float: left;
     width: 300px;
     min-height: 166px;
-    padding: 27px;
-    padding-left: 20px;
-    padding-right: 240px;
-    background: #fff url("../img/bg-strawberry.png") repeat-y;
+    padding: 27px 240px 27px 20px;
+    background: #fff url("../img/bg-strawberry.png") no-repeat;
+    background-size: 100% 100%;
     border-radius: 18px;
     color: #5a5a5a
 }
 
-.blog p {
+.blog a,.blog p {
     color: #5a5a5a;
     font-size: 16px;
     font-weight: 500;
     line-height: 22px;
     padding: 0;
-    margin: 0;
-    margin-bottom: 5px
+    margin: 0 0 5px
 }
 
 .blog a {
@@ -1145,15 +1064,14 @@ body>input[type=radio] {
     font-size: 24px;
     font-weight: 700;
     line-height: 1.2;
-    padding: 0;
     margin: 10px 0
 }
 
-.blog a:hover,.blog a:active {
+.blog a:active,.blog a:hover {
     color: #ec593c
 }
 
-.blog a:hover+.link-border,.blog a:active+.link-border {
+.blog a:active+.link-border,.blog a:hover+.link-border {
     border-bottom: 1px solid rgba(255,188,158,.3)
 }
 
@@ -1174,9 +1092,7 @@ body>input[type=radio] {
     width: 508px;
     min-height: 166px;
     background: #f8f7f4;
-    padding: 22px;
-    padding-left: 21px;
-    padding-right: 21px;
+    padding: 22px 21px;
     border-radius: 13px
 }
 
@@ -1185,10 +1101,8 @@ body>input[type=radio] {
     font-size: 16px;
     font-weight: 400;
     line-height: 22px;
-    padding: 0;
-    margin: 0;
-    margin-bottom: 10px;
-    padding-top: 8px
+    margin: 0 0 10px;
+    padding: 8px 0 0
 }
 
 .label-email-delivery {
@@ -1200,9 +1114,7 @@ body>input[type=radio] {
     font-weight: 400;
     pointer-events: none;
     -webkit-transition: -webkit-transform 200ms ease;
-    transition: -webkit-transform 200ms ease;
     transition: transform 200ms ease;
-    transition: transform 200ms ease,-webkit-transform 200ms ease;
     transition: transform 200ms ease,-webkit-transform 200ms ease;
     -webkit-transform: translateY(-28px);
     transform: translateY(-28px)
@@ -1261,33 +1173,33 @@ body>input[type=radio] {
     line-height: 20px
 }
 
-.map {
+.map,.map-interactive {
     position: relative;
     min-height: 430px
 }
 
 .map-interactive {
     position: absolute;
-    min-height: 430px;
     z-index: 60;
     width: 100%
 }
 
-.map-bg {
+.div-for-address,.map-bg {
     position: absolute;
-    width: 1200px;
-    left: 50%;
-    margin-left: -600px;
+    left: 50%
+}
+
+.map-bg {
     min-height: 430px;
     background: #f7f1d9 url("../img/map%20with%20marker.png") no-repeat center;
     color: #000;
-    z-index: 55
+    z-index: 55;
+    width: 1200px;
+    margin-left: -600px
 }
 
 .div-for-address {
-    position: absolute;
     width: 1146px;
-    left: 50%;
     margin-left: -573px
 }
 
@@ -1309,8 +1221,7 @@ body>input[type=radio] {
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
-    margin: 0;
-    margin-bottom: 25px;
+    margin: 0 0 25px;
     padding: 0
 }
 
@@ -1443,11 +1354,11 @@ body>input[type=radio] {
     text-decoration: none
 }
 
-.footer-copyright .link-htmlacademy:hover,.footer-copyright .link-htmlacademy:active {
+.footer-copyright .link-htmlacademy:active,.footer-copyright .link-htmlacademy:hover {
     color: #ffbc9e
 }
 
-.footer-copyright .link-htmlacademy:hover .link-border,.footer-copyright .link-htmlacademy:active .link-border {
+.footer-copyright .link-htmlacademy:active .link-border,.footer-copyright .link-htmlacademy:hover .link-border {
     border-bottom: 1px solid rgba(255,188,158,.3)
 }
 
@@ -1536,8 +1447,7 @@ body>input[type=radio] {
     margin-left: -240px;
     width: 428px;
     min-height: 397px;
-    padding: 25px;
-    padding-top: 15px;
+    padding: 15px 25px 25px;
     color: #343434;
     background: #f8f7f4;
     border-radius: 10px;
@@ -1569,7 +1479,7 @@ body>input[type=radio] {
     cursor: pointer
 }
 
-.modal-content-close::before,.modal-content-close::after {
+.modal-content-close::after,.modal-content-close::before {
     content: "";
     position: absolute;
     top: 7px;
@@ -1596,15 +1506,14 @@ body>input[type=radio] {
     line-height: 30px;
     color: #343434;
     padding: 0;
-    margin: 0;
-    margin-bottom: 20px
+    margin: 0 0 20px
 }
 
 .modal-content form {
     margin: 0
 }
 
-.label-name-feedback,.label-email-feedback,.label-text-feedback {
+.label-email-feedback,.label-name-feedback,.label-text-feedback {
     position: absolute;
     top: 13px;
     left: 10px;
@@ -1614,25 +1523,19 @@ body>input[type=radio] {
     z-index: 3;
     pointer-events: none;
     -webkit-transition: -webkit-transform 200ms ease;
-    transition: -webkit-transform 200ms ease;
     transition: transform 200ms ease;
-    transition: transform 200ms ease,-webkit-transform 200ms ease;
     transition: transform 200ms ease,-webkit-transform 200ms ease;
     -webkit-transform: translateY(-28px);
     transform: translateY(-28px)
 }
 
-.label-name-feedback::before,.label-email-feedback::before,.label-text-feedback::before {
+.label-email-feedback::before,.label-name-feedback::before,.label-text-feedback::before {
     content: attr(data-first);
     white-space: nowrap
 }
 
-.modal-content input {
+.modal-content input,.modal-content textarea {
     position: relative;
-    margin: 0;
-    margin-bottom: 20px;
-    display: block;
-    width: 236px;
     padding: 9px 15px;
     font-size: 16px;
     font-weight: 700;
@@ -1644,22 +1547,17 @@ body>input[type=radio] {
     border: none
 }
 
+.modal-content input {
+    display: block;
+    margin: 0 0 20px;
+    width: 236px
+}
+
 .modal-content textarea {
-    position: relative;
-    margin: 0;
-    margin-bottom: 25px;
+    margin: 0 0 25px;
     width: 398px;
     height: 134px;
-    padding: 9px 15px;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 24px;
-    color: #353535;
-    border-radius: 5px;
-    resize: none;
-    box-shadow: inset 0 0 0 1px #b2b2b2;
-    outline: none;
-    border: none
+    resize: none
 }
 
 .modal-content input:focus,.modal-content textarea:focus {
@@ -1749,8 +1647,7 @@ body>input[type=radio] {
 }
 
 .breadcrumbs {
-    margin: 0;
-    margin-top: 16px;
+    margin: 16px 0 0;
     padding: 0;
     list-style: none;
     font-size: 0
@@ -1759,9 +1656,8 @@ body>input[type=radio] {
 .breadcrumbs li {
     position: relative;
     display: inline;
-    padding: 0;
     margin: 0;
-    padding-right: 20px
+    padding: 0 20px 0 0
 }
 
 .breadcrumbs li::after {
@@ -1786,19 +1682,18 @@ body>input[type=radio] {
     font-size: 14px;
     line-height: 22px;
     text-decoration: none;
-    padding: 6px 0;
-    padding-bottom: 3px
+    padding: 6px 0 3px
 }
 
 .breadcrumbs-current .link-border {
     border: none
 }
 
-.breadcrumbs a:hover,.breadcrumbs a:active {
+.breadcrumbs a:active,.breadcrumbs a:hover {
     color: #ffbc9e
 }
 
-.breadcrumbs a:hover .link-border,.breadcrumbs a:active .link-border {
+.breadcrumbs a:active .link-border,.breadcrumbs a:hover .link-border {
     border-bottom: 1px solid rgba(255,188,158,.3)
 }
 
@@ -1832,8 +1727,7 @@ body>input[type=radio] {
     font-weight: 500;
     line-height: 20px;
     color: #fff;
-    padding: 0 15px;
-    padding-right: 3px;
+    padding: 0 3px 0 15px;
     margin-bottom: 3px
 }
 
@@ -1926,12 +1820,7 @@ body>input[type=radio] {
     background: #1e90ff
 }
 
-.filter-title-price {
-    display: inline-block;
-    vertical-align: top
-}
-
-.price-control {
+.filter-title-price,.price-control {
     display: inline-block;
     vertical-align: top
 }
@@ -2105,7 +1994,6 @@ body>input[type=radio] {
 }
 
 .btn-filter {
-    border: none;
     vertical-align: bottom;
     padding: 6px 30px;
     border: 2px solid #fff;
@@ -2113,7 +2001,7 @@ body>input[type=radio] {
 }
 
 .btn-filter:hover {
-    background: #fafbfb;6
+    background: #fafbfb;
     color: #363636
 }
 
@@ -2186,11 +2074,11 @@ body>input[type=radio] {
     margin: 0 auto
 }
 
-.container-catalog .link-icecream:hover,.container-catalog .link-icecream:active {
+.container-catalog .link-icecream:active,.container-catalog .link-icecream:hover {
     color: #ffbc9e
 }
 
-.container-catalog .link-icecream:hover .link-border,.container-catalog .link-icecream:active .link-border {
+.container-catalog .link-icecream:active .link-border,.container-catalog .link-icecream:hover .link-border {
     border-bottom: 1px solid rgba(255,188,158,.3)
 }
 
@@ -2212,7 +2100,7 @@ body>input[type=radio] {
     display: block
 }
 
-.container-catalog article:hover .bth-quick-view {
+.container-catalog article:hover .bth-quick-view,.pages .page-link,.pages li {
     display: inline-block;
     vertical-align: top
 }
@@ -2220,37 +2108,31 @@ body>input[type=radio] {
 .pages {
     float: right;
     min-height: 32px;
-    margin: 0;
-    margin-top: 45px;
-    margin-bottom: 35px;
+    margin: 45px 0 35px;
     padding: 0;
     font-size: 0;
     list-style: none;
     color: #fff
 }
 
-.pages li {
-    display: inline-block;
-    vertical-align: top;
+.pages .page-link,.pages li {
     font-size: 16px;
-    line-height: 24px;
-    margin: 0;
-    padding: 0
+    line-height: 24px
+}
+
+.pages li {
+    padding: 0;
+    margin: 0
 }
 
 .pages .page-link {
-    display: inline-block;
-    vertical-align: top;
     min-width: 26px;
     min-height: 24px;
     padding-top: 2px;
     margin: 0 2px;
-    font-size: 16px;
     font-weight: 500;
-    line-height: 24px;
     text-align: center;
     color: #fff;
-    vertical-align: top;
     text-decoration: none;
     border-radius: 100%
 }
@@ -2265,13 +2147,14 @@ body>input[type=radio] {
     color: #353535
 }
 
-.pages .page-next,.pages .page-previous {
+.pages .page-next {
     min-width: 16px;
     margin: 0
 }
 
 .pages .page-previous {
-    margin-right: 6px;
+    min-width: 16px;
+    margin: 0 6px 0 0;
     color: #fff
 }
 
