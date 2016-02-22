@@ -812,19 +812,20 @@ body>input[type=radio] {
 }
 
 .free-chocolate,.free-raspberry {
-    background-size: 100% 100%;
     border-radius: 20px;
     color: #fff
 }
 
 .free-raspberry {
     background: #cd3559 url("../img/bg-raspberry.png") no-repeat;
+    background-size: 100% 100%;
     float: left
 }
 
 .free-chocolate {
     float: right;
-    background: #44281c url("../img/bg-choco.png") no-repeat
+    background: #44281c url("../img/bg-choco.png") no-repeat;
+    background-size: 100% 100%;
 }
 
 .free h2,.free p {
