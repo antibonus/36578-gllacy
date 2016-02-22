@@ -75,8 +75,8 @@
                 </div>
                 <button class="btn btn-login" type="submit">Войти</button>
                 <div class="user-block-links">
-                  <a class="user-block-link link-forgot">Забыли пароль?</a>
-                  <a class="user-block-link link-forgot">Новая регистрация</a>
+                  <a class="user-block-link link-forgot" href="#">Забыли пароль?</a>
+                  <a class="user-block-link link-forgot" href="#">Новая регистрация</a>
                 </div>
               </form>
             </div> 
@@ -165,7 +165,7 @@
           
           <div class="hit"> 
             <article class="hit-orange ice">
-              <img class="icecream" src="img/ice-orange.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+              <img class="icecream" src="img/ice-orange.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
               <div class="price">
                 <span class="amount">310&#8381;</span>
                 <span>/кг</span>
@@ -175,7 +175,7 @@
             </article>
             
             <article class="hit-coffee ice">
-              <img class="icecream" src="img/ice-coffee.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
+              <img class="icecream" src="img/ice-coffee.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
               <div class="price">
                 <span class="amount">380&#8381;</span>
                 <span>/кг</span>
@@ -185,7 +185,7 @@
             </article>
             
             <article class="hit-strawberry ice">
-              <img class="icecream" src="img/ice-strawberry.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+              <img class="icecream" src="img/ice-strawberry.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
               <div class="price">
                 <span class="amount">355&#8381;</span>
                 <span>/кг</span>
@@ -195,7 +195,7 @@
             </article>
             
             <article class="hit-сreme-brulee ice">
-              <img class="icecream" src="img/ice-creme-brulee.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подсыпкой">
+              <img class="icecream" src="img/ice-creme-brulee.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подсыпкой">
               <div class="price">
                 <span class="amount">415&#8381;</span>
                 <span>/кг</span>
@@ -232,14 +232,16 @@
               <a class="link-blog link-white-bg" href="#">10 способов сервировки фруктовых щербетов к столу</a>
             </section>
             <section class="email-delivery">
-              <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-              <form class="clearfix" action="#" method="post">
-                <div class="input-wrapper">
-                  <input type="email" name="email" id="email-delivery" required>
-                  <label class="label-email-delivery" for="email-delivery" data-first="Электронная почта"></label>
-                </div>
-              <button class="btn btn-email-delivery" type="submit" >Отправить</button>
-              </form>
+              <div class="inner-email-delivery">
+                <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+                <form class="clearfix" action="#" method="post">
+                  <div class="input-wrapper">
+                    <input type="email" name="email" id="email-delivery" required>
+                    <label class="label-email-delivery" for="email-delivery" data-first="Электронная почта"></label>
+                  </div>
+                <button class="btn btn-email-delivery" type="submit" >Отправить</button>
+                </form>
+              </div>
             </section>
           </div>
         </div>
@@ -257,7 +259,7 @@
               <p>Для заказа по телефону:<br>
               <b>8 812 450-25-25</b><br>
               (с 10 до 20 ежедневно)</p>
-              <a class="btn btn-feedback" href="123">Форма обратной связи</a>
+              <a class="btn btn-feedback" href="feedback.html">Форма обратной связи</a>
             </div>
           </div>
         </section>

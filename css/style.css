@@ -4,7 +4,7 @@ body {
     line-height: 1.2;
     color: #fff;
     font-weight: 400;
-    font-family: "Roboto","Arial",serif;
+    font-family: "Roboto","Arial",sans-serif;
     margin: 0 auto;
     background: #849d8f;
     padding: 0
@@ -296,6 +296,7 @@ body>input[type=radio] {
     transition: -webkit-transform 200ms ease;
     transition: transform 200ms ease;
     transition: transform 200ms ease,-webkit-transform 200ms ease;
+    transition: transform 200ms ease,-webkit-transform 200ms ease;
     -webkit-transform: translateY(-28px);
     transform: translateY(-28px)
 }
@@ -432,6 +433,7 @@ body>input[type=radio] {
     transition: -webkit-transform 200ms ease;
     transition: transform 200ms ease;
     transition: transform 200ms ease,-webkit-transform 200ms ease;
+    transition: transform 200ms ease,-webkit-transform 200ms ease;
     -webkit-transform: translateY(-26px);
     transform: translateY(-26px)
 }
@@ -454,7 +456,7 @@ body>input[type=radio] {
     color: #353535;
     white-space: nowrap;
     box-shadow: inset 0 0 0 1px #d3d3d2;
-    box-sizing: content;
+    box-sizing: content-box;
     outline: none;
     border: none;
     border-radius: 5px
@@ -733,8 +735,7 @@ body>input[type=radio] {
     font-size: 15px;
     line-height: 24px;
     font-weight: 700;
-    padding: 5px 20px;
-    padding-bottom: 0
+    padding: 5px 20px
 }
 
 .basket-full:hover form {
@@ -871,14 +872,14 @@ body>input[type=radio] {
 
 .free-raspberry {
     float: left;
-    background: #cd3559 url("../img/bg-raspberry.png") no-repeat;
+    background: #cd3559 url("../img/bg-raspberry.png") repeat-y;
     border-radius: 20px;
     color: #fff
 }
 
 .free-chocolate {
     float: right;
-    background: #44281c url("../img/bg-choco.png") no-repeat;
+    background: #44281c url("../img/bg-choco.png") repeat-y;
     border-radius: 20px;
     color: #fff
 }
@@ -1124,7 +1125,7 @@ body>input[type=radio] {
     padding: 27px;
     padding-left: 20px;
     padding-right: 240px;
-    background: #fff url("../img/bg-strawberry.png") no-repeat;
+    background: #fff url("../img/bg-strawberry.png") repeat-y;
     border-radius: 18px;
     color: #5a5a5a
 }
@@ -1158,15 +1159,25 @@ body>input[type=radio] {
 
 .email-delivery {
     float: right;
+    margin: 0 auto;
+    width: 550px;
+    min-height: 210px;
+    border-radius: 18px;
+    padding: 5px;
+    background-image: -webkit-repeating-linear-gradient(315deg,#fe9e90 0,#fe9e90 6px,#f8f7f4 6px,#f8f7f4 13px,#92cdff 13px,#92cdff 19px,#f8f7f4 19px,#f8f7f4 26px);
+    background-image: repeating-linear-gradient(135deg,#fe9e90 0,#fe9e90 6px,#f8f7f4 6px,#f8f7f4 13px,#92cdff 13px,#92cdff 19px,#f8f7f4 19px,#f8f7f4 26px)
+}
+
+.inner-email-delivery {
+    color: #5a5a5a;
+    position: relative;
     width: 508px;
     min-height: 166px;
-    padding: 27px;
-    padding-left: 26px;
-    padding-right: 26px;
-    border-radius: 18px;
-    color: #5a5a5a;
-    background: #f8f7f4 url("../img/bg-letter.png") no-repeat;
-    position: relative
+    background: #f8f7f4;
+    padding: 22px;
+    padding-left: 21px;
+    padding-right: 21px;
+    border-radius: 13px
 }
 
 .email-delivery p {
@@ -1191,6 +1202,7 @@ body>input[type=radio] {
     -webkit-transition: -webkit-transform 200ms ease;
     transition: -webkit-transform 200ms ease;
     transition: transform 200ms ease;
+    transition: transform 200ms ease,-webkit-transform 200ms ease;
     transition: transform 200ms ease,-webkit-transform 200ms ease;
     -webkit-transform: translateY(-28px);
     transform: translateY(-28px)
@@ -1306,7 +1318,7 @@ body>input[type=radio] {
     font-size: 18px;
     font-weight: 700;
     line-height: 24px;
-    margin-bottom: 8px 0
+    margin-bottom: 8px
 }
 
 .btn-feedback {
@@ -1605,6 +1617,7 @@ body>input[type=radio] {
     transition: -webkit-transform 200ms ease;
     transition: transform 200ms ease;
     transition: transform 200ms ease,-webkit-transform 200ms ease;
+    transition: transform 200ms ease,-webkit-transform 200ms ease;
     -webkit-transform: translateY(-28px);
     transform: translateY(-28px)
 }
@@ -1759,7 +1772,7 @@ body>input[type=radio] {
     color: #fff;
     font-size: 14px;
     font-weight: 400;
-    font-family: "Roboto","Arial",serif
+    font-family: "Roboto","Arial",sans-serif
 }
 
 .breadcrumbs .current-li::after {
@@ -2100,7 +2113,7 @@ body>input[type=radio] {
 }
 
 .btn-filter:hover {
-    background: #fafbfb;
+    background: #fafbfb;6
     color: #363636
 }
 
